@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\bin\Debug\BTL_ThucTap_LTNET.exe.config
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\bin\Debug\BTL_ThucTap_LTNET.exe
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\bin\Debug\BTL_ThucTap_LTNET.pdb
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.DangNhap.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.Properties.Resources.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.QuenMatKhau.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.exe
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.pdb
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.Main.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.BanHang.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.BaoCaoDoanhThu.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.BaoCaoTonKho.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.KhoHang.resources
+C:\Users\Admin\source\repos\BTL_ThucTap_LTNET\obj\Debug\BTL_ThucTap_LTNET.NhanVien.resources
