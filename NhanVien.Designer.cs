@@ -38,9 +38,13 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxChucvu = new System.Windows.Forms.ComboBox();
+            this.txtDiachi = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,11 +52,8 @@
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtManv = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.txtDiachi = new System.Windows.Forms.RichTextBox();
-            this.comboBoxChucvu = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.btnCapnhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +134,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "XÓA";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -143,12 +145,14 @@
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnCapnhat);
             this.groupBox1.Controls.Add(this.comboBoxChucvu);
             this.groupBox1.Controls.Add(this.txtDiachi);
             this.groupBox1.Controls.Add(this.label6);
@@ -170,6 +174,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // comboBoxChucvu
+            // 
+            this.comboBoxChucvu.FormattingEnabled = true;
+            this.comboBoxChucvu.Items.AddRange(new object[] {
+            "Quản lý",
+            "Nhân Viên"});
+            this.comboBoxChucvu.Location = new System.Drawing.Point(432, 22);
+            this.comboBoxChucvu.Name = "comboBoxChucvu";
+            this.comboBoxChucvu.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxChucvu.TabIndex = 6;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(432, 62);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(343, 96);
+            this.txtDiachi.TabIndex = 5;
+            this.txtDiachi.Text = "";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -190,6 +213,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Email";
             // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(173, 175);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(104, 46);
+            this.btnThem.TabIndex = 2;
+            this.btnThem.Text = "THÊM";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -199,6 +232,16 @@
             this.label4.Size = new System.Drawing.Size(37, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "SĐT";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(501, 175);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(104, 46);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label3
             // 
@@ -258,45 +301,6 @@
             this.txtManv.Size = new System.Drawing.Size(54, 20);
             this.txtManv.TabIndex = 3;
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(501, 175);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(104, 46);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "RESET";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(173, 175);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(104, 46);
-            this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(432, 62);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(343, 96);
-            this.txtDiachi.TabIndex = 5;
-            this.txtDiachi.Text = "";
-            // 
-            // comboBoxChucvu
-            // 
-            this.comboBoxChucvu.FormattingEnabled = true;
-            this.comboBoxChucvu.Items.AddRange(new object[] {
-            "Quản lý",
-            "Nhân Viên"});
-            this.comboBoxChucvu.Location = new System.Drawing.Point(432, 22);
-            this.comboBoxChucvu.Name = "comboBoxChucvu";
-            this.comboBoxChucvu.Size = new System.Drawing.Size(156, 21);
-            this.comboBoxChucvu.TabIndex = 6;
-            // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(345, 563);
@@ -305,6 +309,17 @@
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // btnCapnhat
+            // 
+            this.btnCapnhat.Enabled = false;
+            this.btnCapnhat.Location = new System.Drawing.Point(333, 175);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.Size = new System.Drawing.Size(104, 46);
+            this.btnCapnhat.TabIndex = 7;
+            this.btnCapnhat.Text = "CẬP NHẬT";
+            this.btnCapnhat.UseVisualStyleBackColor = true;
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // NhanVien
             // 
@@ -320,6 +335,7 @@
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
+            this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -354,5 +370,6 @@
         private System.Windows.Forms.ComboBox comboBoxChucvu;
         private System.Windows.Forms.RichTextBox txtDiachi;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnCapnhat;
     }
 }
