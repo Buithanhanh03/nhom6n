@@ -279,5 +279,18 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Vui lòng chọn một nhân viên để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string maCanTim = txtTimkiem.Text.Trim();
+            if (!string.IsNullOrEmpty(maCanTim)&&IsInteger(txtTimkiem.Text))
+            {
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"manv = '{maCanTim}'";
+            }
+            else
+            {
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
+            }
+        }
     }
 }

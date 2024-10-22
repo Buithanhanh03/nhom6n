@@ -54,11 +54,73 @@ namespace BTL_ThucTap_LTNET
         {
             conn = connectdb();
             conn = new SqlConnection(sqlqr);
-            string sql = "Select * From sanpham";
+            string sql = "Select masp, tensp, gia, mau, madm, tonkho From sanpham";
             SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
+            string query = "SELECT anh FROM sanpham"; // Thay bằng tên bảng và cột thực tế của bạn
+
+            //Sử dụng SqlConnection để truy xuất dữ liệu
+            //using (conn)
+            //{
+            //    using (SqlCommand cmd = new SqlCommand(query, conn))
+            //    {
+            //        conn.Open();
+
+            //        SqlDataAdapter adapter1 = new SqlDataAdapter(cmd);
+            //        DataTable dt1 = new DataTable();
+            //        adapter1.Fill(dt1);
+            //        foreach (DataRow row in dt1.Rows)
+            //        {
+            //            string imagePath = row["anh"].ToString();
+            //            string relativePath = Path.Combine("Resources", imagePath);
+            //            string fullPath = System.IO.Path.Combine(Application.StartupPath, relativePath);
+            //            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            //            dataGridView1.Rows[rowIndex].Cells["anh"].Value = Image.FromFile(fullPath);
+            //        }
+            //    }
+            //}
+            //conn = connectdb();
+            //string sql = "Select * From sanpham";
+            //using (conn)
+            //{
+            //    using (SqlCommand cmd = new SqlCommand(sql, conn))
+            //    {
+            //        conn.Open();
+
+            //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //        DataTable dt = new DataTable();
+            //        da.Fill(dt);
+            //        dataGridView1.Rows.Clear();
+
+            //        // Duyệt qua từng dòng dữ liệu
+            //        foreach (DataRow row in dt.Rows)
+            //        {
+            //            int rowIndex = dataGridView1.Rows.Add();
+            //            dataGridView1.Rows[rowIndex].Cells["masp"].Value = row["masp"];
+            //            dataGridView1.Rows[rowIndex].Cells["tensp"].Value = row["tensp"];
+            //            dataGridView1.Rows[rowIndex].Cells["gia"].Value = row["gia"];
+            //            dataGridView1.Rows[rowIndex].Cells["size"].Value = row["size"];
+            //            dataGridView1.Rows[rowIndex].Cells["mau"].Value = row["mau"];
+            //            dataGridView1.Rows[rowIndex].Cells["Mã madm mục"].Value = row["madm"];
+            //            dataGridView1.Rows[rowIndex].Cells["tonkho kho"].Value = row["tonkho"];
+
+            //            // Xử lý ảnh: kiểm tra đường dẫn và chuyển thành ảnh
+            //            string imagePath = row["anh"].ToString();
+            //            if (System.IO.File.Exists(imagePath))
+            //            {
+            //                dataGridView1.Rows[rowIndex].Cells["imgColumn"].Value = Image.FromFile(imagePath);
+            //            }
+            //            else
+            //            {
+            //                // Hiển thị ảnh mặc định nếu không tìm thấy ảnh
+            //                dataGridView1.Rows[rowIndex].Cells["imgColumn"].Value = Properties.Resources.defaultImage;
+            //            }
+            //        }
+            //    }
+            //}
+
         }
         private void CheckInputType()
         {
@@ -172,6 +234,29 @@ namespace BTL_ThucTap_LTNET
                     selectedImagePath = openFileDialog.FileName;
                 }
             }
+        }
+
+        private void SanPham_Load_1(object sender, EventArgs e)
+        {
+            LoadForm();
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string maCanTim = txtTimkiem.Text.Trim();
+            if (!string.IsNullOrEmpty(maCanTim) && IsInteger(txtTimkiem.Text))
+            {
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"manv = '{maCanTim}'";
+            }
+            else
+            {
+                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
