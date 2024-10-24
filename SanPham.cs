@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BTL_ThucTap_LTNET
 {
     public partial class SanPham : Form
     {
         private string selectedImagePath;
+        private string relativePath;
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
         public SanPham()
@@ -30,7 +33,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
+                if (ctrl is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
                 {
                     return false;
                 }
@@ -52,75 +55,37 @@ namespace BTL_ThucTap_LTNET
         }
         private void LoadForm()
         {
-            conn = connectdb();
-            conn = new SqlConnection(sqlqr);
-            string sql = "Select masp, tensp, gia, mau, madm, tonkho From sanpham";
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            string query = "SELECT anh FROM sanpham"; // Thay bằng tên bảng và cột thực tế của bạn
+            dataGridView1.Rows.Clear();
+            anh.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            string query = "SELECT masp, tensp, gia, anh, mau, madm, tonkho FROM sanpham"; 
 
-            //Sử dụng SqlConnection để truy xuất dữ liệu
-            //using (conn)
-            //{
-            //    using (SqlCommand cmd = new SqlCommand(query, conn))
-            //    {
-            //        conn.Open();
+            using (SqlConnection conn = new SqlConnection(sqlqr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-            //        SqlDataAdapter adapter1 = new SqlDataAdapter(cmd);
-            //        DataTable dt1 = new DataTable();
-            //        adapter1.Fill(dt1);
-            //        foreach (DataRow row in dt1.Rows)
-            //        {
-            //            string imagePath = row["anh"].ToString();
-            //            string relativePath = Path.Combine("Resources", imagePath);
-            //            string fullPath = System.IO.Path.Combine(Application.StartupPath, relativePath);
-            //            int rowIndex = dataGridView1.CurrentCell.RowIndex;
-            //            dataGridView1.Rows[rowIndex].Cells["anh"].Value = Image.FromFile(fullPath);
-            //        }
-            //    }
-            //}
-            //conn = connectdb();
-            //string sql = "Select * From sanpham";
-            //using (conn)
-            //{
-            //    using (SqlCommand cmd = new SqlCommand(sql, conn))
-            //    {
-            //        conn.Open();
-
-            //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //        DataTable dt = new DataTable();
-            //        da.Fill(dt);
-            //        dataGridView1.Rows.Clear();
-
-            //        // Duyệt qua từng dòng dữ liệu
-            //        foreach (DataRow row in dt.Rows)
-            //        {
-            //            int rowIndex = dataGridView1.Rows.Add();
-            //            dataGridView1.Rows[rowIndex].Cells["masp"].Value = row["masp"];
-            //            dataGridView1.Rows[rowIndex].Cells["tensp"].Value = row["tensp"];
-            //            dataGridView1.Rows[rowIndex].Cells["gia"].Value = row["gia"];
-            //            dataGridView1.Rows[rowIndex].Cells["size"].Value = row["size"];
-            //            dataGridView1.Rows[rowIndex].Cells["mau"].Value = row["mau"];
-            //            dataGridView1.Rows[rowIndex].Cells["Mã madm mục"].Value = row["madm"];
-            //            dataGridView1.Rows[rowIndex].Cells["tonkho kho"].Value = row["tonkho"];
-
-            //            // Xử lý ảnh: kiểm tra đường dẫn và chuyển thành ảnh
-            //            string imagePath = row["anh"].ToString();
-            //            if (System.IO.File.Exists(imagePath))
-            //            {
-            //                dataGridView1.Rows[rowIndex].Cells["imgColumn"].Value = Image.FromFile(imagePath);
-            //            }
-            //            else
-            //            {
-            //                // Hiển thị ảnh mặc định nếu không tìm thấy ảnh
-            //                dataGridView1.Rows[rowIndex].Cells["imgColumn"].Value = Properties.Resources.defaultImage;
-            //            }
-            //        }
-            //    }
-            //}
-
+                foreach (DataRow row in dt.Rows)
+                {
+                    string imgPath = row["anh"].ToString();
+                    string imagePath = Path.Combine(Application.StartupPath, imgPath);
+                    Image productImage = null;
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        productImage = Image.FromFile(imagePath);
+                    }
+                    int index = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[index].Cells["anh"].Value = productImage;  
+                    dataGridView1.Rows[index].Cells["masp"].Value = row["masp"];
+                    dataGridView1.Rows[index].Cells["tensp"].Value = row["tensp"];
+                    dataGridView1.Rows[index].Cells["gia"].Value = row["gia"];
+                    dataGridView1.Rows[index].Cells["mau"].Value = row["mau"];
+                    dataGridView1.Rows[index].Cells["madm"].Value = row["madm"];
+                    dataGridView1.Rows[index].Cells["tonkho"].Value = row["tonkho"];
+                }
+            }
         }
         private void CheckInputType()
         {
@@ -134,19 +99,9 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Mã danh mục chỉ có thể nhập kiểu số nguyên");
                 return;
             }
-            if (IsInteger(txtSize.Text) == false)
-            {
-                MessageBox.Show("Size chỉ có thể nhập kiểu số nguyên");
-                return;
-            }
             if (IsInteger(txtGia.Text) == false)
             {
                 MessageBox.Show("Giá chỉ có thể nhập kiểu số nguyên");
-                return;
-            }
-            if (IsInteger(txtTonkho.Text) == false)
-            {
-                MessageBox.Show("Tồn kho chỉ có thể nhập kiểu số nguyên");
                 return;
             }
         }
@@ -155,61 +110,12 @@ namespace BTL_ThucTap_LTNET
             this.Close();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (EmptyTextbox() == false)
-            {
-                MessageBox.Show("Không được bỏ trống");
-                return;
-            }
-            CheckInputType();
-            string maSP = txtMa.Text;
-            string tenSP = txtTen.Text;
-            string gia = txtGia.Text;
-            string size = txtSize.Text;
-            string mau = txtMau.Text;
-            string maDM = txtMadm.Text;
-            string tonKho = txtTonkho.Text;
-
-            byte[] imgBytes = null;
-            if (!string.IsNullOrEmpty(selectedImagePath))
-            {
-                imgBytes = File.ReadAllBytes(selectedImagePath);
-            }
-            using (conn)
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "INSERT INTO sanpham (masp, tensp, gia, anh, size, mau, madm, tonkho) " +
-                                   "VALUES (@masp, @tensp, @gia, @anh, @size, @mau, @madm, @tonkho)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@masp", maSP);
-                        cmd.Parameters.AddWithValue("@tensp", tenSP);
-                        cmd.Parameters.AddWithValue("@gia", gia);
-                        cmd.Parameters.AddWithValue("@anh", (object)imgBytes ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@size", size);
-                        cmd.Parameters.AddWithValue("@mau", mau);
-                        cmd.Parameters.AddWithValue("@madm", maDM);
-                        cmd.Parameters.AddWithValue("@tonkho", tonKho);
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message);
-                }
-            }
-            LoadForm();
-        }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             foreach (Control control in groupBox1.Controls)
             {
-                if (control is TextBox)
+                if (control is System.Windows.Forms.TextBox)
                 {
                     control.Text = string.Empty;
                 }
@@ -231,7 +137,15 @@ namespace BTL_ThucTap_LTNET
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    selectedImagePath = openFileDialog.FileName;
+                    string selectedImagePath = openFileDialog.FileName;
+
+                    string appPath = Application.StartupPath;
+                    Uri appUri = new Uri(appPath + "\\");
+                    Uri fileUri = new Uri(selectedImagePath);
+
+                    relativePath = appUri.MakeRelativeUri(fileUri).ToString();
+
+                    relativePath = relativePath.Replace("/", "\\");
                 }
             }
         }
@@ -243,20 +157,136 @@ namespace BTL_ThucTap_LTNET
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
-            string maCanTim = txtTimkiem.Text.Trim();
-            if (!string.IsNullOrEmpty(maCanTim) && IsInteger(txtTimkiem.Text))
+            
+        }
+
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"manv = '{maCanTim}'";
+                txtMa.Enabled = false;
+                btnCapnhat.Enabled = true;
+                btnXoa.Enabled = false;
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                txtMa.Text = selectedRow.Cells["masp"].Value.ToString();
+                txtTen.Text = selectedRow.Cells["tensp"].Value.ToString();
+                txtGia.Text = selectedRow.Cells["gia"].Value.ToString();
+                txtMau.Text = selectedRow.Cells["mau"].Value.ToString();
+                txtMadm.Text = selectedRow.Cells["madm"].Value.ToString();
             }
+            
             else
             {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
+                MessageBox.Show("Vui lòng chọn một dòng để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btnCapnhat_Click(object sender, EventArgs e)
         {
+            if (EmptyTextbox() == false)
+            {
+                MessageBox.Show("Không được bỏ trống");
+                return;
+            }
+            if (IsInteger(txtGia.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập số cho Giá");
+                return;
+            }
+            if (IsInteger(txtMadm.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập só cho mã danh mục");
+                return;
+            }
+            if (string.IsNullOrEmpty(relativePath))
+            {
+                MessageBox.Show("Bạn chưa chọn ảnh");
+                return;
+            }
+            
+            int masp = int.Parse(txtMa.Text);
+            string tensp = txtTen.Text;
+            int gia = int.Parse(txtGia.Text);
+            string anh = relativePath;
+            string mau = txtMau.Text;
+            string madm = txtMadm.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            using (conn)
+            {
+                conn.Open();
+                string sql = "Update sanpham Set tensp = @tensp, gia = @gia, anh = @anh, mau = @mau, madm = @madm Where masp =@masp";
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                cmd.Parameters.AddWithValue("@masp", masp);
+                cmd.Parameters.AddWithValue("@tensp", tensp);
+                cmd.Parameters.AddWithValue("@gia", gia);
+                cmd.Parameters.AddWithValue("@anh", anh);
+                cmd.Parameters.AddWithValue("@mau", mau);
+                cmd.Parameters.AddWithValue("@madm", madm);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Đã sửa thành công");
+                conn.Close();
+                LoadForm();
+                txtMa.Enabled = true;
+                btnCapnhat.Enabled = false;
+                btnXoa.Enabled = true;
+            }
+        }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string masp = dataGridView1.SelectedRows[0].Cells["masp"].Value.ToString();
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = new SqlConnection(sqlqr))
+                    {
+                        conn.Open();
+                        using (SqlTransaction transaction = conn.BeginTransaction())
+                        {
+                            try
+                            {
+                                string updateForeignKeyQuery = "UPDATE dondathang SET masp = NULL WHERE masp = @masp";
+                                using (SqlCommand cmdUpdate = new SqlCommand(updateForeignKeyQuery, conn, transaction))
+                                {
+                                    cmdUpdate.Parameters.AddWithValue("@masp", masp);
+                                    cmdUpdate.ExecuteNonQuery();
+                                }
+                                string updateForeignKeyQuery1 = "UPDATE chitietdonhang SET masp = NULL WHERE masp = @masp";
+                                using (SqlCommand cmdUpdate1 = new SqlCommand(updateForeignKeyQuery1, conn, transaction))
+                                {
+                                    cmdUpdate1.Parameters.AddWithValue("@masp", masp);
+                                    cmdUpdate1.ExecuteNonQuery();
+                                }
+                                string deleteQuery = "DELETE FROM sanpham WHERE masp = @masp";
+                                using (SqlCommand cmdDelete = new SqlCommand(deleteQuery, conn, transaction))
+                                {
+                                    cmdDelete.Parameters.AddWithValue("@masp", masp);
+                                    cmdDelete.ExecuteNonQuery();
+                                }
+
+                                transaction.Commit();
+                                MessageBox.Show("Xóa sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadForm();
+                            }
+                            catch (Exception ex)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

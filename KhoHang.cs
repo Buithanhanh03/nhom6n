@@ -7,16 +7,19 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BTL_ThucTap_LTNET
 {
     public partial class KhoHang : Form
     {
+        string relativePath;
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
         private SqlConnection connectdb()
@@ -30,13 +33,61 @@ namespace BTL_ThucTap_LTNET
         }
         private void LoadSanPham()
         {
-            conn = connectdb();
-            conn = new SqlConnection(sqlqr);
-            string sql = "Select masp, tensp, gia, mau, madm, tonkho From sanpham";
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView1.Rows.Clear();
+            anh.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            string query = "SELECT masp, tensp, gia, anh, mau, madm, tonkho FROM sanpham";
+
+            using (SqlConnection conn = new SqlConnection(sqlqr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string imgPath = row["anh"].ToString();
+                    string imagePath = Path.Combine(Application.StartupPath, imgPath);
+                    Image productImage = null;
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        productImage = Image.FromFile(imagePath);
+                    }
+                    int index = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[index].Cells["anh"].Value = productImage;
+                    dataGridView1.Rows[index].Cells["masp"].Value = row["masp"];
+                    dataGridView1.Rows[index].Cells["tensp"].Value = row["tensp"];
+                    dataGridView1.Rows[index].Cells["gia"].Value = row["gia"];
+                    dataGridView1.Rows[index].Cells["mau"].Value = row["mau"];
+                    dataGridView1.Rows[index].Cells["madm"].Value = row["madm"];
+                    dataGridView1.Rows[index].Cells["tonkho"].Value = row["tonkho"];
+                }
+            }
+        }
+        private bool IsInteger(string input)
+        {
+            int number;
+            if (int.TryParse(input, out number) && number > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool EmptyTextbox()
+        {
+            foreach (Control ctrl in groupBox1.Controls)
+            {
+                if (ctrl is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
+                {
+                    return false;
+                }
+
+            }
+            return true;
         }
         private void LoadForm()
         {
@@ -106,7 +157,7 @@ namespace BTL_ThucTap_LTNET
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNhapthem_Click(object sender, EventArgs e)
         {
             foreach(Control ctrl in groupBox1.Controls)
             {
@@ -115,10 +166,48 @@ namespace BTL_ThucTap_LTNET
                     ctrl.Enabled = false;
                 }
             }
-            btnAnh.Enabled= false;
-        }
+            btnCapnhat.Enabled = true;
+            btnNhaphangmoi.Enabled = false;
+            btnAnh.Enabled = false;
+            btnReset.Enabled = false;
 
-        private void btnNhapthem_Click(object sender, EventArgs e)
+        }
+        private void btnCapnhat_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                int masp = int.Parse(selectedRow.Cells["masp"].Value.ToString());
+                int tonkho = int.Parse(txtTonkho.Text);
+                
+                conn = connectdb();
+                conn = new SqlConnection(sqlqr);
+                using (conn)
+                {
+                    conn.Open();
+                    string sql = "Update sanpham Set tonkho = @tonkho Where masp =@masp";
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddWithValue("@masp", masp);
+                    cmd.Parameters.AddWithValue("@tonkho", tonkho);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Đã sửa thành công");
+                    conn.Close();
+                    LoadForm();
+                    LoadSanPham();
+                    btnNhaphangmoi.Enabled = true;
+                    btnAnh.Enabled = true;
+                    btnReset.Enabled = true;
+                    btnCapnhat.Enabled = false;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm để nhập thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnNhaphangmoi_Click(object sender, EventArgs e)
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
@@ -128,6 +217,99 @@ namespace BTL_ThucTap_LTNET
                 }
             }
             btnAnh.Enabled = true;
+            if (EmptyTextbox() == false)
+            {
+                MessageBox.Show("Không được bỏ trống");
+                return;
+            }
+            if (IsInteger(txtMa.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập số cho mã sản phẩm");
+                return;
+            }
+            if (IsInteger(txtGia.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập số cho giá");
+                return;
+            }
+            if (IsInteger(txtSize.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập số cho size");
+                return;
+            }
+            if (IsInteger(txtMadm.Text) == false)
+            {
+                MessageBox.Show("Hãy nhập số cho mã mục");
+                return;
+            }
+            if (string.IsNullOrEmpty(relativePath))
+            {
+                MessageBox.Show("Bạn chưa chọn ảnh");
+                return;
+            }
+            int masp = int.Parse(txtMa.Text);
+            string tensp = txtTen.Text;
+            int gia = int.Parse(txtGia.Text);
+            string anh = relativePath;
+            int size = int.Parse(txtSize.Text);
+            string mau = txtMau.Text;
+            int madm = int.Parse(txtMadm.Text);
+            int tonkho = int.Parse(txtTonkho.Text);
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            using (SqlConnection conn = connectdb())
+            {
+                SqlCommand command = new SqlCommand("SELECT COUNT (*) FROM sanpham WHERE masp = @masp", conn);
+
+                command.Parameters.AddWithValue("@masp", masp);
+                conn.Open();
+                int rs = (int)command.ExecuteScalar();
+                if (rs > 0)
+                {
+                    MessageBox.Show("Mã sản phẩm đã tồn tại!");
+                    return;
+                }
+                else
+                {
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "INSERT INTO sanpham(masp, tensp, gia, anh, size, mau, madm, tonkho) VALUES(@masp, @tensp, @gia, @anh, @size, @mau, @madm, @tonkho)";
+                    cmd.Parameters.AddWithValue("@masp", masp);
+                    cmd.Parameters.AddWithValue("@tensp", tensp);
+                    cmd.Parameters.AddWithValue("@gia", gia);
+                    cmd.Parameters.AddWithValue("@anh", anh);
+                    cmd.Parameters.AddWithValue("@size", size);
+                    cmd.Parameters.AddWithValue("@mau", mau);
+                    cmd.Parameters.AddWithValue("@madm", madm);
+                    cmd.Parameters.AddWithValue("@tonkho", tonkho);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Đã thêm thành công");
+                    LoadForm();
+                    LoadSanPham();
+                }
+                conn.Close();
+            }
+        }
+
+        private void btnAnh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                openFileDialog.Title = "Chọn ảnh";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedImagePath = openFileDialog.FileName;
+
+                    string appPath = Application.StartupPath;
+                    Uri appUri = new Uri(appPath + "\\");
+                    Uri fileUri = new Uri(selectedImagePath);
+
+                    relativePath = appUri.MakeRelativeUri(fileUri).ToString();
+
+                    relativePath = relativePath.Replace("/", "\\");
+                }
+            }
         }
     }
 }

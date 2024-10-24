@@ -221,25 +221,18 @@ namespace BTL_ThucTap_LTNET
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy giá trị mã nhân viên từ dòng đã chọn
                 string manv = dataGridView1.SelectedRows[0].Cells["manv"].Value.ToString();
-
-                // Hỏi xác nhận trước khi xóa
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Kết nối với cơ sở dữ liệu
                     using (SqlConnection conn = new SqlConnection(sqlqr))
                     {
                         conn.Open();
-
-                        // Bắt đầu một transaction để đảm bảo tính toàn vẹn của dữ liệu
                         using (SqlTransaction transaction = conn.BeginTransaction())
                         {
                             try
                             {
-                                // Cập nhật các bảng khác có khóa ngoại manv về NULL
                                 string updateForeignKeyQuery = "UPDATE donhang SET manv = NULL WHERE manv = @manv";
                                 using (SqlCommand cmdUpdate = new SqlCommand(updateForeignKeyQuery, conn, transaction))
                                 {
@@ -247,7 +240,6 @@ namespace BTL_ThucTap_LTNET
                                     cmdUpdate.ExecuteNonQuery();
                                 }
 
-                                // Xóa nhân viên từ bảng nhanvien
                                 string deleteQuery = "DELETE FROM nhanvien WHERE manv = @manv";
                                 using (SqlCommand cmdDelete = new SqlCommand(deleteQuery, conn, transaction))
                                 {
@@ -255,18 +247,12 @@ namespace BTL_ThucTap_LTNET
                                     cmdDelete.ExecuteNonQuery();
                                 }
 
-                                // Xác nhận transaction thành công
                                 transaction.Commit();
-
-                                // Thông báo xóa thành công
                                 MessageBox.Show("Xóa nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                // Cập nhật lại DataGridView
                                 LoadForm();
                             }
                             catch (Exception ex)
                             {
-                                // Rollback nếu có lỗi
                                 transaction.Rollback();
                                 MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
