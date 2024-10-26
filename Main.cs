@@ -93,12 +93,12 @@ namespace BTL_ThucTap_LTNET
             {
                 if (e.Node.Text == "BÁO CÁO TỒN KHO")
                 {
-                    BaoCaoTonKho f = new BaoCaoTonKho();
+                    BaoCaoDoanhThu f = new BaoCaoDoanhThu();
                     f.ShowDialog();
                 }
                 else if (e.Node.Text == "BÁO CÁO DOANH THU")
                 {
-                    BaoCaoDoanhThu f = new BaoCaoDoanhThu();
+                    BaoCaoTonKho f = new BaoCaoTonKho();
                     f.ShowDialog();
                 }
             }
