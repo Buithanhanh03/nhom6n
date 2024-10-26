@@ -287,6 +287,29 @@ namespace BTL_ThucTap_LTNET
                     LoadSanPham();
                 }
                 conn.Close();
+                // Tạo mã đơn đặt hàng ngẫu nhiên
+                Random random = new Random();
+                DateTime today = DateTime.Now;
+                int maddh;
+                int gianhap = random.Next(100000, 200001);
+                do
+                {
+                    maddh = random.Next(1, 1001);
+                    SqlCommand checkMaddh = new SqlCommand("SELECT COUNT(*) FROM dondathang WHERE maddh = @maddh", conn);
+                    checkMaddh.Parameters.AddWithValue("@maddh", maddh);
+                    int exists = (int)checkMaddh.ExecuteScalar();
+                    if (exists == 0) break;
+                } while (true);
+                string insertDDHQuery = "INSERT INTO dondathang(maddh, ngaydat, masp, gianhap, soluongnhap) VALUES(@maddh, @ngaydat, @masp, @gianhap, @soluongnhap)";
+                using (SqlCommand cmd = new SqlCommand(insertDDHQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maddh", maddh);
+                    cmd.Parameters.AddWithValue("@ngaydat", today);
+                    cmd.Parameters.AddWithValue("@masp", masp);
+                    cmd.Parameters.AddWithValue("@gianhap", gianhap);
+                    cmd.Parameters.AddWithValue("@soluongnhap", tonkho);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 

@@ -19,15 +19,16 @@ namespace BTL_ThucTap_LTNET
     {
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
-        public NhanVien()
-        {
-            InitializeComponent();
-        }
         private SqlConnection connectdb()
         {
             conn = new SqlConnection(sqlqr);
             return conn;
         }
+        public NhanVien()
+        {
+            InitializeComponent();
+        }
+        
         public bool EmptyTextbox()
         {
             foreach (Control ctrl in groupBox1.Controls)

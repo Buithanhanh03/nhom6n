@@ -73,20 +73,36 @@ namespace BTL_ThucTap_LTNET
                     tongTonkho += Convert.ToInt32(row.Cells["tonkho"].Value);
                 }
             }
-            string query1 = "SELECT SUM(tongtien) FROM donhang";
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells["gianhap"].Value != null && row.Cells["soluongnhap"].Value != null)
+                {
+                    int giaNhap = Convert.ToInt32(row.Cells["gianhap"].Value);
+                    int soLuongNhap = Convert.ToInt32(row.Cells["soluongnhap"].Value);
+                    tongTonkho += giaNhap * soLuongNhap;
+                }
+
+                if (row.Cells["tonkho"].Value != null)
+                {
+                    tongTonkho += Convert.ToInt32(row.Cells["tonkho"].Value);
+                }
+            }
+            lblTongton.Text = tongTonkho.ToString();
+
+
+            string query2 = "SELECT SUM(tonkho) FROM sanpham";
             conn = connectdb();
             using (conn)
-            using (SqlCommand command = new SqlCommand(query1, conn))
+            using (SqlCommand command = new SqlCommand(query2, conn))
             {
                 conn.Open();
                 object result = command.ExecuteScalar();
 
-                int tongtienban = result != DBNull.Value ? Convert.ToInt32(result) : 0;
-                lblTongban.Text = tongtienban.ToString();
+                int soluongTonkho = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                lblSoluongtonkho.Text = soluongTonkho.ToString();
             }
 
-            lblTongnhap.Text = tongNhap.ToString();
-            lblTonkho.Text = tongTonkho.ToString();
+            
         }
         private void BaoCaoDoanhThu_Load(object sender, EventArgs e)
         {

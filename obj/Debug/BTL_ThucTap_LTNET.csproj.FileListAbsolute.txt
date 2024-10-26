@@ -35,3 +35,5 @@ C:\Users\Admin\Source\Repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.exe
 C:\Users\Admin\Source\Repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.pdb
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.NhapKhachHang.resources
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.InHoaDon.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.KhachHang.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.DonDatHang.resources

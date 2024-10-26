@@ -38,16 +38,20 @@
             treeNode4,
             treeNode5});
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("NHÂN VIÊN");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("DANH MỤC", -2, -2, new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("KHÁCH HÀNG");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("ĐƠN ĐẶT HÀNG");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("DANH MỤC", -2, -2, new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode6,
-            treeNode7});
+            treeNode7,
+            treeNode8,
+            treeNode9});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageListMainIcon = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,13 +97,17 @@
             treeNode7.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             treeNode7.SelectedImageKey = "NhanVien.png";
             treeNode7.Text = "NHÂN VIÊN";
-            treeNode8.ImageIndex = -2;
-            treeNode8.Name = "Node0";
-            treeNode8.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode8.SelectedImageIndex = -2;
-            treeNode8.Text = "DANH MỤC";
+            treeNode8.Name = "Node1";
+            treeNode8.Text = "KHÁCH HÀNG";
+            treeNode9.Name = "Node2";
+            treeNode9.Text = "ĐƠN ĐẶT HÀNG";
+            treeNode10.ImageIndex = -2;
+            treeNode10.Name = "Node0";
+            treeNode10.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode10.SelectedImageIndex = -2;
+            treeNode10.Text = "DANH MỤC";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8});
+            treeNode10});
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.ShowPlusMinus = false;
             this.treeView1.ShowRootLines = false;
@@ -107,14 +115,6 @@
             this.treeView1.TabIndex = 1;
             this.treeView1.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView1_DrawNode);
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(405, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 414);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // imageListMainIcon
             // 
@@ -125,6 +125,14 @@
             this.imageListMainIcon.Images.SetKeyName(2, "NhanVien.png");
             this.imageListMainIcon.Images.SetKeyName(3, "SanPham.png");
             this.imageListMainIcon.Images.SetKeyName(4, "shopping-cart.png");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(405, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(383, 414);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 

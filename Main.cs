@@ -87,18 +87,28 @@ namespace BTL_ThucTap_LTNET
                     NhanVien f = new NhanVien();
                     f.ShowDialog();
                 }
-                
+                else if (e.Node.Text == "KHÁCH HÀNG")
+                {
+                    KhachHang f = new KhachHang();
+                    f.ShowDialog();
+                }
+                else if (e.Node.Text == "ĐƠN ĐẶT HÀNG")
+                {
+                    DonDatHang f = new DonDatHang();
+                    f.ShowDialog();
+                }
+
             }
             if (e.Node.Level == 2)
             {
                 if (e.Node.Text == "BÁO CÁO TỒN KHO")
                 {
-                    BaoCaoDoanhThu f = new BaoCaoDoanhThu();
+                    BaoCaoTonKho f = new BaoCaoTonKho();
                     f.ShowDialog();
                 }
                 else if (e.Node.Text == "BÁO CÁO DOANH THU")
                 {
-                    BaoCaoTonKho f = new BaoCaoTonKho();
+                    BaoCaoDoanhThu f = new BaoCaoDoanhThu();
                     f.ShowDialog();
                 }
             }
