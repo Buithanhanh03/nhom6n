@@ -104,6 +104,7 @@
             this.ClientSize = new System.Drawing.Size(800, 332);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "KhachHang";
             this.Text = "KhachHang";
             this.Load += new System.EventHandler(this.KhachHang_Load);

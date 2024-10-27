@@ -112,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(800, 332);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DonDatHang";
             this.Text = "DonDatHang";
             this.Load += new System.EventHandler(this.DonDatHang_Load);

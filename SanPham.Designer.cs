@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anh = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.madm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCapnhat = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAnh = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,16 +57,11 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anh = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapnhat = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -74,11 +77,67 @@
             this.mau,
             this.madm,
             this.tonkho});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(744, 236);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // masp
+            // 
+            this.masp.DataPropertyName = "masp";
+            this.masp.HeaderText = "Mã";
+            this.masp.Name = "masp";
+            this.masp.ReadOnly = true;
+            this.masp.Width = 50;
+            // 
+            // tensp
+            // 
+            this.tensp.DataPropertyName = "tensp";
+            this.tensp.HeaderText = "Tên";
+            this.tensp.Name = "tensp";
+            this.tensp.ReadOnly = true;
+            this.tensp.Width = 300;
+            // 
+            // gia
+            // 
+            this.gia.DataPropertyName = "gia";
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
+            // 
+            // anh
+            // 
+            this.anh.DataPropertyName = "anh";
+            this.anh.HeaderText = "Ảnh";
+            this.anh.Name = "anh";
+            this.anh.ReadOnly = true;
+            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // mau
+            // 
+            this.mau.DataPropertyName = "mau";
+            this.mau.HeaderText = "Màu";
+            this.mau.Name = "mau";
+            this.mau.ReadOnly = true;
+            this.mau.Width = 50;
+            // 
+            // madm
+            // 
+            this.madm.DataPropertyName = "madm";
+            this.madm.HeaderText = "Mã danh mục";
+            this.madm.Name = "madm";
+            this.madm.ReadOnly = true;
+            this.madm.Width = 50;
+            // 
+            // tonkho
+            // 
+            this.tonkho.DataPropertyName = "tonkho";
+            this.tonkho.HeaderText = "Tồn kho";
+            this.tonkho.Name = "tonkho";
+            this.tonkho.ReadOnly = true;
+            this.tonkho.Width = 50;
             // 
             // groupBox1
             // 
@@ -96,12 +155,23 @@
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Location = new System.Drawing.Point(12, 338);
+            this.groupBox1.Location = new System.Drawing.Point(12, 400);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 164);
+            this.groupBox1.Size = new System.Drawing.Size(733, 164);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // btnCapnhat
+            // 
+            this.btnCapnhat.Enabled = false;
+            this.btnCapnhat.Location = new System.Drawing.Point(137, 118);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.Size = new System.Drawing.Size(104, 46);
+            this.btnCapnhat.TabIndex = 9;
+            this.btnCapnhat.Text = "CẬP NHẬT";
+            this.btnCapnhat.UseVisualStyleBackColor = true;
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // label8
             // 
@@ -210,7 +280,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(524, 112);
+            this.btnReset.Location = new System.Drawing.Point(465, 112);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(104, 46);
             this.btnReset.TabIndex = 2;
@@ -220,7 +290,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(189, 286);
+            this.btnSua.Location = new System.Drawing.Point(147, 320);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(104, 46);
             this.btnSua.TabIndex = 2;
@@ -230,7 +300,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(517, 286);
+            this.btnXoa.Location = new System.Drawing.Point(475, 320);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(104, 46);
             this.btnXoa.TabIndex = 2;
@@ -240,7 +310,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(364, 543);
+            this.btnThoat.Location = new System.Drawing.Point(322, 570);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(104, 46);
             this.btnThoat.TabIndex = 2;
@@ -254,7 +324,7 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(157, 254);
+            this.txtTimkiem.Location = new System.Drawing.Point(157, 292);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(74, 20);
             this.txtTimkiem.TabIndex = 8;
@@ -264,84 +334,39 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 255);
+            this.label9.Location = new System.Drawing.Point(22, 293);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 16);
             this.label9.TabIndex = 8;
             this.label9.Text = "Tìm kiếm theo mã";
             // 
-            // masp
+            // groupBox2
             // 
-            this.masp.DataPropertyName = "masp";
-            this.masp.HeaderText = "Mã";
-            this.masp.Name = "masp";
-            this.masp.ReadOnly = true;
-            this.masp.Width = 50;
+            this.groupBox2.BackColor = System.Drawing.Color.Sienna;
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(1, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(744, 39);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
             // 
-            // tensp
+            // label4
             // 
-            this.tensp.DataPropertyName = "tensp";
-            this.tensp.HeaderText = "Tên";
-            this.tensp.Name = "tensp";
-            this.tensp.ReadOnly = true;
-            this.tensp.Width = 300;
-            // 
-            // gia
-            // 
-            this.gia.DataPropertyName = "gia";
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
-            // 
-            // anh
-            // 
-            this.anh.DataPropertyName = "anh";
-            this.anh.HeaderText = "Ảnh";
-            this.anh.Name = "anh";
-            this.anh.ReadOnly = true;
-            this.anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // mau
-            // 
-            this.mau.DataPropertyName = "mau";
-            this.mau.HeaderText = "Màu";
-            this.mau.Name = "mau";
-            this.mau.ReadOnly = true;
-            this.mau.Width = 50;
-            // 
-            // madm
-            // 
-            this.madm.DataPropertyName = "madm";
-            this.madm.HeaderText = "Mã danh mục";
-            this.madm.Name = "madm";
-            this.madm.ReadOnly = true;
-            this.madm.Width = 50;
-            // 
-            // tonkho
-            // 
-            this.tonkho.DataPropertyName = "tonkho";
-            this.tonkho.HeaderText = "Tồn kho";
-            this.tonkho.Name = "tonkho";
-            this.tonkho.ReadOnly = true;
-            this.tonkho.Width = 50;
-            // 
-            // btnCapnhat
-            // 
-            this.btnCapnhat.Enabled = false;
-            this.btnCapnhat.Location = new System.Drawing.Point(177, 118);
-            this.btnCapnhat.Name = "btnCapnhat";
-            this.btnCapnhat.Size = new System.Drawing.Size(104, 46);
-            this.btnCapnhat.TabIndex = 9;
-            this.btnCapnhat.Text = "CẬP NHẬT";
-            this.btnCapnhat.UseVisualStyleBackColor = true;
-            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(19, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "SẢN PHẨM";
             // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 619);
+            this.ClientSize = new System.Drawing.Size(749, 619);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.btnThoat);
@@ -349,12 +374,15 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SanPham";
             this.Text = "SanPham";
             this.Load += new System.EventHandler(this.SanPham_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +419,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn madm;
         private System.Windows.Forms.DataGridViewTextBoxColumn tonkho;
         private System.Windows.Forms.Button btnCapnhat;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
     }
 }

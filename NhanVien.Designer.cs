@@ -56,8 +56,14 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,10 +81,10 @@
             this.sdtnv,
             this.email,
             this.diachinv});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(796, 247);
             this.dataGridView1.TabIndex = 1;
             // 
             // manv
@@ -130,7 +136,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(513, 279);
+            this.btnXoa.Location = new System.Drawing.Point(508, 447);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(104, 46);
             this.btnXoa.TabIndex = 3;
@@ -141,7 +147,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(185, 279);
+            this.btnSua.Location = new System.Drawing.Point(180, 447);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(104, 46);
             this.btnSua.TabIndex = 4;
@@ -169,9 +175,9 @@
             this.groupBox1.Controls.Add(this.txtSdt);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtManv);
-            this.groupBox1.Location = new System.Drawing.Point(12, 321);
+            this.groupBox1.Location = new System.Drawing.Point(7, 424);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 236);
+            this.groupBox1.Size = new System.Drawing.Size(785, 317);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -316,7 +322,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(345, 563);
+            this.btnThoat.Location = new System.Drawing.Point(340, 666);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(104, 46);
             this.btnThoat.TabIndex = 7;
@@ -327,7 +333,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 251);
+            this.label9.Location = new System.Drawing.Point(23, 321);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 16);
             this.label9.TabIndex = 9;
@@ -335,17 +341,61 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(157, 250);
+            this.txtTimkiem.Location = new System.Drawing.Point(158, 320);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(74, 20);
             this.txtTimkiem.TabIndex = 10;
             this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Brown;
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(7, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(785, 39);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(26, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(205, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Tomato;
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Location = new System.Drawing.Point(12, 355);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(785, 39);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(26, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "NHẬP DỮ LIỆU";
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 619);
+            this.ClientSize = new System.Drawing.Size(799, 749);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.btnThoat);
@@ -356,11 +406,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NhanVien";
+            this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +450,9 @@
         private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label8;
     }
 }

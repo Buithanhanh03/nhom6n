@@ -30,12 +30,12 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnLayLai = new System.Windows.Forms.Button();
             this.txtMaXT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,16 @@
             this.groupBox1.Size = new System.Drawing.Size(458, 227);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(346, 156);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(84, 23);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "TRỞ LẠI";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLayLai
             // 
@@ -106,16 +116,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TÀI KHOẢN";
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(346, 156);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 23);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "TRỞ LẠI";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +123,7 @@
             this.ClientSize = new System.Drawing.Size(459, 363);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "QuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuenMatKhau";

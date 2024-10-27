@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbHien = new System.Windows.Forms.CheckBox();
             this.linklblQuenMK = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.txtTK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbHien = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,17 @@
             this.groupBox1.Size = new System.Drawing.Size(458, 227);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cbHien
+            // 
+            this.cbHien.AutoSize = true;
+            this.cbHien.Location = new System.Drawing.Point(185, 136);
+            this.cbHien.Name = "cbHien";
+            this.cbHien.Size = new System.Drawing.Size(111, 17);
+            this.cbHien.TabIndex = 5;
+            this.cbHien.Text = "HIỂN MẬT KHẨU";
+            this.cbHien.UseVisualStyleBackColor = true;
+            this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // linklblQuenMK
             // 
@@ -120,17 +131,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // cbHien
-            // 
-            this.cbHien.AutoSize = true;
-            this.cbHien.Location = new System.Drawing.Point(185, 136);
-            this.cbHien.Name = "cbHien";
-            this.cbHien.Size = new System.Drawing.Size(111, 17);
-            this.cbHien.TabIndex = 5;
-            this.cbHien.Text = "HIỂN MẬT KHẨU";
-            this.cbHien.UseVisualStyleBackColor = true;
-            this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
-            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +138,7 @@
             this.ClientSize = new System.Drawing.Size(459, 361);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";

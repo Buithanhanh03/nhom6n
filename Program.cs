@@ -16,7 +16,7 @@ namespace BTL_ThucTap_LTNET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaoCaoTonKho());
+            Application.Run(new Main());
         }
     }
 }

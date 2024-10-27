@@ -64,6 +64,12 @@
     <Compile Include="BaoCaoTonKho.Designer.cs">
       <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoTri.Designer.cs">
+      <DependentUpon>BaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="DonDatHang.Designer.cs">
       <DependentUpon>DonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuongDan.Designer.cs">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </Compile>
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
@@ -127,6 +139,12 @@
       <DependentUpon>SanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="TempSave.cs" />
+    <Compile Include="ThongTinUngDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinUngDung.Designer.cs">
+      <DependentUpon>ThongTinUngDung.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,11 +154,17 @@
     <EmbeddedResource Include="BaoCaoTonKho.resx">
       <DependentUpon>BaoCaoTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoTri.resx">
+      <DependentUpon>BaoTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DonDatHang.resx">
       <DependentUpon>DonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuongDan.resx">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InHoaDon.resx">
       <DependentUpon>InHoaDon.cs</DependentUpon>
@@ -176,6 +200,9 @@
     <EmbeddedResource Include="SanPham.resx">
       <DependentUpon>SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinUngDung.resx">
+      <DependentUpon>ThongTinUngDung.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,6 +221,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ao_dong_phuc_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -53,11 +53,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbChucnang = new System.Windows.Forms.GroupBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.txtSoluong = new System.Windows.Forms.RichTextBox();
-            this.txtThongtin = new System.Windows.Forms.RichTextBox();
-            this.btnThanhtoan = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnThanhtoan = new System.Windows.Forms.Button();
+            this.txtThongtin = new System.Windows.Forms.RichTextBox();
+            this.txtSoluong = new System.Windows.Forms.RichTextBox();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -292,36 +292,16 @@
             this.gbChucnang.TabIndex = 5;
             this.gbChucnang.TabStop = false;
             // 
-            // btnThem
+            // btnHuy
             // 
-            this.btnThem.Enabled = false;
-            this.btnThem.Location = new System.Drawing.Point(23, 20);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(173, 41);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "THÊM VÀO GIỎ";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // txtSoluong
-            // 
-            this.txtSoluong.Enabled = false;
-            this.txtSoluong.Location = new System.Drawing.Point(216, 20);
-            this.txtSoluong.Name = "txtSoluong";
-            this.txtSoluong.Size = new System.Drawing.Size(159, 41);
-            this.txtSoluong.TabIndex = 1;
-            this.txtSoluong.Text = "";
-            this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
-            // 
-            // txtThongtin
-            // 
-            this.txtThongtin.Enabled = false;
-            this.txtThongtin.Location = new System.Drawing.Point(23, 77);
-            this.txtThongtin.Name = "txtThongtin";
-            this.txtThongtin.Size = new System.Drawing.Size(352, 75);
-            this.txtThongtin.TabIndex = 2;
-            this.txtThongtin.Text = "";
-            this.txtThongtin.TextChanged += new System.EventHandler(this.txtThongtin_TextChanged);
+            this.btnHuy.Enabled = false;
+            this.btnHuy.Location = new System.Drawing.Point(202, 168);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(173, 41);
+            this.btnHuy.TabIndex = 4;
+            this.btnHuy.Text = "HỦY BỎ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThanhtoan
             // 
@@ -334,16 +314,36 @@
             this.btnThanhtoan.UseVisualStyleBackColor = true;
             this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
             // 
-            // btnHuy
+            // txtThongtin
             // 
-            this.btnHuy.Enabled = false;
-            this.btnHuy.Location = new System.Drawing.Point(202, 168);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(173, 41);
-            this.btnHuy.TabIndex = 4;
-            this.btnHuy.Text = "HỦY BỎ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.txtThongtin.Enabled = false;
+            this.txtThongtin.Location = new System.Drawing.Point(23, 77);
+            this.txtThongtin.Name = "txtThongtin";
+            this.txtThongtin.Size = new System.Drawing.Size(352, 75);
+            this.txtThongtin.TabIndex = 2;
+            this.txtThongtin.Text = "";
+            this.txtThongtin.TextChanged += new System.EventHandler(this.txtThongtin_TextChanged);
+            // 
+            // txtSoluong
+            // 
+            this.txtSoluong.Enabled = false;
+            this.txtSoluong.Location = new System.Drawing.Point(216, 20);
+            this.txtSoluong.Name = "txtSoluong";
+            this.txtSoluong.Size = new System.Drawing.Size(159, 41);
+            this.txtSoluong.TabIndex = 1;
+            this.txtSoluong.Text = "";
+            this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Enabled = false;
+            this.btnThem.Location = new System.Drawing.Point(23, 20);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(173, 41);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "THÊM VÀO GIỎ";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // BanHang
             // 
@@ -356,6 +356,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BanHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanHang";

@@ -37,10 +37,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnNhap = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNhap = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbThongtinKH.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +130,22 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên KH";
             // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(91, 20);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(353, 20);
+            this.txtMaKH.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mã KH";
+            // 
             // btnNhap
             // 
             this.btnNhap.Location = new System.Drawing.Point(96, 201);
@@ -150,22 +166,6 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(91, 20);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(353, 20);
-            this.txtMaKH.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã KH";
-            // 
             // NhapKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,7 +175,7 @@
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbThongtinKH);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhapKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhapKhachHang";

@@ -380,6 +380,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BaoCaoTonKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo doanh thu";

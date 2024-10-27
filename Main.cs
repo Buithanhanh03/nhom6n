@@ -113,5 +113,33 @@ namespace BTL_ThucTap_LTNET
                 }
             }
         }
+
+        private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongTinUngDung f =new ThongTinUngDung();
+            f.ShowDialog();
+        }
+
+        private void tRỢGIÚPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HuongDan f =new HuongDan();
+            f.ShowDialog();
+        }
+
+        private void bẢOTRÌToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoTri f = new BaoTri();
+            f.ShowDialog();
+        }
+
+        private void tHOÁTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tHOÁTToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
