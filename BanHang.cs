@@ -114,13 +114,16 @@ namespace BTL_ThucTap_LTNET
 
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    if (cell.OwningColumn.HeaderText == "Tên" || cell.OwningColumn.HeaderText == "Đã bán")
+                    if (cell.Value != null)
                     {
-                        info += cell.OwningColumn.HeaderText + ": " + cell.Value.ToString() + "\n";
-                    }
-                    if (cell.OwningColumn.HeaderText == "Ảnh")
-                    {
-                        imagePath = cell.Value?.ToString();
+                        if (cell.OwningColumn.HeaderText == "Tên" || cell.OwningColumn.HeaderText == "Đã bán")
+                        {
+                            info += cell.OwningColumn.HeaderText + ": " + cell.Value.ToString() + "\n";
+                        }
+                        if (cell.OwningColumn.HeaderText == "Ảnh")
+                        {
+                            imagePath = cell.Value.ToString();
+                        }
                     }
                 }
 
