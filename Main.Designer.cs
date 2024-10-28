@@ -42,8 +42,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.trackBarVolume = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.cbNhac = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnBanhang = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
@@ -171,8 +169,6 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.trackBarVolume);
-            this.guna2Panel1.Controls.Add(this.cbNhac);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
             this.guna2Panel1.Controls.Add(this.btnBanhang);
             this.guna2Panel1.Controls.Add(this.btnBaocaotonkho);
@@ -183,38 +179,8 @@
             this.guna2Panel1.Controls.Add(this.btnKhohang);
             this.guna2Panel1.Location = new System.Drawing.Point(1, 90);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(272, 431);
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 389);
             this.guna2Panel1.TabIndex = 13;
-            // 
-            // trackBarVolume
-            // 
-            this.trackBarVolume.Location = new System.Drawing.Point(11, 408);
-            this.trackBarVolume.Name = "trackBarVolume";
-            this.trackBarVolume.Size = new System.Drawing.Size(246, 23);
-            this.trackBarVolume.TabIndex = 5;
-            this.trackBarVolume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.trackBarVolume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.trackBarVolume_Scroll);
-            // 
-            // cbNhac
-            // 
-            this.cbNhac.BackColor = System.Drawing.Color.Transparent;
-            this.cbNhac.BorderRadius = 10;
-            this.cbNhac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNhac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNhac.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNhac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbNhac.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNhac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbNhac.ItemHeight = 30;
-            this.cbNhac.Items.AddRange(new object[] {
-            "NGHE NHẠC",
-            "Calamity1"});
-            this.cbNhac.Location = new System.Drawing.Point(23, 373);
-            this.cbNhac.Name = "cbNhac";
-            this.cbNhac.Size = new System.Drawing.Size(222, 36);
-            this.cbNhac.StartIndex = 0;
-            this.cbNhac.TabIndex = 3;
-            this.cbNhac.SelectedIndexChanged += new System.EventHandler(this.cbNhac_SelectedIndexChanged);
             // 
             // guna2TileButton1
             // 
@@ -378,7 +344,7 @@
             this.pictureBox1.ImageRotate = 0F;
             this.pictureBox1.Location = new System.Drawing.Point(288, 92);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 420);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 387);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -388,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 524);
+            this.ClientSize = new System.Drawing.Size(674, 485);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -436,7 +402,5 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnBanhang;
         private Guna.UI2.WinForms.Guna2TileButton btnBaocaotonkho;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbNhac;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarVolume;
     }
 }

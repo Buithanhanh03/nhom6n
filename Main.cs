@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using NAudio.Wave;
 
 namespace BTL_ThucTap_LTNET
 {
@@ -24,8 +23,6 @@ namespace BTL_ThucTap_LTNET
         private Timer imageTimer;
         private Timer fadeTimer;
         private float opacity = 1.0f;
-        private WaveOutEvent outputDevice;
-        private AudioFileReader audioFileReader;
         public Main()
         {
             InitializeComponent();
@@ -198,60 +195,5 @@ namespace BTL_ThucTap_LTNET
 
         }
 
-        private void btnMute_Click(object sender, EventArgs e)
-        {
-            player.Stop();
-        }
-
-        private void btnUnmute_Click(object sender, EventArgs e)
-        {
-            player.Play();
-        }
-
-        private void cbNhac_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Dừng nhạc hiện tại nếu có
-            StopMusic();
-
-            // Lấy file nhạc tương ứng với mục được chọn
-            string selectedTrack = cbNhac.SelectedItem.ToString();
-            string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nhac", $"{selectedTrack}.wav");
-
-            if (File.Exists(relativePath))
-            {
-                // Khởi tạo NAudio để phát nhạc
-                outputDevice = new WaveOutEvent();
-                audioFileReader = new AudioFileReader(relativePath);
-                outputDevice.Init(audioFileReader);
-                outputDevice.Play();
-
-                // Thiết lập âm lượng
-                audioFileReader.Volume = trackBarVolume.Value / 100f; // Điều chỉnh âm lượng từ 0.0 đến 1.0
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy file nhạc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void trackBarVolume_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (audioFileReader != null)
-            {
-                audioFileReader.Volume = trackBarVolume.Value / 100f; // Điều chỉnh âm lượng theo giá trị của TrackBar
-            }
-        }
-        private void StopMusic()
-        {
-            if (outputDevice != null)
-            {
-                outputDevice.Stop();
-                outputDevice.Dispose();
-                outputDevice = null;
-
-                audioFileReader?.Dispose();
-                audioFileReader = null;
-            }
-        }
     }
 }
