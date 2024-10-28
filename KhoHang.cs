@@ -304,6 +304,7 @@ namespace BTL_ThucTap_LTNET
                     maddh = random.Next(1, 1001);
                     SqlCommand checkMaddh = new SqlCommand("SELECT COUNT(*) FROM dondathang WHERE maddh = @maddh", conn);
                     checkMaddh.Parameters.AddWithValue("@maddh", maddh);
+                    conn.Open();
                     int exists = (int)checkMaddh.ExecuteScalar();
                     if (exists == 0) break;
                 } while (true);

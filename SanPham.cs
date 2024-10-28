@@ -168,6 +168,7 @@ namespace BTL_ThucTap_LTNET
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtMa.Enabled = false;
+                txtMadm.Enabled = false;
                 btnCapnhat.Enabled = true;
                 btnXoa.Enabled = false;
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];

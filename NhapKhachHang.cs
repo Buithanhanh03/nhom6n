@@ -28,7 +28,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is TextBox && string.IsNullOrWhiteSpace(ctrl.Text) || ctrl is RichTextBox && string.IsNullOrWhiteSpace(ctrl.Text))
+                if (ctrl is Guna.UI2.WinForms.Guna2TextBox TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
                 {
                     return false;
                 }
@@ -110,7 +110,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control control in groupBox1.Controls)
             {
-                if (control is TextBox || control is RichTextBox)
+                if (control is Guna.UI2.WinForms.Guna2TextBox TextBox)
                 {
                     control.Text = string.Empty;
                 }

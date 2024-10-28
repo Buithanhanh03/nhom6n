@@ -185,6 +185,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DonDatHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DonDatHang";
             this.Load += new System.EventHandler(this.DonDatHang_Load);
             this.groupBox1.ResumeLayout(false);
