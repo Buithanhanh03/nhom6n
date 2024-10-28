@@ -247,5 +247,23 @@
   <ItemGroup>
     <None Include="Resources\uniform-shop-01.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SteelSword_W03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HGR_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIND_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

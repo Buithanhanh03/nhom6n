@@ -29,104 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("BÁN HÀNG");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("SẢN PHẨM");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("KHO HÀNG");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("BÁO CÁO TỒN KHO", -2, -2);
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("BÁO CÁO DOANH THU", -2, -2);
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("BÁO CÁO", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("NHÂN VIÊN");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("KHÁCH HÀNG");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("ĐƠN ĐẶT HÀNG");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("DANH MỤC", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageListMainIcon = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnKhachhang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnBaocaodoanhthu = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnBanhang = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tHÔNGTINỨNGDỤNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bẢOTRÌToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHOÁTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHOÁTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // treeView1
-            // 
-            this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeView1.ForeColor = System.Drawing.Color.Black;
-            this.treeView1.ImageIndex = 0;
-            this.treeView1.ImageList = this.imageListMainIcon;
-            this.treeView1.Location = new System.Drawing.Point(-1, 92);
-            this.treeView1.Name = "treeView1";
-            treeNode1.ImageKey = "shopping-cart.png";
-            treeNode1.Name = "Node1";
-            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode1.SelectedImageKey = "shopping-cart.png";
-            treeNode1.Text = "BÁN HÀNG";
-            treeNode2.ImageKey = "SanPham.png";
-            treeNode2.Name = "Node2";
-            treeNode2.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode2.SelectedImageKey = "SanPham.png";
-            treeNode2.Text = "SẢN PHẨM";
-            treeNode3.ImageKey = "KhoHang.png";
-            treeNode3.Name = "Node3";
-            treeNode3.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode3.SelectedImageKey = "KhoHang.png";
-            treeNode3.Text = "KHO HÀNG";
-            treeNode4.ImageIndex = -2;
-            treeNode4.Name = "Node7";
-            treeNode4.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode4.SelectedImageIndex = -2;
-            treeNode4.Text = "BÁO CÁO TỒN KHO";
-            treeNode5.ImageIndex = -2;
-            treeNode5.Name = "Node8";
-            treeNode5.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode5.SelectedImageIndex = -2;
-            treeNode5.Text = "BÁO CÁO DOANH THU";
-            treeNode6.Name = "Node4";
-            treeNode6.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode6.Text = "BÁO CÁO";
-            treeNode7.ImageKey = "NhanVien.png";
-            treeNode7.Name = "Node6";
-            treeNode7.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode7.SelectedImageKey = "NhanVien.png";
-            treeNode7.Text = "NHÂN VIÊN";
-            treeNode8.Name = "Node1";
-            treeNode8.Text = "KHÁCH HÀNG";
-            treeNode9.Name = "Node2";
-            treeNode9.Text = "ĐƠN ĐẶT HÀNG";
-            treeNode10.ImageIndex = -2;
-            treeNode10.Name = "Node0";
-            treeNode10.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode10.SelectedImageIndex = -2;
-            treeNode10.Text = "DANH MỤC";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10});
-            this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.ShowPlusMinus = false;
-            this.treeView1.ShowRootLines = false;
-            this.treeView1.Size = new System.Drawing.Size(264, 357);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView1_DrawNode);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick_1);
             // 
             // imageListMainIcon
             // 
@@ -175,6 +105,211 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox2.Location = new System.Drawing.Point(1, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(272, 39);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(19, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "CHỨC NĂNG";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel1.Controls.Add(this.btnBanhang);
+            this.guna2Panel1.Controls.Add(this.btnBaocaotonkho);
+            this.guna2Panel1.Controls.Add(this.btnBaocaodoanhthu);
+            this.guna2Panel1.Controls.Add(this.btnKhachhang);
+            this.guna2Panel1.Controls.Add(this.btnNhanvien);
+            this.guna2Panel1.Controls.Add(this.btnSanpham);
+            this.guna2Panel1.Controls.Add(this.btnKhohang);
+            this.guna2Panel1.Location = new System.Drawing.Point(1, 90);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 373);
+            this.guna2Panel1.TabIndex = 13;
+            // 
+            // btnKhohang
+            // 
+            this.btnKhohang.Animated = true;
+            this.btnKhohang.BorderRadius = 10;
+            this.btnKhohang.BorderThickness = 1;
+            this.btnKhohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhohang.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnKhohang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKhohang.ForeColor = System.Drawing.Color.White;
+            this.btnKhohang.Location = new System.Drawing.Point(11, 72);
+            this.btnKhohang.Name = "btnKhohang";
+            this.btnKhohang.Size = new System.Drawing.Size(246, 37);
+            this.btnKhohang.TabIndex = 0;
+            this.btnKhohang.Text = "KHO HÀNG";
+            this.btnKhohang.Click += new System.EventHandler(this.btnKhohang_Click);
+            // 
+            // btnSanpham
+            // 
+            this.btnSanpham.Animated = true;
+            this.btnSanpham.BorderRadius = 10;
+            this.btnSanpham.BorderThickness = 1;
+            this.btnSanpham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanpham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanpham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanpham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSanpham.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnSanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSanpham.ForeColor = System.Drawing.Color.White;
+            this.btnSanpham.Location = new System.Drawing.Point(11, 115);
+            this.btnSanpham.Name = "btnSanpham";
+            this.btnSanpham.Size = new System.Drawing.Size(246, 37);
+            this.btnSanpham.TabIndex = 0;
+            this.btnSanpham.Text = "SẢN PHẨM";
+            this.btnSanpham.Click += new System.EventHandler(this.btnSanpham_Click);
+            // 
+            // btnNhanvien
+            // 
+            this.btnNhanvien.Animated = true;
+            this.btnNhanvien.BorderRadius = 10;
+            this.btnNhanvien.BorderThickness = 1;
+            this.btnNhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhanvien.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnNhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNhanvien.ForeColor = System.Drawing.Color.White;
+            this.btnNhanvien.Location = new System.Drawing.Point(11, 201);
+            this.btnNhanvien.Name = "btnNhanvien";
+            this.btnNhanvien.Size = new System.Drawing.Size(246, 37);
+            this.btnNhanvien.TabIndex = 0;
+            this.btnNhanvien.Text = "NHÂN VIÊN";
+            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
+            // 
+            // btnKhachhang
+            // 
+            this.btnKhachhang.Animated = true;
+            this.btnKhachhang.BorderRadius = 10;
+            this.btnKhachhang.BorderThickness = 1;
+            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhachhang.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnKhachhang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKhachhang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachhang.Location = new System.Drawing.Point(11, 158);
+            this.btnKhachhang.Name = "btnKhachhang";
+            this.btnKhachhang.Size = new System.Drawing.Size(246, 37);
+            this.btnKhachhang.TabIndex = 0;
+            this.btnKhachhang.Text = "KHÁCH HÀNG";
+            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
+            // 
+            // btnBaocaodoanhthu
+            // 
+            this.btnBaocaodoanhthu.Animated = true;
+            this.btnBaocaodoanhthu.BorderRadius = 10;
+            this.btnBaocaodoanhthu.BorderThickness = 1;
+            this.btnBaocaodoanhthu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaodoanhthu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaodoanhthu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaocaodoanhthu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
+            this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
+            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 287);
+            this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
+            this.btnBaocaodoanhthu.Size = new System.Drawing.Size(246, 37);
+            this.btnBaocaodoanhthu.TabIndex = 0;
+            this.btnBaocaodoanhthu.Text = "BÁO CÁO DOANH THU";
+            this.btnBaocaodoanhthu.Click += new System.EventHandler(this.btnBaocaodoanhthu_Click);
+            // 
+            // btnBanhang
+            // 
+            this.btnBanhang.BorderColor = System.Drawing.Color.Gold;
+            this.btnBanhang.BorderRadius = 10;
+            this.btnBanhang.BorderThickness = 2;
+            this.btnBanhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBanhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBanhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBanhang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBanhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBanhang.FillColor = System.Drawing.Color.Lime;
+            this.btnBanhang.FillColor2 = System.Drawing.Color.Red;
+            this.btnBanhang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBanhang.ForeColor = System.Drawing.Color.White;
+            this.btnBanhang.Location = new System.Drawing.Point(3, 2);
+            this.btnBanhang.Name = "btnBanhang";
+            this.btnBanhang.Size = new System.Drawing.Size(265, 55);
+            this.btnBanhang.TabIndex = 1;
+            this.btnBanhang.Text = "BÁN HÀNG";
+            this.btnBanhang.Click += new System.EventHandler(this.btnBanhang_Click);
+            // 
+            // btnBaocaotonkho
+            // 
+            this.btnBaocaotonkho.Animated = true;
+            this.btnBaocaotonkho.BorderRadius = 10;
+            this.btnBaocaotonkho.BorderThickness = 1;
+            this.btnBaocaotonkho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaotonkho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaotonkho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaocaotonkho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaocaotonkho.FillColor = System.Drawing.Color.Navy;
+            this.btnBaocaotonkho.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBaocaotonkho.ForeColor = System.Drawing.Color.White;
+            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 330);
+            this.btnBaocaotonkho.Name = "btnBaocaotonkho";
+            this.btnBaocaotonkho.Size = new System.Drawing.Size(246, 37);
+            this.btnBaocaotonkho.TabIndex = 0;
+            this.btnBaocaotonkho.Text = "BÁO CÁO TỒN KHO";
+            this.btnBaocaotonkho.Click += new System.EventHandler(this.btnBaocaotonkho_Click);
+            // 
+            // guna2TileButton1
+            // 
+            this.guna2TileButton1.Animated = true;
+            this.guna2TileButton1.BorderRadius = 10;
+            this.guna2TileButton1.BorderThickness = 1;
+            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton1.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.Location = new System.Drawing.Point(11, 244);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.Size = new System.Drawing.Size(246, 37);
+            this.guna2TileButton1.TabIndex = 2;
+            this.guna2TileButton1.Text = "ĐƠN ĐẶT HÀNG";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderRadius = 10;
+            this.pictureBox1.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.ao_dong_phuc_1;
+            this.pictureBox1.ImageRotate = 0F;
+            this.pictureBox1.Location = new System.Drawing.Point(288, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(383, 370);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
             // tHÔNGTINỨNGDỤNGToolStripMenuItem
             // 
             this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
@@ -215,46 +350,15 @@
             this.tHOÁTToolStripMenuItem1.Text = "THOÁT";
             this.tHOÁTToolStripMenuItem1.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem1_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(1, 44);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(262, 39);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(19, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "CHỨC NĂNG";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(288, 92);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(383, 357);
-            this.guna2PictureBox1.TabIndex = 12;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 456);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.ClientSize = new System.Drawing.Size(674, 465);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
@@ -268,14 +372,14 @@
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ImageList imageListMainIcon;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -287,6 +391,15 @@
         private System.Windows.Forms.ToolStripMenuItem tHOÁTToolStripMenuItem1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2TileButton btnBaocaodoanhthu;
+        private Guna.UI2.WinForms.Guna2TileButton btnKhachhang;
+        private Guna.UI2.WinForms.Guna2TileButton btnNhanvien;
+        private Guna.UI2.WinForms.Guna2TileButton btnSanpham;
+        private Guna.UI2.WinForms.Guna2TileButton btnKhohang;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnBanhang;
+        private Guna.UI2.WinForms.Guna2TileButton btnBaocaotonkho;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
     }
 }

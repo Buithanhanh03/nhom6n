@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,105 +16,65 @@ namespace BTL_ThucTap_LTNET
     public partial class Main : Form
     {
 
+        private Image[] images;
+        private int currentImageIndex = 0;
+        private Timer imageTimer;
+        private Timer fadeTimer;
+        private float opacity = 1.0f;
         public Main()
         {
             InitializeComponent();
-            treeView1.BackColor = Color.LightBlue;
-            treeView1.ForeColor = Color.White;
-            treeView1.DrawMode = TreeViewDrawMode.OwnerDrawText;
-            treeView1.DrawNode += new DrawTreeNodeEventHandler(treeView1_DrawNode);
+            string imageDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "anh");
+            string[] imagePaths = Directory.GetFiles(imageDirectory, "*.jpg");
 
-            
+            // Khởi tạo mảng ảnh từ các đường dẫn tương đối
+            images = new Image[imagePaths.Length];
+            for (int i = 0; i < imagePaths.Length; i++)
+            {
+                images[i] = Image.FromFile(imagePaths[i]);
+            }
+
+            // Hiển thị ảnh đầu tiên
+            pictureBox1.Image = images[currentImageIndex];
+            pictureBox1.Paint += pictureBox1_Paint;
+
+            // Thiết lập Timer cho việc chuyển ảnh mỗi 5 giây
+            imageTimer = new Timer();
+            imageTimer.Interval = 5000;
+            imageTimer.Tick += ImageTimer_Tick;
+            imageTimer.Start();
+
+            // Thiết lập Timer cho hiệu ứng mờ dần
+            fadeTimer = new Timer();
+            fadeTimer.Interval = 50; // Mỗi lần giảm độ mờ sau 50 ms
+            fadeTimer.Tick += FadeTimer_Tick;
         }
 
+        private void ImageTimer_Tick(object sender, EventArgs e)
+        {
+            // Bắt đầu hiệu ứng mờ dần trước khi chuyển ảnh
+            opacity = 1.0f;
+            fadeTimer.Start();
+        }
+        private void FadeTimer_Tick(object sender, EventArgs e)
+        {
+            // Giảm độ mờ và yêu cầu vẽ lại PictureBox
+            opacity -= 0.1f;
+            if (opacity <= 0)
+            {
+                // Khi độ mờ đạt đến mức 0, chuyển sang ảnh tiếp theo
+                currentImageIndex = (currentImageIndex + 1) % images.Length;
+                pictureBox1.Image = images[currentImageIndex];
+
+                // Đặt lại độ mờ và dừng fadeTimer
+                opacity = 1.0f;
+                fadeTimer.Stop();
+            }
+            pictureBox1.Invalidate(); // Yêu cầu PictureBox vẽ lại
+        }
         private void Main_Load(object sender, EventArgs e)
         {
-            treeView1.ExpandAll();
-        }
-        private void treeView1_DrawNode(object sender, DrawTreeNodeEventArgs e)
-        {
-            Font nodeFont;
-            if (e.Node.Level == 0)
-            {
-                nodeFont = new Font(treeView1.Font.FontFamily, 12, FontStyle.Bold); 
-            }
-            else if (e.Node.Level == 1)
-            {
-                nodeFont = new Font(treeView1.Font.FontFamily, 10, FontStyle.Regular);
-            }
-            else if (e.Node.Level == 2)
-            {
-                nodeFont = new Font(treeView1.Font.FontFamily, 8, FontStyle.Regular);
-            }
-            else
-            {
-                nodeFont = treeView1.Font;
-            }
-
-            if (e.Node.IsSelected)
-            {
-                e.Graphics.FillRectangle(Brushes.DarkBlue, e.Bounds);
-                TextRenderer.DrawText(e.Graphics, e.Node.Text, nodeFont, e.Bounds, Color.White);
-            }
-            else
-            {
-                e.Graphics.FillRectangle(Brushes.Transparent, e.Bounds);
-                TextRenderer.DrawText(e.Graphics, e.Node.Text, nodeFont, e.Bounds, Color.Black);
-            }
-        }
-       
-
-        private void treeView1_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            if (e.Node.Level == 1)
-            {
-                if (e.Node.Text == "BÁN HÀNG")
-                {
-                    BanHang f = new BanHang();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "SẢN PHẨM")
-                {
-                    SanPham f = new SanPham();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "KHO HÀNG")
-                {
-                    KhoHang f = new KhoHang();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "NHÂN VIÊN")
-                {
-                    NhanVien f = new NhanVien();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "KHÁCH HÀNG")
-                {
-                    KhachHang f = new KhachHang();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "ĐƠN ĐẶT HÀNG")
-                {
-                    DonDatHang f = new DonDatHang();
-                    f.ShowDialog();
-                }
-
-            }
-            if (e.Node.Level == 2)
-            {
-                if (e.Node.Text == "BÁO CÁO TỒN KHO")
-                {
-                    BaoCaoTonKho f = new BaoCaoTonKho();
-                    f.ShowDialog();
-                }
-                else if (e.Node.Text == "BÁO CÁO DOANH THU")
-                {
-                    BaoCaoDoanhThu f = new BaoCaoDoanhThu();
-                    f.ShowDialog();
-                }
-            }
-        }
-
+        }       
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ThongTinUngDung f =new ThongTinUngDung();
@@ -133,6 +95,8 @@ namespace BTL_ThucTap_LTNET
 
         private void tHOÁTToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DangNhap f =new DangNhap();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -150,6 +114,75 @@ namespace BTL_ThucTap_LTNET
             using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, color1, color2, LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void btnBanhang_Click(object sender, EventArgs e)
+        {
+            BanHang f = new BanHang();
+            f.ShowDialog();
+        }
+
+        private void btnKhohang_Click(object sender, EventArgs e)
+        {
+            KhoHang f = new KhoHang();
+            f.ShowDialog();
+        }
+
+        private void btnSanpham_Click(object sender, EventArgs e)
+        {
+            SanPham f = new SanPham();
+            f.ShowDialog();
+        }
+
+        private void btnKhachhang_Click(object sender, EventArgs e)
+        {
+            KhachHang f = new KhachHang();
+            f.ShowDialog();
+        }
+
+        private void btnNhanvien_Click(object sender, EventArgs e)
+        {
+            NhanVien f = new NhanVien();
+            f.ShowDialog();
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            DonDatHang f = new DonDatHang();
+            f.ShowDialog();
+        }
+
+        private void btnBaocaodoanhthu_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhThu f = new BaoCaoDoanhThu();
+            f.ShowDialog();
+        }
+
+        private void btnBaocaotonkho_Click(object sender, EventArgs e)
+        {
+            BaoCaoTonKho f = new BaoCaoTonKho();
+            f.ShowDialog();
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            // Vẽ ảnh với độ mờ hiện tại
+            if (pictureBox1.Image != null)
+            {
+                e.Graphics.Clear(pictureBox1.BackColor);
+                ColorMatrix colorMatrix = new ColorMatrix
+                {
+                    Matrix33 = opacity // Đặt độ mờ của ảnh
+                };
+                ImageAttributes attributes = new ImageAttributes();
+                attributes.SetColorMatrix(colorMatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+
+                // Vẽ ảnh với độ mờ
+                e.Graphics.DrawImage(pictureBox1.Image,
+                                     new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height),
+                                     0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height,
+                                     GraphicsUnit.Pixel, attributes);
             }
         }
     }
