@@ -57,12 +57,15 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control control in groupBox1.Controls)
             {
-                if (control is TextBox || control is RichTextBox)
+                if (control is Guna.UI2.WinForms.Guna2TextBox)
                 {
                     control.Text = string.Empty;
                 }
             }
             comboBoxChucvu.SelectedIndex = -1;
+            btnSua.Enabled = true;
+            btnThem.Enabled = true;
+            btnCapnhat.Enabled = false;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -278,6 +281,11 @@ namespace BTL_ThucTap_LTNET
             {
                 (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

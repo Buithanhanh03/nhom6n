@@ -33,7 +33,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
+                if (ctrl is Guna.UI2.WinForms.Guna2TextBox TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
                 {
                     return false;
                 }
@@ -115,12 +115,14 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control control in groupBox1.Controls)
             {
-                if (control is System.Windows.Forms.TextBox)
+                if (control is Guna.UI2.WinForms.Guna2TextBox TextBox)
                 {
                     control.Text = string.Empty;
                 }
             }
-
+            btnCapnhat.Enabled = false;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void SanPham_Load(object sender, EventArgs e)

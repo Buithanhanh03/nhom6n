@@ -28,121 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnLayLai = new System.Windows.Forms.Button();
-            this.txtMaXT = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtMaXT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLaylai = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // guna2PictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 136);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.uniform_shop_01;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(154, 48);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(458, 138);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
-            // groupBox1
+            // guna2GroupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnBack);
-            this.groupBox1.Controls.Add(this.btnLayLai);
-            this.groupBox1.Controls.Add(this.txtMaXT);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTK);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(1, 136);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(458, 227);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2GroupBox1.BorderRadius = 10;
+            this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.btnBack);
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2GroupBox1.Controls.Add(this.txtMaXT);
+            this.guna2GroupBox1.Controls.Add(this.txtTK);
+            this.guna2GroupBox1.Controls.Add(this.btnLaylai);
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Silver;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(154, 192);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 274);
+            this.guna2GroupBox1.TabIndex = 5;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(346, 156);
+            this.btnBack.BorderRadius = 15;
+            this.btnBack.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(255, 215);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 23);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "TRỞ LẠI";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Size = new System.Drawing.Size(162, 31);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "THOÁT";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnLayLai
+            // guna2HtmlLabel2
             // 
-            this.btnLayLai.Location = new System.Drawing.Point(139, 156);
-            this.btnLayLai.Name = "btnLayLai";
-            this.btnLayLai.Size = new System.Drawing.Size(201, 23);
-            this.btnLayLai.TabIndex = 2;
-            this.btnLayLai.Text = "LẤY LẠI MẬT KHẨU";
-            this.btnLayLai.UseVisualStyleBackColor = true;
-            this.btnLayLai.Click += new System.EventHandler(this.btnLayLai_Click);
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(161, 53);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(165, 22);
+            this.guna2HtmlLabel2.TabIndex = 14;
+            this.guna2HtmlLabel2.Text = "LẤY LẠI MẬT KHẨU";
             // 
             // txtMaXT
             // 
-            this.txtMaXT.Location = new System.Drawing.Point(141, 94);
+            this.txtMaXT.BorderRadius = 10;
+            this.txtMaXT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaXT.DefaultText = "";
+            this.txtMaXT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaXT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaXT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaXT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaXT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaXT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaXT.ForeColor = System.Drawing.Color.Black;
+            this.txtMaXT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaXT.Location = new System.Drawing.Point(73, 137);
             this.txtMaXT.Name = "txtMaXT";
-            this.txtMaXT.Size = new System.Drawing.Size(289, 20);
-            this.txtMaXT.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MÃ XÁC THỰC";
+            this.txtMaXT.PasswordChar = '*';
+            this.txtMaXT.PlaceholderText = "Nhập mã xác thực";
+            this.txtMaXT.SelectedText = "";
+            this.txtMaXT.Size = new System.Drawing.Size(344, 33);
+            this.txtMaXT.TabIndex = 12;
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(139, 46);
+            this.txtTK.BorderRadius = 10;
+            this.txtTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTK.DefaultText = "";
+            this.txtTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTK.ForeColor = System.Drawing.Color.Black;
+            this.txtTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTK.Location = new System.Drawing.Point(73, 95);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(291, 20);
-            this.txtTK.TabIndex = 1;
+            this.txtTK.PasswordChar = '\0';
+            this.txtTK.PlaceholderText = "Nhập tài khoản cần tìm";
+            this.txtTK.SelectedText = "";
+            this.txtTK.Size = new System.Drawing.Size(344, 33);
+            this.txtTK.TabIndex = 13;
             // 
-            // label1
+            // btnLaylai
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TÀI KHOẢN";
+            this.btnLaylai.BorderRadius = 15;
+            this.btnLaylai.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnLaylai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLaylai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLaylai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLaylai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLaylai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLaylai.ForeColor = System.Drawing.Color.White;
+            this.btnLaylai.Location = new System.Drawing.Point(73, 215);
+            this.btnLaylai.Name = "btnLaylai";
+            this.btnLaylai.Size = new System.Drawing.Size(167, 31);
+            this.btnLaylai.TabIndex = 11;
+            this.btnLaylai.Text = "XÁC NHẬN";
+            this.btnLaylai.Click += new System.EventHandler(this.btnLayLai_Click);
             // 
             // QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 363);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(757, 519);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "QuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuenMatKhau";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLayLai;
-        private System.Windows.Forms.TextBox txtMaXT;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTK;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBack;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaXT;
+        private Guna.UI2.WinForms.Guna2TextBox txtTK;
+        private Guna.UI2.WinForms.Guna2Button btnLaylai;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
     }
 }

@@ -116,7 +116,7 @@ namespace BTL_ThucTap_LTNET
                 {
                     if (cell.Value != null)
                     {
-                        if (cell.OwningColumn.HeaderText == "Tên" || cell.OwningColumn.HeaderText == "Đã bán")
+                        if (cell.OwningColumn.HeaderText == "Tên SP" || cell.OwningColumn.HeaderText == "SLĐB")
                         {
                             info += cell.OwningColumn.HeaderText + ": " + cell.Value.ToString() + "\n";
                         }

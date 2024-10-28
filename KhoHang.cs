@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -81,7 +82,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is System.Windows.Forms.TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
+                if (ctrl is Guna.UI2.WinForms.Guna2TextBox TextBox && string.IsNullOrWhiteSpace(ctrl.Text))
                 {
                     return false;
                 }
@@ -109,7 +110,7 @@ namespace BTL_ThucTap_LTNET
             }
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is System.Windows.Forms.TextBox)
+                if (ctrl is Guna.UI2.WinForms.Guna2TextBox TextBox)
                 {
                     ctrl.Enabled = true;
                 }
@@ -159,26 +160,31 @@ namespace BTL_ThucTap_LTNET
 
         private void btnNhapthem_Click(object sender, EventArgs e)
         {
-            foreach(Control ctrl in groupBox1.Controls)
+            foreach (Control control in groupBox1.Controls)
             {
-                if(ctrl is System.Windows.Forms.TextBox && ctrl != txtTonkho)
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
                 {
-                    ctrl.Enabled = false;
+                    if(control != txtTonkho)
+                    {
+                        control.Enabled = true;
+                    }    
                 }
             }
             btnCapnhat.Enabled = true;
-            btnNhaphangmoi.Enabled = false;
-            btnAnh.Enabled = false;
-            btnReset.Enabled = false;
-
         }
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtTonkho.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập số lượng muốn nhập thêm");
+                return;
+            }
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 int masp = int.Parse(selectedRow.Cells["masp"].Value.ToString());
-                int tonkho = int.Parse(txtTonkho.Text);
+                int tonkhocu = int.Parse(selectedRow.Cells["tonkho"].Value.ToString());
+                int soluongnhap = int.Parse(txtTonkho.Text);
                 
                 conn = connectdb();
                 conn = new SqlConnection(sqlqr);
@@ -189,7 +195,7 @@ namespace BTL_ThucTap_LTNET
                     SqlCommand cmd = conn.CreateCommand();
                     cmd.CommandText = sql;
                     cmd.Parameters.AddWithValue("@masp", masp);
-                    cmd.Parameters.AddWithValue("@tonkho", tonkho);
+                    cmd.Parameters.AddWithValue("@tonkho", (tonkhocu + soluongnhap));
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã sửa thành công");
                     conn.Close();
@@ -199,6 +205,7 @@ namespace BTL_ThucTap_LTNET
                     btnAnh.Enabled = true;
                     btnReset.Enabled = true;
                     btnCapnhat.Enabled = false;
+                    btnReset_Click(null, null);
                 }
 
             }
@@ -211,7 +218,7 @@ namespace BTL_ThucTap_LTNET
         {
             foreach (Control ctrl in groupBox1.Controls)
             {
-                if (ctrl is System.Windows.Forms.TextBox)
+                if (ctrl is Guna.UI2.WinForms.Guna2TextBox textBox)
                 {
                     ctrl.Enabled = true;
                 }
@@ -333,6 +340,24 @@ namespace BTL_ThucTap_LTNET
                     relativePath = relativePath.Replace("/", "\\");
                 }
             }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in groupBox1.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
+                {
+                    control.Text = string.Empty;
+                    control.Enabled = true;
+                }
+            }
+            btnCapnhat.Enabled = false;
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

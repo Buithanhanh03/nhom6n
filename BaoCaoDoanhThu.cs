@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using System.Drawing.Drawing2D;
 
 namespace BTL_ThucTap_LTNET
 {
@@ -108,6 +109,18 @@ namespace BTL_ThucTap_LTNET
             Bitmap bmp = new Bitmap(this.Width, this.Height);
             this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
             e.Graphics.DrawImage(bmp, 0, 0);
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            Color color1 = Color.MediumAquamarine;
+            Color color2 = Color.WhiteSmoke;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, color1, color2, LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
     }
 }

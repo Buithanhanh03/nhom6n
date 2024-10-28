@@ -47,5 +47,10 @@ namespace BTL_ThucTap_LTNET
         {
             richTextBox1.Text = "KHÁCH HÀNG VÀ ĐƠN ĐẶT HÀNG:\r\nBạn có thể xem danh sách tương ứng ở đây.";
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

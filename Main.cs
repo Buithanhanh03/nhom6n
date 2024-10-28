@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,30 +34,28 @@ namespace BTL_ThucTap_LTNET
             Font nodeFont;
             if (e.Node.Level == 0)
             {
-                nodeFont = new Font(treeView1.Font.FontFamily, 12, FontStyle.Bold); // Bậc 1
+                nodeFont = new Font(treeView1.Font.FontFamily, 12, FontStyle.Bold); 
             }
             else if (e.Node.Level == 1)
             {
-                nodeFont = new Font(treeView1.Font.FontFamily, 10, FontStyle.Regular); // Bậc 1
+                nodeFont = new Font(treeView1.Font.FontFamily, 10, FontStyle.Regular);
             }
             else if (e.Node.Level == 2)
             {
-                nodeFont = new Font(treeView1.Font.FontFamily, 8, FontStyle.Regular); // Bậc 2
+                nodeFont = new Font(treeView1.Font.FontFamily, 8, FontStyle.Regular);
             }
             else
             {
-                nodeFont = treeView1.Font; // Sử dụng font mặc định cho các cấp độ khác
+                nodeFont = treeView1.Font;
             }
 
             if (e.Node.IsSelected)
             {
-                // Tô màu nền khi node được chọn
                 e.Graphics.FillRectangle(Brushes.DarkBlue, e.Bounds);
                 TextRenderer.DrawText(e.Graphics, e.Node.Text, nodeFont, e.Bounds, Color.White);
             }
             else
             {
-                // Tô màu nền khi node không được chọn
                 e.Graphics.FillRectangle(Brushes.Transparent, e.Bounds);
                 TextRenderer.DrawText(e.Graphics, e.Node.Text, nodeFont, e.Bounds, Color.Black);
             }
@@ -140,6 +139,18 @@ namespace BTL_ThucTap_LTNET
         private void tHOÁTToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            Color color1 = Color.LightPink;
+            Color color2 = Color.IndianRed;
+
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, color1, color2, LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
     }
 }

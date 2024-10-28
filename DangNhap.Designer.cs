@@ -28,138 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbHien = new System.Windows.Forms.CheckBox();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.cbHien = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.linklblQuenMK = new System.Windows.Forms.LinkLabel();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.txtMK = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // guna2GroupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbHien);
-            this.groupBox1.Controls.Add(this.linklblQuenMK);
-            this.groupBox1.Controls.Add(this.btnDangNhap);
-            this.groupBox1.Controls.Add(this.txtMK);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTK);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(1, 136);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(458, 227);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2GroupBox1.BorderRadius = 10;
+            this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.btnDangNhap);
+            this.guna2GroupBox1.Controls.Add(this.cbHien);
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2GroupBox1.Controls.Add(this.txtMK);
+            this.guna2GroupBox1.Controls.Add(this.txtTK);
+            this.guna2GroupBox1.Controls.Add(this.linklblQuenMK);
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Silver;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(154, 192);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 274);
+            this.guna2GroupBox1.TabIndex = 2;
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Animated = true;
+            this.btnDangNhap.AnimatedGIF = true;
+            this.btnDangNhap.BorderRadius = 20;
+            this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangNhap.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangNhap.FillColor = System.Drawing.Color.Cyan;
+            this.btnDangNhap.FillColor2 = System.Drawing.Color.LightCoral;
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Location = new System.Drawing.Point(111, 208);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(259, 45);
+            this.btnDangNhap.TabIndex = 16;
+            this.btnDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // cbHien
             // 
             this.cbHien.AutoSize = true;
-            this.cbHien.Location = new System.Drawing.Point(185, 136);
+            this.cbHien.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.cbHien.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbHien.CheckedState.BorderRadius = 0;
+            this.cbHien.CheckedState.BorderThickness = 0;
+            this.cbHien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbHien.ForeColor = System.Drawing.Color.Black;
+            this.cbHien.Location = new System.Drawing.Point(73, 183);
             this.cbHien.Name = "cbHien";
-            this.cbHien.Size = new System.Drawing.Size(111, 17);
-            this.cbHien.TabIndex = 5;
-            this.cbHien.Text = "HIỂN MẬT KHẨU";
-            this.cbHien.UseVisualStyleBackColor = true;
+            this.cbHien.Size = new System.Drawing.Size(104, 19);
+            this.cbHien.TabIndex = 15;
+            this.cbHien.Text = "Hiện mật khẩu";
+            this.cbHien.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbHien.UncheckedState.BorderRadius = 0;
+            this.cbHien.UncheckedState.BorderThickness = 0;
+            this.cbHien.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(190, 52);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(103, 22);
+            this.guna2HtmlLabel2.TabIndex = 14;
+            this.guna2HtmlLabel2.Text = "XIN CHÀO !!";
+            // 
+            // txtMK
+            // 
+            this.txtMK.BorderRadius = 10;
+            this.txtMK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMK.DefaultText = "";
+            this.txtMK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMK.ForeColor = System.Drawing.Color.Black;
+            this.txtMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMK.Location = new System.Drawing.Point(73, 137);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
+            this.txtMK.PlaceholderText = "Nhập mật khẩu";
+            this.txtMK.SelectedText = "";
+            this.txtMK.Size = new System.Drawing.Size(344, 33);
+            this.txtMK.TabIndex = 12;
+            // 
+            // txtTK
+            // 
+            this.txtTK.BorderRadius = 10;
+            this.txtTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTK.DefaultText = "";
+            this.txtTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTK.ForeColor = System.Drawing.Color.Black;
+            this.txtTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTK.Location = new System.Drawing.Point(73, 95);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.PasswordChar = '\0';
+            this.txtTK.PlaceholderText = "Nhập tài khoản";
+            this.txtTK.SelectedText = "";
+            this.txtTK.Size = new System.Drawing.Size(344, 33);
+            this.txtTK.TabIndex = 13;
             // 
             // linklblQuenMK
             // 
             this.linklblQuenMK.AutoSize = true;
-            this.linklblQuenMK.Location = new System.Drawing.Point(212, 194);
+            this.linklblQuenMK.Location = new System.Drawing.Point(307, 183);
             this.linklblQuenMK.Name = "linklblQuenMK";
-            this.linklblQuenMK.Size = new System.Drawing.Size(106, 13);
-            this.linklblQuenMK.TabIndex = 3;
+            this.linklblQuenMK.Size = new System.Drawing.Size(110, 15);
+            this.linklblQuenMK.TabIndex = 9;
             this.linklblQuenMK.TabStop = true;
             this.linklblQuenMK.Text = "QUÊN MẬT KHẨU ?";
-            this.linklblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblQuenMK_LinkClicked);
+            this.linklblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblQuenMK_LinkClicked_1);
             // 
-            // btnDangNhap
+            // guna2PictureBox1
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(185, 159);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(168, 23);
-            this.btnDangNhap.TabIndex = 2;
-            this.btnDangNhap.Text = "ĐĂNG NHẬP";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // txtMK
-            // 
-            this.txtMK.Location = new System.Drawing.Point(114, 94);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.PasswordChar = '*';
-            this.txtMK.Size = new System.Drawing.Size(316, 20);
-            this.txtMK.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MẬT KHẨU";
-            // 
-            // txtTK
-            // 
-            this.txtTK.Location = new System.Drawing.Point(114, 46);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(316, 20);
-            this.txtTK.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TÀI KHOẢN";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 136);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.uniform_shop_01;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(154, 48);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(458, 138);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 3;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 361);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(757, 519);
+            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtMK;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTK;
-        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMK;
+        private Guna.UI2.WinForms.Guna2TextBox txtTK;
         private System.Windows.Forms.LinkLabel linklblQuenMK;
-        private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox cbHien;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2CheckBox cbHien;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
     }
 }
 
