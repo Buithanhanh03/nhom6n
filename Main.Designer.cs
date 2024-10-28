@@ -34,23 +34,25 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnKhachhang = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnBaocaodoanhthu = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnBanhang = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tHÔNGTINỨNGDỤNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bẢOTRÌToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHOÁTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHOÁTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.trackBarVolume = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.cbNhac = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnBanhang = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnBaocaodoanhthu = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnKhachhang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -105,6 +107,46 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // tHÔNGTINỨNGDỤNGToolStripMenuItem
+            // 
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Name = "tHÔNGTINỨNGDỤNGToolStripMenuItem";
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Size = new System.Drawing.Size(212, 25);
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Text = "THÔNG TIN ỨNG DỤNG";
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Click += new System.EventHandler(this.tHÔNGTINỨNGDỤNGToolStripMenuItem_Click);
+            // 
+            // tRỢGIÚPToolStripMenuItem
+            // 
+            this.tRỢGIÚPToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
+            this.tRỢGIÚPToolStripMenuItem.Name = "tRỢGIÚPToolStripMenuItem";
+            this.tRỢGIÚPToolStripMenuItem.Size = new System.Drawing.Size(135, 25);
+            this.tRỢGIÚPToolStripMenuItem.Text = "HƯỚNG DẪN";
+            this.tRỢGIÚPToolStripMenuItem.Click += new System.EventHandler(this.tRỢGIÚPToolStripMenuItem_Click);
+            // 
+            // bẢOTRÌToolStripMenuItem
+            // 
+            this.bẢOTRÌToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.wrench;
+            this.bẢOTRÌToolStripMenuItem.Name = "bẢOTRÌToolStripMenuItem";
+            this.bẢOTRÌToolStripMenuItem.Size = new System.Drawing.Size(99, 25);
+            this.bẢOTRÌToolStripMenuItem.Text = "BẢO TRÌ";
+            this.bẢOTRÌToolStripMenuItem.Click += new System.EventHandler(this.bẢOTRÌToolStripMenuItem_Click);
+            // 
+            // tHOÁTToolStripMenuItem
+            // 
+            this.tHOÁTToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
+            this.tHOÁTToolStripMenuItem.Name = "tHOÁTToolStripMenuItem";
+            this.tHOÁTToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
+            this.tHOÁTToolStripMenuItem.Text = "ĐĂNG XUẤT";
+            this.tHOÁTToolStripMenuItem.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem_Click);
+            // 
+            // tHOÁTToolStripMenuItem1
+            // 
+            this.tHOÁTToolStripMenuItem1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
+            this.tHOÁTToolStripMenuItem1.Name = "tHOÁTToolStripMenuItem1";
+            this.tHOÁTToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
+            this.tHOÁTToolStripMenuItem1.Text = "THOÁT";
+            this.tHOÁTToolStripMenuItem1.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem1_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
@@ -129,6 +171,8 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.trackBarVolume);
+            this.guna2Panel1.Controls.Add(this.cbNhac);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
             this.guna2Panel1.Controls.Add(this.btnBanhang);
             this.guna2Panel1.Controls.Add(this.btnBaocaotonkho);
@@ -139,103 +183,57 @@
             this.guna2Panel1.Controls.Add(this.btnKhohang);
             this.guna2Panel1.Location = new System.Drawing.Point(1, 90);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(272, 373);
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 431);
             this.guna2Panel1.TabIndex = 13;
             // 
-            // btnKhohang
+            // trackBarVolume
             // 
-            this.btnKhohang.Animated = true;
-            this.btnKhohang.BorderRadius = 10;
-            this.btnKhohang.BorderThickness = 1;
-            this.btnKhohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhohang.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnKhohang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKhohang.ForeColor = System.Drawing.Color.White;
-            this.btnKhohang.Location = new System.Drawing.Point(11, 72);
-            this.btnKhohang.Name = "btnKhohang";
-            this.btnKhohang.Size = new System.Drawing.Size(246, 37);
-            this.btnKhohang.TabIndex = 0;
-            this.btnKhohang.Text = "KHO HÀNG";
-            this.btnKhohang.Click += new System.EventHandler(this.btnKhohang_Click);
+            this.trackBarVolume.Location = new System.Drawing.Point(11, 408);
+            this.trackBarVolume.Name = "trackBarVolume";
+            this.trackBarVolume.Size = new System.Drawing.Size(246, 23);
+            this.trackBarVolume.TabIndex = 5;
+            this.trackBarVolume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.trackBarVolume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.trackBarVolume_Scroll);
             // 
-            // btnSanpham
+            // cbNhac
             // 
-            this.btnSanpham.Animated = true;
-            this.btnSanpham.BorderRadius = 10;
-            this.btnSanpham.BorderThickness = 1;
-            this.btnSanpham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanpham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanpham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSanpham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSanpham.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnSanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSanpham.ForeColor = System.Drawing.Color.White;
-            this.btnSanpham.Location = new System.Drawing.Point(11, 115);
-            this.btnSanpham.Name = "btnSanpham";
-            this.btnSanpham.Size = new System.Drawing.Size(246, 37);
-            this.btnSanpham.TabIndex = 0;
-            this.btnSanpham.Text = "SẢN PHẨM";
-            this.btnSanpham.Click += new System.EventHandler(this.btnSanpham_Click);
+            this.cbNhac.BackColor = System.Drawing.Color.Transparent;
+            this.cbNhac.BorderRadius = 10;
+            this.cbNhac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNhac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNhac.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbNhac.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbNhac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNhac.ItemHeight = 30;
+            this.cbNhac.Items.AddRange(new object[] {
+            "NGHE NHẠC",
+            "Calamity1"});
+            this.cbNhac.Location = new System.Drawing.Point(23, 373);
+            this.cbNhac.Name = "cbNhac";
+            this.cbNhac.Size = new System.Drawing.Size(222, 36);
+            this.cbNhac.StartIndex = 0;
+            this.cbNhac.TabIndex = 3;
+            this.cbNhac.SelectedIndexChanged += new System.EventHandler(this.cbNhac_SelectedIndexChanged);
             // 
-            // btnNhanvien
+            // guna2TileButton1
             // 
-            this.btnNhanvien.Animated = true;
-            this.btnNhanvien.BorderRadius = 10;
-            this.btnNhanvien.BorderThickness = 1;
-            this.btnNhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhanvien.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnNhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNhanvien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanvien.Location = new System.Drawing.Point(11, 201);
-            this.btnNhanvien.Name = "btnNhanvien";
-            this.btnNhanvien.Size = new System.Drawing.Size(246, 37);
-            this.btnNhanvien.TabIndex = 0;
-            this.btnNhanvien.Text = "NHÂN VIÊN";
-            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
-            // 
-            // btnKhachhang
-            // 
-            this.btnKhachhang.Animated = true;
-            this.btnKhachhang.BorderRadius = 10;
-            this.btnKhachhang.BorderThickness = 1;
-            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhachhang.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnKhachhang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKhachhang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachhang.Location = new System.Drawing.Point(11, 158);
-            this.btnKhachhang.Name = "btnKhachhang";
-            this.btnKhachhang.Size = new System.Drawing.Size(246, 37);
-            this.btnKhachhang.TabIndex = 0;
-            this.btnKhachhang.Text = "KHÁCH HÀNG";
-            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
-            // 
-            // btnBaocaodoanhthu
-            // 
-            this.btnBaocaodoanhthu.Animated = true;
-            this.btnBaocaodoanhthu.BorderRadius = 10;
-            this.btnBaocaodoanhthu.BorderThickness = 1;
-            this.btnBaocaodoanhthu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocaodoanhthu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBaocaodoanhthu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBaocaodoanhthu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
-            this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 287);
-            this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
-            this.btnBaocaodoanhthu.Size = new System.Drawing.Size(246, 37);
-            this.btnBaocaodoanhthu.TabIndex = 0;
-            this.btnBaocaodoanhthu.Text = "BÁO CÁO DOANH THU";
-            this.btnBaocaodoanhthu.Click += new System.EventHandler(this.btnBaocaodoanhthu_Click);
+            this.guna2TileButton1.Animated = true;
+            this.guna2TileButton1.BorderRadius = 10;
+            this.guna2TileButton1.BorderThickness = 1;
+            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton1.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.Location = new System.Drawing.Point(11, 244);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.Size = new System.Drawing.Size(246, 37);
+            this.guna2TileButton1.TabIndex = 2;
+            this.guna2TileButton1.Text = "ĐƠN ĐẶT HÀNG";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
             // 
             // btnBanhang
             // 
@@ -277,24 +275,100 @@
             this.btnBaocaotonkho.Text = "BÁO CÁO TỒN KHO";
             this.btnBaocaotonkho.Click += new System.EventHandler(this.btnBaocaotonkho_Click);
             // 
-            // guna2TileButton1
+            // btnBaocaodoanhthu
             // 
-            this.guna2TileButton1.Animated = true;
-            this.guna2TileButton1.BorderRadius = 10;
-            this.guna2TileButton1.BorderThickness = 1;
-            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2TileButton1.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.Location = new System.Drawing.Point(11, 244);
-            this.guna2TileButton1.Name = "guna2TileButton1";
-            this.guna2TileButton1.Size = new System.Drawing.Size(246, 37);
-            this.guna2TileButton1.TabIndex = 2;
-            this.guna2TileButton1.Text = "ĐƠN ĐẶT HÀNG";
-            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
+            this.btnBaocaodoanhthu.Animated = true;
+            this.btnBaocaodoanhthu.BorderRadius = 10;
+            this.btnBaocaodoanhthu.BorderThickness = 1;
+            this.btnBaocaodoanhthu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaodoanhthu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaocaodoanhthu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaocaodoanhthu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
+            this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
+            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 287);
+            this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
+            this.btnBaocaodoanhthu.Size = new System.Drawing.Size(246, 37);
+            this.btnBaocaodoanhthu.TabIndex = 0;
+            this.btnBaocaodoanhthu.Text = "BÁO CÁO DOANH THU";
+            this.btnBaocaodoanhthu.Click += new System.EventHandler(this.btnBaocaodoanhthu_Click);
+            // 
+            // btnKhachhang
+            // 
+            this.btnKhachhang.Animated = true;
+            this.btnKhachhang.BorderRadius = 10;
+            this.btnKhachhang.BorderThickness = 1;
+            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhachhang.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnKhachhang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKhachhang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachhang.Location = new System.Drawing.Point(11, 158);
+            this.btnKhachhang.Name = "btnKhachhang";
+            this.btnKhachhang.Size = new System.Drawing.Size(246, 37);
+            this.btnKhachhang.TabIndex = 0;
+            this.btnKhachhang.Text = "KHÁCH HÀNG";
+            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
+            // 
+            // btnNhanvien
+            // 
+            this.btnNhanvien.Animated = true;
+            this.btnNhanvien.BorderRadius = 10;
+            this.btnNhanvien.BorderThickness = 1;
+            this.btnNhanvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhanvien.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnNhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNhanvien.ForeColor = System.Drawing.Color.White;
+            this.btnNhanvien.Location = new System.Drawing.Point(11, 201);
+            this.btnNhanvien.Name = "btnNhanvien";
+            this.btnNhanvien.Size = new System.Drawing.Size(246, 37);
+            this.btnNhanvien.TabIndex = 0;
+            this.btnNhanvien.Text = "NHÂN VIÊN";
+            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
+            // 
+            // btnSanpham
+            // 
+            this.btnSanpham.Animated = true;
+            this.btnSanpham.BorderRadius = 10;
+            this.btnSanpham.BorderThickness = 1;
+            this.btnSanpham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanpham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanpham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanpham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSanpham.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnSanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSanpham.ForeColor = System.Drawing.Color.White;
+            this.btnSanpham.Location = new System.Drawing.Point(11, 115);
+            this.btnSanpham.Name = "btnSanpham";
+            this.btnSanpham.Size = new System.Drawing.Size(246, 37);
+            this.btnSanpham.TabIndex = 0;
+            this.btnSanpham.Text = "SẢN PHẨM";
+            this.btnSanpham.Click += new System.EventHandler(this.btnSanpham_Click);
+            // 
+            // btnKhohang
+            // 
+            this.btnKhohang.Animated = true;
+            this.btnKhohang.BorderRadius = 10;
+            this.btnKhohang.BorderThickness = 1;
+            this.btnKhohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhohang.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnKhohang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKhohang.ForeColor = System.Drawing.Color.White;
+            this.btnKhohang.Location = new System.Drawing.Point(11, 72);
+            this.btnKhohang.Name = "btnKhohang";
+            this.btnKhohang.Size = new System.Drawing.Size(246, 37);
+            this.btnKhohang.TabIndex = 0;
+            this.btnKhohang.Text = "KHO HÀNG";
+            this.btnKhohang.Click += new System.EventHandler(this.btnKhohang_Click);
             // 
             // pictureBox1
             // 
@@ -304,57 +378,17 @@
             this.pictureBox1.ImageRotate = 0F;
             this.pictureBox1.Location = new System.Drawing.Point(288, 92);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 370);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 420);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // tHÔNGTINỨNGDỤNGToolStripMenuItem
-            // 
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Name = "tHÔNGTINỨNGDỤNGToolStripMenuItem";
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Size = new System.Drawing.Size(212, 25);
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Text = "THÔNG TIN ỨNG DỤNG";
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Click += new System.EventHandler(this.tHÔNGTINỨNGDỤNGToolStripMenuItem_Click);
-            // 
-            // tRỢGIÚPToolStripMenuItem
-            // 
-            this.tRỢGIÚPToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
-            this.tRỢGIÚPToolStripMenuItem.Name = "tRỢGIÚPToolStripMenuItem";
-            this.tRỢGIÚPToolStripMenuItem.Size = new System.Drawing.Size(135, 25);
-            this.tRỢGIÚPToolStripMenuItem.Text = "HƯỚNG DẪN";
-            this.tRỢGIÚPToolStripMenuItem.Click += new System.EventHandler(this.tRỢGIÚPToolStripMenuItem_Click);
-            // 
-            // bẢOTRÌToolStripMenuItem
-            // 
-            this.bẢOTRÌToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.wrench;
-            this.bẢOTRÌToolStripMenuItem.Name = "bẢOTRÌToolStripMenuItem";
-            this.bẢOTRÌToolStripMenuItem.Size = new System.Drawing.Size(99, 25);
-            this.bẢOTRÌToolStripMenuItem.Text = "BẢO TRÌ";
-            this.bẢOTRÌToolStripMenuItem.Click += new System.EventHandler(this.bẢOTRÌToolStripMenuItem_Click);
-            // 
-            // tHOÁTToolStripMenuItem
-            // 
-            this.tHOÁTToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
-            this.tHOÁTToolStripMenuItem.Name = "tHOÁTToolStripMenuItem";
-            this.tHOÁTToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
-            this.tHOÁTToolStripMenuItem.Text = "ĐĂNG XUẤT";
-            this.tHOÁTToolStripMenuItem.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem_Click);
-            // 
-            // tHOÁTToolStripMenuItem1
-            // 
-            this.tHOÁTToolStripMenuItem1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
-            this.tHOÁTToolStripMenuItem1.Name = "tHOÁTToolStripMenuItem1";
-            this.tHOÁTToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
-            this.tHOÁTToolStripMenuItem1.Text = "THOÁT";
-            this.tHOÁTToolStripMenuItem1.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem1_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 465);
+            this.ClientSize = new System.Drawing.Size(674, 524);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -365,6 +399,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -401,5 +436,7 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnBanhang;
         private Guna.UI2.WinForms.Guna2TileButton btnBaocaotonkho;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbNhac;
+        private Guna.UI2.WinForms.Guna2TrackBar trackBarVolume;
     }
 }

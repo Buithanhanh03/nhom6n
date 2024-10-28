@@ -7,20 +7,25 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using NAudio.Wave;
 
 namespace BTL_ThucTap_LTNET
 {
     public partial class Main : Form
     {
-
+        private SoundPlayer player;
         private Image[] images;
         private int currentImageIndex = 0;
         private Timer imageTimer;
         private Timer fadeTimer;
         private float opacity = 1.0f;
+        private WaveOutEvent outputDevice;
+        private AudioFileReader audioFileReader;
         public Main()
         {
             InitializeComponent();
@@ -74,16 +79,18 @@ namespace BTL_ThucTap_LTNET
         }
         private void Main_Load(object sender, EventArgs e)
         {
-        }       
+
+        }
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThongTinUngDung f =new ThongTinUngDung();
+            player.Stop();
+            ThongTinUngDung f = new ThongTinUngDung();
             f.ShowDialog();
         }
 
         private void tRỢGIÚPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HuongDan f =new HuongDan();
+            HuongDan f = new HuongDan();
             f.ShowDialog();
         }
 
@@ -95,7 +102,7 @@ namespace BTL_ThucTap_LTNET
 
         private void tHOÁTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DangNhap f =new DangNhap();
+            DangNhap f = new DangNhap();
             f.ShowDialog();
             this.Close();
         }
@@ -183,6 +190,67 @@ namespace BTL_ThucTap_LTNET
                                      new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height),
                                      0, 0, pictureBox1.Image.Width, pictureBox1.Image.Height,
                                      GraphicsUnit.Pixel, attributes);
+            }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void btnMute_Click(object sender, EventArgs e)
+        {
+            player.Stop();
+        }
+
+        private void btnUnmute_Click(object sender, EventArgs e)
+        {
+            player.Play();
+        }
+
+        private void cbNhac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Dừng nhạc hiện tại nếu có
+            StopMusic();
+
+            // Lấy file nhạc tương ứng với mục được chọn
+            string selectedTrack = cbNhac.SelectedItem.ToString();
+            string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nhac", $"{selectedTrack}.wav");
+
+            if (File.Exists(relativePath))
+            {
+                // Khởi tạo NAudio để phát nhạc
+                outputDevice = new WaveOutEvent();
+                audioFileReader = new AudioFileReader(relativePath);
+                outputDevice.Init(audioFileReader);
+                outputDevice.Play();
+
+                // Thiết lập âm lượng
+                audioFileReader.Volume = trackBarVolume.Value / 100f; // Điều chỉnh âm lượng từ 0.0 đến 1.0
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy file nhạc.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void trackBarVolume_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (audioFileReader != null)
+            {
+                audioFileReader.Volume = trackBarVolume.Value / 100f; // Điều chỉnh âm lượng theo giá trị của TrackBar
+            }
+        }
+        private void StopMusic()
+        {
+            if (outputDevice != null)
+            {
+                outputDevice.Stop();
+                outputDevice.Dispose();
+                outputDevice = null;
+
+                audioFileReader?.Dispose();
+                audioFileReader = null;
             }
         }
     }
