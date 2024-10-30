@@ -35,6 +35,7 @@
             this.txtMaXT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLaylai = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Controls.Add(this.btnBack);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.txtMaXT);
@@ -81,7 +83,7 @@
             this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(255, 215);
+            this.btnBack.Location = new System.Drawing.Point(255, 199);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(162, 31);
             this.btnBack.TabIndex = 15;
@@ -151,12 +153,23 @@
             this.btnLaylai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLaylai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLaylai.ForeColor = System.Drawing.Color.White;
-            this.btnLaylai.Location = new System.Drawing.Point(73, 215);
+            this.btnLaylai.Location = new System.Drawing.Point(73, 199);
             this.btnLaylai.Name = "btnLaylai";
             this.btnLaylai.Size = new System.Drawing.Size(167, 31);
             this.btnLaylai.TabIndex = 11;
             this.btnLaylai.Text = "XÁC NHẬN";
             this.btnLaylai.Click += new System.EventHandler(this.btnLayLai_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DarkGray;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(161, 236);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(163, 17);
+            this.guna2HtmlLabel1.TabIndex = 18;
+            this.guna2HtmlLabel1.Text = "*Mã xác thực mặc định là 0410";
             // 
             // QuenMatKhau
             // 
@@ -186,5 +199,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTK;
         private Guna.UI2.WinForms.Guna2Button btnLaylai;
         private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
