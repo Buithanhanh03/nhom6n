@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,9 @@ namespace BTL_ThucTap_LTNET
 {
     public partial class SanPham : Form
     {
+        Guna2Panel panelDetail = new Guna2Panel();
+        Label lblInfo = new Label();
+        PictureBox pictureBox = new PictureBox();
         private string selectedImagePath;
         private string relativePath;
         private SqlConnection conn = null;
@@ -23,6 +27,30 @@ namespace BTL_ThucTap_LTNET
         public SanPham()
         {
             InitializeComponent();
+            InitializePanel();
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            this.Click += SanPham_Click;
+        }
+        private void InitializePanel()
+        {
+            panelDetail.Size = new Size(150, 150);
+            panelDetail.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            panelDetail.BackColor = Color.LightBlue;
+            panelDetail.Visible = false;
+            panelDetail.BorderRadius = 10;
+            panelDetail.BorderThickness = 1;
+
+            lblInfo.AutoSize = true;
+            lblInfo.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
+            lblInfo.Location = new Point(5, 5);
+            panelDetail.Controls.Add(lblInfo);
+
+            pictureBox.Size = new Size(100, 100);
+            pictureBox.Location = new Point(5, 30);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            panelDetail.Controls.Add(pictureBox);
+
+            this.Controls.Add(panelDetail);
         }
         private SqlConnection connectdb()
         {
@@ -55,37 +83,13 @@ namespace BTL_ThucTap_LTNET
         }
         private void LoadForm()
         {
-            dataGridView1.Rows.Clear();
-            anh.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            string query = "SELECT masp, tensp, gia, anh, mau, madm, tonkho FROM sanpham"; 
-
-            using (SqlConnection conn = new SqlConnection(sqlqr))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    string imgPath = row["anh"].ToString();
-                    string imagePath = Path.Combine(Application.StartupPath, imgPath);
-                    Image productImage = null;
-                    if (System.IO.File.Exists(imagePath))
-                    {
-                        productImage = Image.FromFile(imagePath);
-                    }
-                    int index = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[index].Cells["anh"].Value = productImage;  
-                    dataGridView1.Rows[index].Cells["masp"].Value = row["masp"];
-                    dataGridView1.Rows[index].Cells["tensp"].Value = row["tensp"];
-                    dataGridView1.Rows[index].Cells["gia"].Value = row["gia"];
-                    dataGridView1.Rows[index].Cells["mau"].Value = row["mau"];
-                    dataGridView1.Rows[index].Cells["madm"].Value = row["madm"];
-                    dataGridView1.Rows[index].Cells["tonkho"].Value = row["tonkho"];
-                }
-            }
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From sanpham";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
         private void CheckInputType()
         {
@@ -289,6 +293,48 @@ namespace BTL_ThucTap_LTNET
             else
             {
                 MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridView1.Rows[e.RowIndex];
+                string info = "";
+                string imagePath = "";
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        if (cell.OwningColumn.HeaderText == "Tên SP" || cell.OwningColumn.HeaderText == "SLĐB")
+                        {
+                            info += cell.OwningColumn.HeaderText + ": " + cell.Value.ToString() + "\n";
+                        }
+                        if (cell.OwningColumn.HeaderText == "Ảnh")
+                        {
+                            imagePath = cell.Value.ToString();
+                        }
+                    }
+                }
+
+                lblInfo.Text = info;
+                pictureBox.ImageLocation = imagePath;
+                Point dataGridViewLocation = dataGridView1.Location;
+                int rowHeight = dataGridView1.RowTemplate.Height;
+                int panelY = dataGridViewLocation.Y + row.Index * rowHeight;
+                panelDetail.Location = new Point(dataGridViewLocation.X, panelY);
+                panelDetail.BringToFront();
+                panelDetail.Visible = true;
+            }
+        }
+        private void SanPham_Click(object sender, EventArgs e)
+        {
+            if (panelDetail.Visible)
+            {
+                panelDetail.Visible = false;
+                lblInfo.Text = "";
+                pictureBox.Image = null;
             }
         }
     }

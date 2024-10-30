@@ -39,40 +39,32 @@ namespace BTL_ThucTap_LTNET
             // Hiển thị ảnh đầu tiên
             pictureBox1.Image = images[currentImageIndex];
             pictureBox1.Paint += pictureBox1_Paint;
-
-            // Thiết lập Timer cho việc chuyển ảnh mỗi 5 giây
             imageTimer = new Timer();
-            imageTimer.Interval = 5000;
+            imageTimer.Interval = 3000;
             imageTimer.Tick += ImageTimer_Tick;
             imageTimer.Start();
-
-            // Thiết lập Timer cho hiệu ứng mờ dần
             fadeTimer = new Timer();
-            fadeTimer.Interval = 50; // Mỗi lần giảm độ mờ sau 50 ms
+            fadeTimer.Interval = 50;
             fadeTimer.Tick += FadeTimer_Tick;
         }
 
         private void ImageTimer_Tick(object sender, EventArgs e)
         {
-            // Bắt đầu hiệu ứng mờ dần trước khi chuyển ảnh
             opacity = 1.0f;
             fadeTimer.Start();
         }
         private void FadeTimer_Tick(object sender, EventArgs e)
         {
-            // Giảm độ mờ và yêu cầu vẽ lại PictureBox
             opacity -= 0.1f;
             if (opacity <= 0)
             {
-                // Khi độ mờ đạt đến mức 0, chuyển sang ảnh tiếp theo
                 currentImageIndex = (currentImageIndex + 1) % images.Length;
                 pictureBox1.Image = images[currentImageIndex];
 
-                // Đặt lại độ mờ và dừng fadeTimer
                 opacity = 1.0f;
                 fadeTimer.Stop();
             }
-            pictureBox1.Invalidate(); // Yêu cầu PictureBox vẽ lại
+            pictureBox1.Invalidate();
         }
         private void Main_Load(object sender, EventArgs e)
         {

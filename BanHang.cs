@@ -12,12 +12,13 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using TextBox = System.Windows.Forms.TextBox;
+using Guna.UI2.WinForms;
 
 namespace BTL_ThucTap_LTNET
 {
     public partial class BanHang : Form
     {
-        Panel panelDetail = new Panel();
+        Guna2Panel panelDetail = new Guna2Panel();
         Label lblInfo = new Label();
         PictureBox pictureBox = new PictureBox();
         private int slmua = 0;
@@ -35,9 +36,11 @@ namespace BTL_ThucTap_LTNET
         private void InitializePanel()
         {
             panelDetail.Size = new Size(150, 150);
-            panelDetail.BorderStyle = BorderStyle.Fixed3D;
-            panelDetail.BackColor = Color.LightGray;
+            panelDetail.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            panelDetail.BackColor = Color.LightBlue;
             panelDetail.Visible = false;
+            panelDetail.BorderRadius = 10;
+            panelDetail.BorderThickness = 1;
 
             lblInfo.AutoSize = true;
             lblInfo.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
@@ -165,6 +168,12 @@ namespace BTL_ThucTap_LTNET
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                int tonkho = int.Parse(selectedRow.Cells["tonkho"].Value.ToString());
+                if (int.Parse(txtSoluong.Text) > tonkho)
+                {
+                    MessageBox.Show($"Mặt hàng chỉ còn {tonkho} chiếc, hãy nhập lại số lượng mua");
+                    return;
+                }
                 int masp = int.Parse(selectedRow.Cells["masp"].Value.ToString());
                 string tensp = selectedRow.Cells["tensp"].Value.ToString();
                 int gia = int.Parse(selectedRow.Cells["gia"].Value.ToString());

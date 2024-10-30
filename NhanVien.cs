@@ -272,15 +272,16 @@ namespace BTL_ThucTap_LTNET
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
-            string maCanTim = txtTimkiem.Text.Trim();
-            if (!string.IsNullOrEmpty(maCanTim)&&IsInteger(txtTimkiem.Text))
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"manv = '{maCanTim}'";
-            }
-            else
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
-            }
+            string tennv = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From nhanvien Where tennv LIKE @tennv";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@tennv", "%" + tennv + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

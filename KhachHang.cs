@@ -38,5 +38,24 @@ namespace BTL_ThucTap_LTNET
         {
             LoadForm();
         }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string tenkh = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From khachhang Where tenkh LIKE @tenkh";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@tenkh", "%" + tenkh + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

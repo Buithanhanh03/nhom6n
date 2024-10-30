@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBox1.SuspendLayout();
             this.gbThongtinKH.SuspendLayout();
             this.SuspendLayout();
@@ -209,7 +210,7 @@
             this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(303, 257);
+            this.btnReset.Location = new System.Drawing.Point(303, 293);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(180, 36);
             this.btnReset.TabIndex = 22;
@@ -227,18 +228,29 @@
             this.btnNhap.FillColor = System.Drawing.Color.Red;
             this.btnNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNhap.ForeColor = System.Drawing.Color.White;
-            this.btnNhap.Location = new System.Drawing.Point(64, 257);
+            this.btnNhap.Location = new System.Drawing.Point(64, 293);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(180, 36);
             this.btnNhap.TabIndex = 21;
             this.btnNhap.Text = "NHẬP THÔNG TIN";
             this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 252);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(334, 18);
+            this.guna2HtmlLabel2.TabIndex = 23;
+            this.guna2HtmlLabel2.Text = "*Bạn không thể thoát khi chưa nhập thông tin khách hàng";
+            // 
             // NhapKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 314);
+            this.ClientSize = new System.Drawing.Size(532, 341);
+            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.groupBox1);
@@ -252,6 +264,7 @@
             this.gbThongtinKH.ResumeLayout(false);
             this.gbThongtinKH.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -270,5 +283,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMaKH;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button btnNhap;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

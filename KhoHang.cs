@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,6 +21,10 @@ namespace BTL_ThucTap_LTNET
 {
     public partial class KhoHang : Form
     {
+        Guna2Panel panelDetail = new Guna2Panel();
+        Label lblInfo = new Label();
+        PictureBox pictureBox = new PictureBox();
+
         string relativePath;
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
@@ -31,40 +36,19 @@ namespace BTL_ThucTap_LTNET
         public KhoHang()
         {
             InitializeComponent();
+            InitializePanel();
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            this.Click += KhoHang_Click;
         }
         private void LoadSanPham()
         {
-            dataGridView1.Rows.Clear();
-            anh.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            string query = "SELECT masp, tensp, gia, anh, mau, madm, tonkho FROM sanpham";
-
-            using (SqlConnection conn = new SqlConnection(sqlqr))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    string imgPath = row["anh"].ToString();
-                    string imagePath = Path.Combine(Application.StartupPath, imgPath);
-                    Image productImage = null;
-                    if (System.IO.File.Exists(imagePath))
-                    {
-                        productImage = Image.FromFile(imagePath);
-                    }
-                    int index = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[index].Cells["anh"].Value = productImage;
-                    dataGridView1.Rows[index].Cells["masp"].Value = row["masp"];
-                    dataGridView1.Rows[index].Cells["tensp"].Value = row["tensp"];
-                    dataGridView1.Rows[index].Cells["gia"].Value = row["gia"];
-                    dataGridView1.Rows[index].Cells["mau"].Value = row["mau"];
-                    dataGridView1.Rows[index].Cells["madm"].Value = row["madm"];
-                    dataGridView1.Rows[index].Cells["tonkho"].Value = row["tonkho"];
-                }
-            }
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From sanpham";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
         private bool IsInteger(string input)
         {
@@ -100,13 +84,6 @@ namespace BTL_ThucTap_LTNET
                 conn.Open();
 
                 SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    // Giả sử cột cần lấy là cột kiểu string
-                    comboBoxDanhmuc.Items.Add(reader["tendm"].ToString());
-                }
-
-                reader.Close();
             }
             foreach (Control ctrl in groupBox1.Controls)
             {
@@ -121,41 +98,6 @@ namespace BTL_ThucTap_LTNET
         {
             LoadForm();
             LoadSanPham();
-        }
-
-        private void comboBoxDanhmuc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int madmCantim = -1;
-            string tendmCantim = comboBoxDanhmuc.SelectedItem?.ToString();
-
-            if (!string.IsNullOrEmpty(tendmCantim))
-            {
-                conn = connectdb();
-                string query = "SELECT madm FROM danhmuc WHERE tendm = @tendm";
-                using (conn)
-                {
-                    SqlCommand command = new SqlCommand(query, conn);
-                    command.Parameters.AddWithValue("@tendm", tendmCantim);
-
-                    conn.Open();
-                    object result = command.ExecuteScalar();
-                    conn.Close();
-
-                    if (result != null)
-                    {
-                        madmCantim = Convert.ToInt32(result);
-                    }
-                }
-            }
-
-            if (madmCantim != -1)
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"madm = {madmCantim}";
-            }
-            else
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
-            }
         }
 
         private void btnNhapthem_Click(object sender, EventArgs e)
@@ -359,6 +301,85 @@ namespace BTL_ThucTap_LTNET
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string tensp = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From sanpham Where tensp LIKE @tensp";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@tensp", "%" + tensp + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+        private void InitializePanel()
+        {
+            panelDetail.Size = new Size(150, 150);
+            panelDetail.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            panelDetail.BackColor = Color.LightBlue;
+            panelDetail.Visible = false;
+            panelDetail.BorderRadius = 10;
+            panelDetail.BorderThickness = 1;
+
+            lblInfo.AutoSize = true;
+            lblInfo.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
+            lblInfo.Location = new Point(5, 5);
+            panelDetail.Controls.Add(lblInfo);
+
+            pictureBox.Size = new Size(100, 100);
+            pictureBox.Location = new Point(5, 30);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            panelDetail.Controls.Add(pictureBox);
+
+            this.Controls.Add(panelDetail);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridView1.Rows[e.RowIndex];
+                string info = "";
+                string imagePath = "";
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                    {
+                        if (cell.OwningColumn.HeaderText == "Tên SP" || cell.OwningColumn.HeaderText == "SLĐB")
+                        {
+                            info += cell.OwningColumn.HeaderText + ": " + cell.Value.ToString() + "\n";
+                        }
+                        if (cell.OwningColumn.HeaderText == "Ảnh")
+                        {
+                            imagePath = cell.Value.ToString();
+                        }
+                    }
+                }
+
+                lblInfo.Text = info;
+                pictureBox.ImageLocation = imagePath;
+                Point dataGridViewLocation = dataGridView1.Location;
+                int rowHeight = dataGridView1.RowTemplate.Height;
+                int panelY = dataGridViewLocation.Y + row.Index * rowHeight;
+                panelDetail.Location = new Point(dataGridViewLocation.X, panelY);
+                panelDetail.BringToFront();
+                panelDetail.Visible = true;
+            }
+        }
+
+        private void KhoHang_Click(object sender, EventArgs e)
+        {
+            if (panelDetail.Visible)
+            {
+                panelDetail.Visible = false;
+                lblInfo.Text = "";
+                pictureBox.Image = null;
+            }
         }
     }
 }

@@ -101,7 +101,7 @@
             this.tHOÁTToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(1, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(672, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(792, 29);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -234,7 +234,7 @@
             this.btnBaocaotonkho.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaotonkho.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaotonkho.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 330);
+            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 345);
             this.btnBaocaotonkho.Name = "btnBaocaotonkho";
             this.btnBaocaotonkho.Size = new System.Drawing.Size(246, 37);
             this.btnBaocaotonkho.TabIndex = 0;
@@ -253,7 +253,7 @@
             this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 287);
+            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 302);
             this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
             this.btnBaocaodoanhthu.Size = new System.Drawing.Size(246, 37);
             this.btnBaocaodoanhthu.TabIndex = 0;
