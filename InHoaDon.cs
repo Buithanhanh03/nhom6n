@@ -102,8 +102,13 @@ namespace BTL_ThucTap_LTNET
         }
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+            Rectangle printArea = new Rectangle(0, 0, this.Width, this.Height - btnThoat.Height - 10); // Adjust as needed
+
+            // Capture the bitmap of the desired print area
+            Bitmap bmp = new Bitmap(printArea.Width, printArea.Height);
+            this.DrawToBitmap(bmp, printArea);
+
+            // Draw the bitmap on the PrintPage event graphics
             e.Graphics.DrawImage(bmp, 0, 0);
         }
 
