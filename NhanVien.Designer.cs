@@ -166,7 +166,12 @@
             this.comboBoxChucvu.Items.AddRange(new object[] {
             "Nhân viên",
             "Quản lý",
-            "Canh cửa"});
+            "Bảo vệ",
+            "Trực kho",
+            "Kế toán",
+            "Thư ký",
+            "Giám đốc",
+            "Lao công"});
             this.comboBoxChucvu.Location = new System.Drawing.Point(467, 60);
             this.comboBoxChucvu.Name = "comboBoxChucvu";
             this.comboBoxChucvu.Size = new System.Drawing.Size(280, 36);
