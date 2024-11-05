@@ -52,14 +52,6 @@
             this.txtThongtin = new System.Windows.Forms.RichTextBox();
             this.txtSoluong = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masp1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaydat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluongdaban1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +61,16 @@
             this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masp1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaydat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluongdaban1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -143,6 +144,7 @@
             // 
             // gbChucnang
             // 
+            this.gbChucnang.Controls.Add(this.btnThoat);
             this.gbChucnang.Controls.Add(this.btnHuy);
             this.gbChucnang.Controls.Add(this.btnThanhtoan);
             this.gbChucnang.Controls.Add(this.btnThem);
@@ -164,12 +166,12 @@
             this.btnHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHuy.Enabled = false;
-            this.btnHuy.FillColor = System.Drawing.Color.DimGray;
+            this.btnHuy.FillColor = System.Drawing.Color.DarkGray;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(202, 168);
+            this.btnHuy.Location = new System.Drawing.Point(207, 168);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(173, 41);
+            this.btnHuy.Size = new System.Drawing.Size(81, 41);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "HỦY";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -330,6 +332,71 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // masp
+            // 
+            this.masp.DataPropertyName = "masp";
+            this.masp.HeaderText = "Mã SP";
+            this.masp.Name = "masp";
+            this.masp.ReadOnly = true;
+            // 
+            // tensp
+            // 
+            this.tensp.DataPropertyName = "tensp";
+            this.tensp.HeaderText = "Tên SP";
+            this.tensp.Name = "tensp";
+            this.tensp.ReadOnly = true;
+            // 
+            // gia
+            // 
+            this.gia.DataPropertyName = "gia";
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.DataPropertyName = "size";
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            // 
+            // mau
+            // 
+            this.mau.DataPropertyName = "mau";
+            this.mau.HeaderText = "Màu";
+            this.mau.Name = "mau";
+            this.mau.ReadOnly = true;
+            // 
+            // madm
+            // 
+            this.madm.DataPropertyName = "madm";
+            this.madm.HeaderText = "Mã DM";
+            this.madm.Name = "madm";
+            this.madm.ReadOnly = true;
+            // 
+            // tonkho
+            // 
+            this.tonkho.DataPropertyName = "tonkho";
+            this.tonkho.HeaderText = "Tồn kho";
+            this.tonkho.Name = "tonkho";
+            this.tonkho.ReadOnly = true;
+            // 
+            // anh
+            // 
+            this.anh.DataPropertyName = "anh";
+            this.anh.HeaderText = "Ảnh";
+            this.anh.Name = "anh";
+            this.anh.ReadOnly = true;
+            this.anh.Visible = false;
+            // 
+            // soluongdaban
+            // 
+            this.soluongdaban.DataPropertyName = "soluongdaban";
+            this.soluongdaban.HeaderText = "SLĐB";
+            this.soluongdaban.Name = "soluongdaban";
+            this.soluongdaban.ReadOnly = true;
+            this.soluongdaban.Visible = false;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -456,71 +523,6 @@
             this.trangthai.Name = "trangthai";
             this.trangthai.ReadOnly = true;
             // 
-            // masp
-            // 
-            this.masp.DataPropertyName = "masp";
-            this.masp.HeaderText = "Mã SP";
-            this.masp.Name = "masp";
-            this.masp.ReadOnly = true;
-            // 
-            // tensp
-            // 
-            this.tensp.DataPropertyName = "tensp";
-            this.tensp.HeaderText = "Tên SP";
-            this.tensp.Name = "tensp";
-            this.tensp.ReadOnly = true;
-            // 
-            // gia
-            // 
-            this.gia.DataPropertyName = "gia";
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.DataPropertyName = "size";
-            this.size.HeaderText = "Size";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            // 
-            // mau
-            // 
-            this.mau.DataPropertyName = "mau";
-            this.mau.HeaderText = "Màu";
-            this.mau.Name = "mau";
-            this.mau.ReadOnly = true;
-            // 
-            // madm
-            // 
-            this.madm.DataPropertyName = "madm";
-            this.madm.HeaderText = "Mã DM";
-            this.madm.Name = "madm";
-            this.madm.ReadOnly = true;
-            // 
-            // tonkho
-            // 
-            this.tonkho.DataPropertyName = "tonkho";
-            this.tonkho.HeaderText = "Tồn kho";
-            this.tonkho.Name = "tonkho";
-            this.tonkho.ReadOnly = true;
-            // 
-            // anh
-            // 
-            this.anh.DataPropertyName = "anh";
-            this.anh.HeaderText = "Ảnh";
-            this.anh.Name = "anh";
-            this.anh.ReadOnly = true;
-            this.anh.Visible = false;
-            // 
-            // soluongdaban
-            // 
-            this.soluongdaban.DataPropertyName = "soluongdaban";
-            this.soluongdaban.HeaderText = "SLĐB";
-            this.soluongdaban.Name = "soluongdaban";
-            this.soluongdaban.ReadOnly = true;
-            this.soluongdaban.Visible = false;
-            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -530,6 +532,25 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(384, 18);
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "*Bạn có thể nháy đúp 1 dòng để xem thêm về thông tin sản phẩm";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BorderRadius = 15;
+            this.btnThoat.BorderThickness = 1;
+            this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThoat.Enabled = false;
+            this.btnThoat.FillColor = System.Drawing.Color.DimGray;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(294, 168);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(81, 41);
+            this.btnThoat.TabIndex = 9;
+            this.btnThoat.Text = "THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // BanHang
             // 
@@ -597,5 +618,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn anh;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluongdaban;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Button btnThoat;
     }
 }
