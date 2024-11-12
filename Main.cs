@@ -72,7 +72,6 @@ namespace BTL_ThucTap_LTNET
         }
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            player.Stop();
             ThongTinUngDung f = new ThongTinUngDung();
             f.ShowDialog();
         }
