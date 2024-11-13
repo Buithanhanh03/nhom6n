@@ -186,5 +186,10 @@ namespace BTL_ThucTap_LTNET
 
         }
 
+        private void guna2TileButton2_Click(object sender, EventArgs e)
+        {
+            XemLich f = new XemLich();
+            f.ShowDialog();
+        }
     }
 }
