@@ -303,6 +303,7 @@ namespace BTL_ThucTap_LTNET
                             cmd.ExecuteNonQuery();
                         }
                     }
+                    
 
                     txtThongtin.Clear();
                     txtSoluong.Clear();

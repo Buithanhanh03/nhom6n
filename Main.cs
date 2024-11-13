@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -11,6 +12,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTL_ThucTap_LTNET
@@ -23,6 +25,14 @@ namespace BTL_ThucTap_LTNET
         private Timer imageTimer;
         private Timer fadeTimer;
         private float opacity = 1.0f;
+        private SqlConnection conn = null;
+        string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
+
+        private SqlConnection connectdb()
+        {
+            conn = new SqlConnection(sqlqr);
+            return conn;
+        }
         public Main()
         {
             InitializeComponent();
@@ -190,6 +200,58 @@ namespace BTL_ThucTap_LTNET
         {
             XemLich f = new XemLich();
             f.ShowDialog();
+        }
+
+        private void btnChoigame_Click(object sender, EventArgs e)
+        {
+            if(TempSave.TaiKhoan == "admin")
+            {
+                MessageBox.Show("Admin không thể chơi game");
+                return;
+            }
+            // Hiển thị hộp thoại nhập mã nhân viên
+            string inputManv = Microsoft.VisualBasic.Interaction.InputBox("Nhập mã nhân viên:", "Kiểm tra mã nhân viên", "");
+
+            if (!string.IsNullOrEmpty(inputManv))
+            {
+                // Kiểm tra mã nhân viên trong cơ sở dữ liệu
+                if (CheckManvExists(inputManv))
+                {
+                    TempSave.MaNhanVien = int.Parse(inputManv);
+                    ChoiGame f = new ChoiGame();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Mã nhân viên không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            
+        }
+        private bool CheckManvExists(string manv)
+        {
+            bool exists = false;
+
+            // Kết nối và truy vấn cơ sở dữ liệu
+            using (conn = connectdb())
+            {
+                string query = "SELECT COUNT(*) FROM nhanvien WHERE manv = @manv";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@manv", manv);
+
+                try
+                {
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    exists = count > 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return exists;
         }
     }
 }

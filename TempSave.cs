@@ -8,6 +8,7 @@ namespace BTL_ThucTap_LTNET
 {
     static class TempSave
     {
+        public static int MaNhanVien { set; get; }
         public static int MaDonHang { set; get; }
         public static int GiamGia { set; get; }
         public static string TaiKhoan { set; get; }

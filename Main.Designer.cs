@@ -34,6 +34,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bẢOTRÌToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tHOÁTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tHOÁTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,11 +52,7 @@
             this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bẢOTRÌToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tHOÁTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tHOÁTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnChoigame = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,6 +107,46 @@
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // tHÔNGTINỨNGDỤNGToolStripMenuItem
+            // 
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Name = "tHÔNGTINỨNGDỤNGToolStripMenuItem";
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Size = new System.Drawing.Size(212, 25);
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Text = "THÔNG TIN ỨNG DỤNG";
+            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Click += new System.EventHandler(this.tHÔNGTINỨNGDỤNGToolStripMenuItem_Click);
+            // 
+            // tRỢGIÚPToolStripMenuItem
+            // 
+            this.tRỢGIÚPToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
+            this.tRỢGIÚPToolStripMenuItem.Name = "tRỢGIÚPToolStripMenuItem";
+            this.tRỢGIÚPToolStripMenuItem.Size = new System.Drawing.Size(135, 25);
+            this.tRỢGIÚPToolStripMenuItem.Text = "HƯỚNG DẪN";
+            this.tRỢGIÚPToolStripMenuItem.Click += new System.EventHandler(this.tRỢGIÚPToolStripMenuItem_Click);
+            // 
+            // bẢOTRÌToolStripMenuItem
+            // 
+            this.bẢOTRÌToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.wrench;
+            this.bẢOTRÌToolStripMenuItem.Name = "bẢOTRÌToolStripMenuItem";
+            this.bẢOTRÌToolStripMenuItem.Size = new System.Drawing.Size(99, 25);
+            this.bẢOTRÌToolStripMenuItem.Text = "BẢO TRÌ";
+            this.bẢOTRÌToolStripMenuItem.Click += new System.EventHandler(this.bẢOTRÌToolStripMenuItem_Click);
+            // 
+            // tHOÁTToolStripMenuItem
+            // 
+            this.tHOÁTToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
+            this.tHOÁTToolStripMenuItem.Name = "tHOÁTToolStripMenuItem";
+            this.tHOÁTToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
+            this.tHOÁTToolStripMenuItem.Text = "ĐĂNG XUẤT";
+            this.tHOÁTToolStripMenuItem.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem_Click);
+            // 
+            // tHOÁTToolStripMenuItem1
+            // 
+            this.tHOÁTToolStripMenuItem1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
+            this.tHOÁTToolStripMenuItem1.Name = "tHOÁTToolStripMenuItem1";
+            this.tHOÁTToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
+            this.tHOÁTToolStripMenuItem1.Text = "THOÁT";
+            this.tHOÁTToolStripMenuItem1.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem1_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
@@ -130,6 +171,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnChoigame);
             this.guna2Panel1.Controls.Add(this.guna2TileButton2);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
             this.guna2Panel1.Controls.Add(this.btnBanhang);
@@ -158,7 +200,7 @@
             this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
             this.guna2TileButton2.Location = new System.Drawing.Point(11, 403);
             this.guna2TileButton2.Name = "guna2TileButton2";
-            this.guna2TileButton2.Size = new System.Drawing.Size(129, 37);
+            this.guna2TileButton2.Size = new System.Drawing.Size(110, 37);
             this.guna2TileButton2.TabIndex = 3;
             this.guna2TileButton2.Text = "XEM LỊCH";
             this.guna2TileButton2.Click += new System.EventHandler(this.guna2TileButton2_Click);
@@ -331,45 +373,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // tHÔNGTINỨNGDỤNGToolStripMenuItem
+            // btnChoigame
             // 
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Name = "tHÔNGTINỨNGDỤNGToolStripMenuItem";
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Size = new System.Drawing.Size(212, 25);
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Text = "THÔNG TIN ỨNG DỤNG";
-            this.tHÔNGTINỨNGDỤNGToolStripMenuItem.Click += new System.EventHandler(this.tHÔNGTINỨNGDỤNGToolStripMenuItem_Click);
-            // 
-            // tRỢGIÚPToolStripMenuItem
-            // 
-            this.tRỢGIÚPToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
-            this.tRỢGIÚPToolStripMenuItem.Name = "tRỢGIÚPToolStripMenuItem";
-            this.tRỢGIÚPToolStripMenuItem.Size = new System.Drawing.Size(135, 25);
-            this.tRỢGIÚPToolStripMenuItem.Text = "HƯỚNG DẪN";
-            this.tRỢGIÚPToolStripMenuItem.Click += new System.EventHandler(this.tRỢGIÚPToolStripMenuItem_Click);
-            // 
-            // bẢOTRÌToolStripMenuItem
-            // 
-            this.bẢOTRÌToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.wrench;
-            this.bẢOTRÌToolStripMenuItem.Name = "bẢOTRÌToolStripMenuItem";
-            this.bẢOTRÌToolStripMenuItem.Size = new System.Drawing.Size(99, 25);
-            this.bẢOTRÌToolStripMenuItem.Text = "BẢO TRÌ";
-            this.bẢOTRÌToolStripMenuItem.Click += new System.EventHandler(this.bẢOTRÌToolStripMenuItem_Click);
-            // 
-            // tHOÁTToolStripMenuItem
-            // 
-            this.tHOÁTToolStripMenuItem.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
-            this.tHOÁTToolStripMenuItem.Name = "tHOÁTToolStripMenuItem";
-            this.tHOÁTToolStripMenuItem.Size = new System.Drawing.Size(128, 25);
-            this.tHOÁTToolStripMenuItem.Text = "ĐĂNG XUẤT";
-            this.tHOÁTToolStripMenuItem.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem_Click);
-            // 
-            // tHOÁTToolStripMenuItem1
-            // 
-            this.tHOÁTToolStripMenuItem1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
-            this.tHOÁTToolStripMenuItem1.Name = "tHOÁTToolStripMenuItem1";
-            this.tHOÁTToolStripMenuItem1.Size = new System.Drawing.Size(90, 25);
-            this.tHOÁTToolStripMenuItem1.Text = "THOÁT";
-            this.tHOÁTToolStripMenuItem1.Click += new System.EventHandler(this.tHOÁTToolStripMenuItem1_Click);
+            this.btnChoigame.Animated = true;
+            this.btnChoigame.BorderRadius = 10;
+            this.btnChoigame.BorderThickness = 1;
+            this.btnChoigame.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoigame.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoigame.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChoigame.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChoigame.FillColor = System.Drawing.Color.Indigo;
+            this.btnChoigame.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChoigame.ForeColor = System.Drawing.Color.White;
+            this.btnChoigame.Location = new System.Drawing.Point(140, 403);
+            this.btnChoigame.Name = "btnChoigame";
+            this.btnChoigame.Size = new System.Drawing.Size(117, 37);
+            this.btnChoigame.TabIndex = 4;
+            this.btnChoigame.Text = "CHƠI GAME";
+            this.btnChoigame.Click += new System.EventHandler(this.btnChoigame_Click);
             // 
             // Main
             // 
@@ -424,5 +445,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnBaocaotonkho;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
+        private Guna.UI2.WinForms.Guna2TileButton btnChoigame;
     }
 }
