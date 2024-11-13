@@ -139,6 +139,14 @@ namespace BTL_ThucTap_LTNET
         }
         public void NhanVien_Load(object sender, EventArgs e)
         {
+            if(TempSave.TaiKhoan == "nhanvien")
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                btnCapnhat.Enabled = false;
+                btnReset.Enabled = false;
+            }
             LoadForm();
         }
 

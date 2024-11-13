@@ -25,19 +25,28 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Không được bỏ trống");
                 return;
             }
-            if(txtTK.Text != "admin")
+            if(txtTK.Text != "admin" && txtTK.Text != "nhanvien")
             {
                 MessageBox.Show("Sai tài khoản");
                 return;
             }
-            if (txtMK.Text != "admin")
+            if (txtMK.Text != "admin" && txtTK.Text != "nhanvien")
             {
                 MessageBox.Show("Sai mật khẩu");
                 return;
             }
             if(txtTK.Text == "admin" && txtMK.Text == "admin")
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Bạn đã đăng nhập với tư cách là Quản Lý thành công");
+                TempSave.TaiKhoan = "admin";
+                Main m = new Main();
+                m.ShowDialog();
+                this.Close();
+            }
+            if (txtTK.Text == "nhanvien" && txtMK.Text == "nhanvien")
+            {
+                MessageBox.Show("Bạn đã đăng nhập với tư cách là Nhân Viên thành công");
+                TempSave.TaiKhoan = "nhanvien";
                 Main m = new Main();
                 m.ShowDialog();
                 this.Close();

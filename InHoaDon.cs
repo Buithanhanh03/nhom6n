@@ -66,7 +66,6 @@ namespace BTL_ThucTap_LTNET
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    lblSoluong.Text = row["soluongdaban"].ToString();
                 }
             }
             string query2 = "SELECT * FROM khachhang WHERE makh = @makh";
@@ -88,10 +87,23 @@ namespace BTL_ThucTap_LTNET
                     lblDiachi.Text = row["diachitruong"].ToString();
                 }
             }
+           
+        }
+        private void LoadCTDH()
+        {
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From chitietdonhang Where madh = @madh";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@madh",TempSave.MaDonHang);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
         private void InHoaDon_Load(object sender, EventArgs e)
         {
             LoadForm();
+            LoadCTDH();
         }
 
         private void btnIn_Click(object sender, EventArgs e)

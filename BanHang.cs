@@ -22,8 +22,12 @@ namespace BTL_ThucTap_LTNET
         Label lblInfo = new Label();
         PictureBox pictureBox = new PictureBox();
         private int slmua = 0;
-        int tongtienban = 0;
+        int tongtienmothang = 0;
+        int sohangmua = 0;
+        int thutumuahang = 0;
+        int tongtiendonhang = 0;
         Random random = new Random();
+        TempSave.ChiTietDonHang[] CTDH = new TempSave.ChiTietDonHang[20];
 
         public BanHang()
         {
@@ -159,7 +163,7 @@ namespace BTL_ThucTap_LTNET
 
         private void txtSoluong_TextChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtSoluong.Text))btnThem.Enabled = false;
+            if (string.IsNullOrEmpty(txtSoluong.Text)) btnThem.Enabled = false;
             else btnThem.Enabled = true;
         }
 
@@ -180,12 +184,19 @@ namespace BTL_ThucTap_LTNET
 
                 if (int.TryParse(txtSoluong.Text, out slmua) && slmua > 0)
                 {
-                    tongtienban = gia * slmua;
-                    txtThongtin.Text = $"THÔNG TIN MUA HÀNG:\n" +
+                    sohangmua++;
+                    tongtienmothang = gia * slmua;
+                    txtThongtin.Text += $"SẢN PHẨM THỨ {thutumuahang + 1}:\n" +
                                                   $"Mã sản phẩm: {masp}\n" +
                                                   $"Tên sản phẩm: {tensp}\n" +
                                                   $"Số lượng mua: {slmua}\n" +
-                                                  $"Tổng giá: {tongtienban} VND";
+                                                  $"Tổng giá: {tongtienmothang} VND\n";
+                    CTDH[thutumuahang].masp = masp;
+                    CTDH[thutumuahang].dongiadh = gia;
+                    CTDH[thutumuahang].soluongdaban = slmua;
+                    CTDH[thutumuahang].tongtienmothang = tongtienmothang;
+                    tongtiendonhang += tongtienmothang;
+                    thutumuahang++;
                 }
                 else
                 {
@@ -201,13 +212,15 @@ namespace BTL_ThucTap_LTNET
         private void btnHuy_Click(object sender, EventArgs e)
         {
             txtThongtin.Clear();
+            thutumuahang = 0;
+            sohangmua = 0;
         }
 
         private void txtThongtin_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtThongtin.Text))
-            { 
-                btnThanhtoan.Enabled = false; 
+            {
+                btnThanhtoan.Enabled = false;
                 btnHuy.Enabled = false;
             }
             else
@@ -219,7 +232,7 @@ namespace BTL_ThucTap_LTNET
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn thanh toán không?", "Xác nhận thanh toán", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Tổng tiền: {tongtiendonhang} VNĐ.\nBạn có muốn thanh toán không?", "Xác nhận thanh toán", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -259,45 +272,51 @@ namespace BTL_ThucTap_LTNET
                     using (SqlCommand cmd = new SqlCommand(insertDHQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@madh", madh);
-                        cmd.Parameters.AddWithValue("@tongtien", tongtienban);
+                        cmd.Parameters.AddWithValue("@tongtien", tongtiendonhang);
                         cmd.Parameters.AddWithValue("@manv", "1");
                         cmd.Parameters.AddWithValue("@trangthai", "Đang xử lý");
                         cmd.Parameters.AddWithValue("@ngaydat", today);
                         cmd.ExecuteNonQuery();
                     }
-
-                    // Tạo mã chi tiết đơn hàng ngẫu nhiên
-                    int mactdh;
-                    do
+                    for (int i = 0; i < sohangmua; i++)
                     {
-                        mactdh = random.Next(1, 1001);
-                        SqlCommand checkMactdh = new SqlCommand("SELECT COUNT(*) FROM chitietdonhang WHERE mactdh = @mactdh", conn);
-                        checkMactdh.Parameters.AddWithValue("@mactdh", mactdh);
-                        int exists = (int)checkMactdh.ExecuteScalar();
-                        if (exists == 0) break;
-                    } while (true);
-
-                    // Thêm chi tiết đơn hàng vào bảng chitietdonhang
-                    string insertCTDHQuery = "INSERT INTO chitietdonhang(mactdh, madh, masp, dongiadh, soluongdaban) VALUES(@mactdh, @madh, @masp, @dongiadh, @soluongdaban)";
-                    using (SqlCommand cmd = new SqlCommand(insertCTDHQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@mactdh", mactdh);
-                        cmd.Parameters.AddWithValue("@madh", madh);
-                        cmd.Parameters.AddWithValue("@masp", masp);
-                        cmd.Parameters.AddWithValue("@dongiadh", tongtienban);
-                        cmd.Parameters.AddWithValue("@soluongdaban", soluongban);
-                        cmd.ExecuteNonQuery();
+                        int mactdh;
+                        do
+                        {
+                            mactdh = random.Next(1, 1001);
+                            SqlCommand checkMactdh = new SqlCommand("SELECT COUNT(*) FROM chitietdonhang WHERE mactdh = @mactdh", conn);
+                            checkMactdh.Parameters.AddWithValue("@mactdh", mactdh);
+                            int exists = (int)checkMactdh.ExecuteScalar();
+                            if (exists == 0) break;
+                        } while (true);
+                        CTDH[i].mactdh = mactdh;
+                        CTDH[i].madh = madh;
+                        // Thêm chi tiết đơn hàng vào bảng chitietdonhang
+                        string insertCTDHQuery = "INSERT INTO chitietdonhang(mactdh, madh, masp, dongiadh, soluongdaban) VALUES(@mactdh, @madh, @masp, @dongiadh, @soluongdaban)";
+                        using (SqlCommand cmd = new SqlCommand(insertCTDHQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@mactdh", mactdh);
+                            cmd.Parameters.AddWithValue("@madh", madh);
+                            cmd.Parameters.AddWithValue("@masp", CTDH[i].masp);
+                            cmd.Parameters.AddWithValue("@dongiadh", CTDH[i].dongiadh);
+                            cmd.Parameters.AddWithValue("@soluongdaban", CTDH[i].soluongdaban);
+                            cmd.ExecuteNonQuery();
+                        }
                     }
+
                     txtThongtin.Clear();
                     txtSoluong.Clear();
+                    sohangmua = 0;
+                    thutumuahang = 0;
                     conn.Close();
                 }
+
                 MessageBox.Show("Thanh toán thành công! Bạn sẽ được chuyển đến phần In hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Reload dữ liệu sau khi thanh toán
                 LoadDataSanPham();
                 LoadDataLichSu();
-                NhapKhachHang f =new NhapKhachHang();
+                NhapKhachHang f = new NhapKhachHang();
                 f.ShowDialog();
             }
             else

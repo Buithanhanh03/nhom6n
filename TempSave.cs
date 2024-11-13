@@ -9,5 +9,15 @@ namespace BTL_ThucTap_LTNET
     static class TempSave
     {
         public static int MaDonHang { set; get; }
+        public static string TaiKhoan { set; get; }
+        public struct ChiTietDonHang
+        {
+            public int mactdh;
+            public int madh;
+            public int masp;
+            public int dongiadh;
+            public int soluongdaban;
+            public int tongtienmothang;
+        }
     }
 }

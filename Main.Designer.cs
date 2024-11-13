@@ -51,6 +51,7 @@
             this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,9 +86,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(19, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SẢN PHẨM";
+            this.label1.Text = "TRƯNG BÀY";
             // 
             // menuStrip1
             // 
@@ -101,7 +102,7 @@
             this.tHOÁTToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(1, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(792, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(672, 29);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,6 +170,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2TileButton2);
             this.guna2Panel1.Controls.Add(this.guna2TileButton1);
             this.guna2Panel1.Controls.Add(this.btnBanhang);
             this.guna2Panel1.Controls.Add(this.btnBaocaotonkho);
@@ -179,7 +181,7 @@
             this.guna2Panel1.Controls.Add(this.btnKhohang);
             this.guna2Panel1.Location = new System.Drawing.Point(1, 90);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(272, 389);
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 452);
             this.guna2Panel1.TabIndex = 13;
             // 
             // guna2TileButton1
@@ -344,17 +346,35 @@
             this.pictureBox1.ImageRotate = 0F;
             this.pictureBox1.Location = new System.Drawing.Point(288, 92);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 387);
+            this.pictureBox1.Size = new System.Drawing.Size(383, 428);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
+            // guna2TileButton2
+            // 
+            this.guna2TileButton2.Animated = true;
+            this.guna2TileButton2.BorderRadius = 10;
+            this.guna2TileButton2.BorderThickness = 1;
+            this.guna2TileButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton2.FillColor = System.Drawing.Color.DarkGreen;
+            this.guna2TileButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton2.Location = new System.Drawing.Point(11, 403);
+            this.guna2TileButton2.Name = "guna2TileButton2";
+            this.guna2TileButton2.Size = new System.Drawing.Size(129, 37);
+            this.guna2TileButton2.TabIndex = 3;
+            this.guna2TileButton2.Text = "XEM LỊCH";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 485);
+            this.ClientSize = new System.Drawing.Size(674, 554);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -402,5 +422,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnBanhang;
         private Guna.UI2.WinForms.Guna2TileButton btnBaocaotonkho;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
     }
 }

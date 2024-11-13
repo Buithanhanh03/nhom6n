@@ -28,7 +28,7 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Không được bỏ trống");
                 return;
             }
-            if (txtTK.Text != "admin")
+            if (txtTK.Text != "admin" && txtTK.Text != "nhanvien")
             {
                 MessageBox.Show("Sai tài khoản");
                 return;
@@ -41,6 +41,10 @@ namespace BTL_ThucTap_LTNET
             if (txtTK.Text == "admin" && txtMaXT.Text == "0410")
             {
                 MessageBox.Show("Mật khẩu của bạn là 'admin'");
+            }
+            if (txtTK.Text == "nhanvien" && txtMaXT.Text == "0410")
+            {
+                MessageBox.Show("Mật khẩu của bạn là 'nhanvien'");
             }
         }
 

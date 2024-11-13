@@ -37,6 +37,7 @@
             this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.linklblQuenMK = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Controls.Add(this.btnDangNhap);
             this.guna2GroupBox1.Controls.Add(this.cbHien);
@@ -60,18 +62,18 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Silver;
             this.guna2GroupBox1.Location = new System.Drawing.Point(154, 192);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 285);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 299);
             this.guna2GroupBox1.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(125, 259);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(110, 259);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(232, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(273, 17);
             this.guna2HtmlLabel1.TabIndex = 17;
-            this.guna2HtmlLabel1.Text = "*Tài khoản và mật khẩu mặc định là admin";
+            this.guna2HtmlLabel1.Text = "*Tài khoản, mật khẩu mặc định cho quản lý: admin";
             // 
             // btnDangNhap
             // 
@@ -190,6 +192,16 @@
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(98, 279);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(302, 17);
+            this.guna2HtmlLabel3.TabIndex = 18;
+            this.guna2HtmlLabel3.Text = "*Tài khoản, mật khẩu mặc định cho nhân viên: nhanvien";
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +232,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox cbHien;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }
 
