@@ -42,6 +42,8 @@
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtMagiamgia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbThongtinKH.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             // gbThongtinKH
             // 
+            this.gbThongtinKH.Controls.Add(this.txtMagiamgia);
+            this.gbThongtinKH.Controls.Add(this.label6);
             this.gbThongtinKH.Controls.Add(this.txtDiachitruong);
             this.gbThongtinKH.Controls.Add(this.txtSDTKH);
             this.gbThongtinKH.Controls.Add(this.txtTenKH);
@@ -79,7 +83,7 @@
             this.gbThongtinKH.Controls.Add(this.label2);
             this.gbThongtinKH.Location = new System.Drawing.Point(33, 51);
             this.gbThongtinKH.Name = "gbThongtinKH";
-            this.gbThongtinKH.Size = new System.Drawing.Size(478, 184);
+            this.gbThongtinKH.Size = new System.Drawing.Size(478, 226);
             this.gbThongtinKH.TabIndex = 6;
             this.gbThongtinKH.TabStop = false;
             // 
@@ -166,7 +170,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 158);
+            this.label5.Location = new System.Drawing.Point(28, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 0;
@@ -175,7 +179,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 114);
+            this.label4.Location = new System.Drawing.Point(28, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 0;
@@ -184,7 +188,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 64);
+            this.label3.Location = new System.Drawing.Point(28, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 0;
@@ -193,7 +197,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 23);
+            this.label2.Location = new System.Drawing.Point(28, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 0;
@@ -210,7 +214,7 @@
             this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(303, 293);
+            this.btnReset.Location = new System.Drawing.Point(303, 339);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(180, 36);
             this.btnReset.TabIndex = 22;
@@ -228,7 +232,7 @@
             this.btnNhap.FillColor = System.Drawing.Color.Red;
             this.btnNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNhap.ForeColor = System.Drawing.Color.White;
-            this.btnNhap.Location = new System.Drawing.Point(64, 293);
+            this.btnNhap.Location = new System.Drawing.Point(64, 339);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(180, 36);
             this.btnNhap.TabIndex = 21;
@@ -239,17 +243,46 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 252);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 298);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(334, 18);
             this.guna2HtmlLabel2.TabIndex = 23;
             this.guna2HtmlLabel2.Text = "*Bạn không thể thoát khi chưa nhập thông tin khách hàng";
             // 
+            // txtMagiamgia
+            // 
+            this.txtMagiamgia.BorderRadius = 10;
+            this.txtMagiamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMagiamgia.DefaultText = "";
+            this.txtMagiamgia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMagiamgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMagiamgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMagiamgia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMagiamgia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMagiamgia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMagiamgia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMagiamgia.Location = new System.Drawing.Point(97, 194);
+            this.txtMagiamgia.Name = "txtMagiamgia";
+            this.txtMagiamgia.PasswordChar = '\0';
+            this.txtMagiamgia.PlaceholderText = "";
+            this.txtMagiamgia.SelectedText = "";
+            this.txtMagiamgia.Size = new System.Drawing.Size(353, 26);
+            this.txtMagiamgia.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Mã giảm giá";
+            // 
             // NhapKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 341);
+            this.ClientSize = new System.Drawing.Size(532, 416);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnNhap);
@@ -284,5 +317,7 @@
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button btnNhap;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMagiamgia;
+        private System.Windows.Forms.Label label6;
     }
 }

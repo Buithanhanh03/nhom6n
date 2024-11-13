@@ -85,6 +85,8 @@ namespace BTL_ThucTap_LTNET
                     lblHoten.Text = row["tenkh"].ToString();
                     lblSDT.Text = row["sdtkh"].ToString();
                     lblDiachi.Text = row["diachitruong"].ToString();
+                    lblGiamgia.Text = TempSave.GiamGia.ToString() + "%";
+                    lblTongtiendagiam.Text = (int.Parse(lblTongtien.Text) - int.Parse(lblTongtien.Text) * TempSave.GiamGia / 100).ToString();
                 }
             }
            
