@@ -83,5 +83,10 @@ namespace BTL_ThucTap_LTNET
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
