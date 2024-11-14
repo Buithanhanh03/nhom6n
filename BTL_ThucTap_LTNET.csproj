@@ -89,6 +89,12 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DangNhapKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhapKhach.Designer.cs">
+      <DependentUpon>DangNhapKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="DonDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangNhapKhach.resx">
+      <DependentUpon>DangNhapKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DonDatHang.resx">
       <DependentUpon>DonDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOnline.resx">
+      <DependentUpon>MainOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
@@ -304,6 +316,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\paper.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

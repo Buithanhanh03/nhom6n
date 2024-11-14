@@ -42,6 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChoigame = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnBanhang = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -52,12 +53,14 @@
             this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnChoigame = new Guna.UI2.WinForms.Guna2TileButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListMainIcon
@@ -74,9 +77,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Sienna;
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(288, 44);
+            this.groupBox1.Location = new System.Drawing.Point(291, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 39);
+            this.groupBox1.Size = new System.Drawing.Size(539, 39);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -101,7 +104,7 @@
             this.bẢOTRÌToolStripMenuItem,
             this.tHOÁTToolStripMenuItem,
             this.tHOÁTToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(1, 1);
+            this.menuStrip1.Location = new System.Drawing.Point(177, 7);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(672, 29);
             this.menuStrip1.TabIndex = 11;
@@ -152,7 +155,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.Chocolate;
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(1, 44);
+            this.groupBox2.Location = new System.Drawing.Point(4, 67);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(272, 39);
             this.groupBox2.TabIndex = 11;
@@ -181,10 +184,29 @@
             this.guna2Panel1.Controls.Add(this.btnNhanvien);
             this.guna2Panel1.Controls.Add(this.btnSanpham);
             this.guna2Panel1.Controls.Add(this.btnKhohang);
-            this.guna2Panel1.Location = new System.Drawing.Point(1, 90);
+            this.guna2Panel1.Location = new System.Drawing.Point(4, 113);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(272, 452);
             this.guna2Panel1.TabIndex = 13;
+            // 
+            // btnChoigame
+            // 
+            this.btnChoigame.Animated = true;
+            this.btnChoigame.BorderRadius = 10;
+            this.btnChoigame.BorderThickness = 1;
+            this.btnChoigame.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoigame.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChoigame.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChoigame.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChoigame.FillColor = System.Drawing.Color.Indigo;
+            this.btnChoigame.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChoigame.ForeColor = System.Drawing.Color.White;
+            this.btnChoigame.Location = new System.Drawing.Point(140, 403);
+            this.btnChoigame.Name = "btnChoigame";
+            this.btnChoigame.Size = new System.Drawing.Size(117, 37);
+            this.btnChoigame.TabIndex = 4;
+            this.btnChoigame.Text = "CHƠI GAME";
+            this.btnChoigame.Click += new System.EventHandler(this.btnChoigame_Click);
             // 
             // guna2TileButton2
             // 
@@ -365,38 +387,46 @@
             this.pictureBox1.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.ao_dong_phuc_1;
             this.pictureBox1.ImageRotate = 0F;
-            this.pictureBox1.Location = new System.Drawing.Point(288, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(291, 115);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(383, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(539, 450);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // btnChoigame
+            // label3
             // 
-            this.btnChoigame.Animated = true;
-            this.btnChoigame.BorderRadius = 10;
-            this.btnChoigame.BorderThickness = 1;
-            this.btnChoigame.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoigame.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoigame.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChoigame.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChoigame.FillColor = System.Drawing.Color.Indigo;
-            this.btnChoigame.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChoigame.ForeColor = System.Drawing.Color.White;
-            this.btnChoigame.Location = new System.Drawing.Point(140, 403);
-            this.btnChoigame.Name = "btnChoigame";
-            this.btnChoigame.Size = new System.Drawing.Size(117, 37);
-            this.btnChoigame.TabIndex = 4;
-            this.btnChoigame.Text = "CHƠI GAME";
-            this.btnChoigame.Click += new System.EventHandler(this.btnChoigame_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Brown;
+            this.label3.Location = new System.Drawing.Point(45, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 28);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "UNIWEAR";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 14;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 554);
+            this.ClientSize = new System.Drawing.Size(842, 580);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -417,6 +447,7 @@
             this.groupBox2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,5 +477,7 @@
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
         private Guna.UI2.WinForms.Guna2TileButton btnChoigame;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
     }
 }

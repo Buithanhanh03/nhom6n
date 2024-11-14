@@ -44,3 +44,5 @@ C:\Users\Admin\Source\Repos\Buithanhanh03\nhom6n\bin\Debug\Guna.UI2.dll
 C:\Users\Admin\Source\Repos\Buithanhanh03\nhom6n\obj\Debug\BTL_Thuc.086A75D1.Up2Date
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.XemLich.resources
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.ChoiGame.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.MainOnline.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.DangNhapKhach.resources

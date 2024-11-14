@@ -19,7 +19,6 @@ namespace BTL_ThucTap_LTNET
 {
     public partial class Main : Form
     {
-        private SoundPlayer player;
         private Image[] images;
         private int currentImageIndex = 0;
         private Timer imageTimer;

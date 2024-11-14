@@ -88,5 +88,17 @@ namespace BTL_ThucTap_LTNET
         {
             this.Close();
         }
+
+        private void btnGhetham_Click(object sender, EventArgs e)
+        {
+            MainOnline f = new MainOnline();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
