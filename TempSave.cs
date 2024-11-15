@@ -11,7 +11,7 @@ namespace BTL_ThucTap_LTNET
         public static int MaNhanVien { set; get; }
         public static int MaDonHang { set; get; }
         public static int GiamGia { set; get; }
-        public static string TaiKhoan { set; get; }
+        public static string TaiKhoan { set; get; } //của admin và nhân viên
         public struct ChiTietDonHang
         {
             public int mactdh;
@@ -21,5 +21,6 @@ namespace BTL_ThucTap_LTNET
             public int soluongdaban;
             public int tongtienmothang;
         }
+        public static string username { set; get; } // của khách
     }
 }

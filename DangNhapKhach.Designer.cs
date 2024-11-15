@@ -30,8 +30,10 @@
         {
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.linklblQuenMK = new System.Windows.Forms.LinkLabel();
             this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,13 +41,10 @@
             this.cbHien = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnGhetham = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +56,6 @@
             this.guna2GroupBox1.BorderThickness = 2;
             this.guna2GroupBox1.Controls.Add(this.label1);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.guna2GroupBox2);
             this.guna2GroupBox1.Controls.Add(this.btnThoat);
             this.guna2GroupBox1.Controls.Add(this.btnGhetham);
@@ -82,15 +80,18 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "UNIWEAR";
             // 
-            // guna2HtmlLabel2
+            // guna2CirclePictureBox1
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(44, 351);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(353, 15);
-            this.guna2HtmlLabel2.TabIndex = 22;
-            this.guna2HtmlLabel2.Text = "BẠN LÀ KHÁCH HÀNG? HÃY GHÉ THĂM CỬA HÀNG CỦA CHÚNG TÔI";
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(156, 11);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 23;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // guna2GroupBox2
             // 
@@ -114,6 +115,27 @@
             this.guna2GroupBox2.Text = "ĐĂNG NHẬP CHO KHÁCH HÀNG";
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(60, 248);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 15);
+            this.guna2HtmlLabel1.TabIndex = 25;
+            this.guna2HtmlLabel1.Text = "BẠN CHƯA CÓ TÀI KHOẢN ??";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(228, 248);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(100, 15);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "ĐĂNG KÝ NGAY !!";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtTK
             // 
@@ -145,6 +167,7 @@
             this.linklblQuenMK.TabIndex = 9;
             this.linklblQuenMK.TabStop = true;
             this.linklblQuenMK.Text = "QUÊN MẬT KHẨU ?";
+            this.linklblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblQuenMK_LinkClicked);
             // 
             // txtMK
             // 
@@ -187,6 +210,7 @@
             this.btnDangNhap.Size = new System.Drawing.Size(344, 45);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // cbHien
             // 
@@ -206,6 +230,7 @@
             this.cbHien.UncheckedState.BorderRadius = 0;
             this.cbHien.UncheckedState.BorderThickness = 0;
             this.cbHien.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // btnThoat
             // 
@@ -246,19 +271,6 @@
             this.btnGhetham.Text = "TIẾP TỤC GHÉ THĂM CỬA HÀNG";
             this.btnGhetham.Click += new System.EventHandler(this.btnGhetham_Click);
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(156, 11);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 23;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 10;
@@ -270,26 +282,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 5;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(227, 250);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(100, 15);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "ĐĂNG KÝ NGAY !!";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(60, 248);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(161, 17);
-            this.guna2HtmlLabel1.TabIndex = 25;
-            this.guna2HtmlLabel1.Text = "BẠN CHƯA CÓ TÀI KHOẢN ??";
             // 
             // DangNhapKhach
             // 
@@ -304,9 +296,9 @@
             this.Text = "DangNhapKhach";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -317,17 +309,16 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2TextBox txtTK;
         private System.Windows.Forms.LinkLabel linklblQuenMK;
         private Guna.UI2.WinForms.Guna2TextBox txtMK;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
         private Guna.UI2.WinForms.Guna2CheckBox cbHien;
-        private Guna.UI2.WinForms.Guna2Button btnThoat;
         private Guna.UI2.WinForms.Guna2GradientButton btnGhetham;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnThoat;
     }
 }

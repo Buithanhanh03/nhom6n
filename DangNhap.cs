@@ -95,10 +95,14 @@ namespace BTL_ThucTap_LTNET
             f.ShowDialog();
             this.Close();
         }
-
+        //Giải phóng các bộ nhớ tạm thời khi chạy lại chương trình
         private void DangNhap_Load(object sender, EventArgs e)
         {
-
+            TempSave.TaiKhoan = null;
+            TempSave.username = null;
+            TempSave.MaNhanVien = 0;
+            TempSave.GiamGia = 0;
+            TempSave.MaDonHang = 0;
         }
     }
 }

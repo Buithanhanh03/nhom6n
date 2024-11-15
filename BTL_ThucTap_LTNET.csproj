@@ -83,6 +83,12 @@
     <Compile Include="ChoiGame.Designer.cs">
       <DependentUpon>ChoiGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="DangKyKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyKhach.Designer.cs">
+      <DependentUpon>DangKyKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     <Compile Include="QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuenMatKhauKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhauKhach.Designer.cs">
+      <DependentUpon>QuenMatKhauKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChoiGame.resx">
       <DependentUpon>ChoiGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyKhach.resx">
+      <DependentUpon>DangKyKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -236,6 +251,9 @@
     </Compile>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuenMatKhauKhach.resx">
+      <DependentUpon>QuenMatKhauKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SanPham.resx">
       <DependentUpon>SanPham.cs</DependentUpon>

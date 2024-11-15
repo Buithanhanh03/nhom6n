@@ -161,6 +161,11 @@ namespace BTL_ThucTap_LTNET
 
         private void MainOnline_Load(object sender, EventArgs e)
         {
+            // Câp nhật lại khả năng truy cập vào các chức năng khi người dùng đã đăng nhập
+            if (TempSave.username != null)
+            {
+                DangNhapMenu.Text = "ĐĂNG XUẤT";
+            }
             LoadProducts();
         }
 
@@ -168,7 +173,6 @@ namespace BTL_ThucTap_LTNET
         {
             DangNhapKhach f = new DangNhapKhach();
             f.ShowDialog();
-            this.Close();
         }
     }
 }
