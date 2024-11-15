@@ -48,3 +48,5 @@ C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.Mai
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.DangNhapKhach.resources
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.DangKyKhach.resources
 C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.QuenMatKhauKhach.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.DatHang.resources
+C:\Users\Admin\source\repos\Buithanhanh03\nhom6n\obj\Debug\BTL_ThucTap_LTNET.GioHang.resources

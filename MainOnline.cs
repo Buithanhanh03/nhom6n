@@ -165,6 +165,7 @@ namespace BTL_ThucTap_LTNET
             if (TempSave.username != null)
             {
                 DangNhapMenu.Text = "ĐĂNG XUẤT";
+                btnDathang.Enabled = true;
             }
             LoadProducts();
         }
@@ -172,6 +173,12 @@ namespace BTL_ThucTap_LTNET
         private void DangNhap_Click(object sender, EventArgs e)
         {
             DangNhapKhach f = new DangNhapKhach();
+            f.ShowDialog();
+        }
+
+        private void btnDathang_Click(object sender, EventArgs e)
+        {
+            DatHang f = new DatHang();
             f.ShowDialog();
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTL_ThucTap_LTNET
 {
-    static class TempSave
+    public static class TempSave
     {
         public static int MaNhanVien { set; get; }
         public static int MaDonHang { set; get; }
@@ -22,5 +22,12 @@ namespace BTL_ThucTap_LTNET
             public int tongtienmothang;
         }
         public static string username { set; get; } // của khách
+        public class GioHang //sau khi khách thêm các sản phẩm và số lượng vào giỏ
+        {
+            public int masp;
+            public string tensp;
+            public int gia;
+            public int soluongdaban;
+        }
     }
 }
