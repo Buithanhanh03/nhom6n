@@ -186,12 +186,12 @@ namespace BTL_ThucTap_LTNET
             using (var conn = connectdb())
             {
                 conn.Open();
-                SqlCommand cmdInsertOrder = new SqlCommand("INSERT INTO donhang (madh, makh, manv, ngaydat, tongtien, trangthai) VALUES (@madh, @makh, NULL, @ngaydat, @tongtien, 'Đang xử lý')", conn);
+                SqlCommand cmdInsertOrder = new SqlCommand("INSERT INTO donhang (madh, makh, manv, ngaydat, tongtien, trangthai) VALUES (@madh, @makh, NULL, @ngaydat, @tongtien, @trangthai)", conn);
                 cmdInsertOrder.Parameters.AddWithValue("@madh", madh);
                 cmdInsertOrder.Parameters.AddWithValue("@makh", makh);
                 cmdInsertOrder.Parameters.AddWithValue("@ngaydat", ngayDat);
                 cmdInsertOrder.Parameters.AddWithValue("@tongtien", tongTien);
-
+                cmdInsertOrder.Parameters.AddWithValue("@trangthai", "Đang xử lý");
                 cmdInsertOrder.ExecuteNonQuery();
             }
             Random random = new Random();

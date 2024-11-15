@@ -166,19 +166,26 @@ namespace BTL_ThucTap_LTNET
             {
                 DangNhapMenu.Text = "ĐĂNG XUẤT";
                 btnDathang.Enabled = true;
+                btnLichsumuahang.Enabled = true;
             }
             LoadProducts();
         }
 
         private void DangNhap_Click(object sender, EventArgs e)
         {
-            DangNhapKhach f = new DangNhapKhach();
-            f.ShowDialog();
+            this.Close();
+            TempSave.username = null;
         }
 
         private void btnDathang_Click(object sender, EventArgs e)
         {
             DatHang f = new DatHang();
+            f.ShowDialog();
+        }
+
+        private void btnLichsumuahang_Click(object sender, EventArgs e)
+        {
+            LichSuMuaHang f = new LichSuMuaHang();
             f.ShowDialog();
         }
     }

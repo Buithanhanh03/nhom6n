@@ -18,9 +18,13 @@ namespace BTL_ThucTap_LTNET
 
         private SqlConnection connectdb()
         {
-            conn = new SqlConnection(sqlqr);
+            if (conn == null || conn.State == ConnectionState.Closed)
+            {
+                conn = new SqlConnection(sqlqr);
+            }
             return conn;
         }
+
         public DangNhapKhach()
         {
             InitializeComponent();
@@ -35,21 +39,24 @@ namespace BTL_ThucTap_LTNET
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtTK.Text) || string.IsNullOrEmpty(txtMK.Text))
+            if (string.IsNullOrEmpty(txtTK.Text) || string.IsNullOrEmpty(txtMK.Text))
             {
                 MessageBox.Show("Không được bỏ trống");
                 return;
             }
+
             string username = txtTK.Text;
             string password = txtMK.Text;
 
-            using (conn)
+            try
             {
+                conn = connectdb(); // Ensure the connection is initialized
                 string query = "SELECT COUNT(*) FROM taikhoan WHERE username = @username AND password = @password";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
                 conn.Open();
+
                 int count = (int)cmd.ExecuteScalar();
 
                 if (count > 0)
@@ -65,10 +72,19 @@ namespace BTL_ThucTap_LTNET
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
             }
         }
-
         private void cbHien_CheckedChanged(object sender, EventArgs e)
         {
             if (cbHien.Checked)

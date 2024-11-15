@@ -153,7 +153,7 @@ namespace BTL_ThucTap_LTNET
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
-            DonDatHang f = new DonDatHang();
+            LichSuNhapHang f = new LichSuNhapHang();
             f.ShowDialog();
         }
 
@@ -251,6 +251,12 @@ namespace BTL_ThucTap_LTNET
             }
 
             return exists;
+        }
+
+        private void guna2TileButton3_Click(object sender, EventArgs e)
+        {
+            XuLyDonHang f = new XuLyDonHang();
+            f.ShowDialog();
         }
     }
 }

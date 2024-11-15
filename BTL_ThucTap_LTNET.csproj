@@ -107,11 +107,17 @@
     <Compile Include="DatHang.Designer.cs">
       <DependentUpon>DatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DonDatHang.cs">
+    <Compile Include="LichSuMuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DonDatHang.Designer.cs">
-      <DependentUpon>DonDatHang.cs</DependentUpon>
+    <Compile Include="LichSuMuaHang.Designer.cs">
+      <DependentUpon>LichSuMuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuNhapHang.Designer.cs">
+      <DependentUpon>LichSuNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GioHang.cs">
       <SubType>Form</SubType>
@@ -200,6 +206,12 @@
     <Compile Include="XemLich.Designer.cs">
       <DependentUpon>XemLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuLyDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyDonHang.Designer.cs">
+      <DependentUpon>XuLyDonHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,8 +239,11 @@
     <EmbeddedResource Include="DatHang.resx">
       <DependentUpon>DatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DonDatHang.resx">
-      <DependentUpon>DonDatHang.cs</DependentUpon>
+    <EmbeddedResource Include="LichSuMuaHang.resx">
+      <DependentUpon>LichSuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuNhapHang.resx">
+      <DependentUpon>LichSuNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GioHang.resx">
       <DependentUpon>GioHang.cs</DependentUpon>
@@ -281,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XemLich.resx">
       <DependentUpon>XemLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyDonHang.resx">
+      <DependentUpon>XuLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
