@@ -173,8 +173,9 @@ namespace BTL_ThucTap_LTNET
 
         private void DangNhap_Click(object sender, EventArgs e)
         {
-            this.Close();
             TempSave.username = null;
+            DangNhapKhach f = new DangNhapKhach();
+            f.ShowDialog();
         }
 
         private void btnDathang_Click(object sender, EventArgs e)
