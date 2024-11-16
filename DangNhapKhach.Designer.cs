@@ -248,6 +248,7 @@
             this.btnThoat.Size = new System.Drawing.Size(124, 45);
             this.btnThoat.TabIndex = 20;
             this.btnThoat.Text = "THOÁT";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnGhetham
             // 

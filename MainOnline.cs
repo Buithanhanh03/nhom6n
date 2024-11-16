@@ -167,15 +167,23 @@ namespace BTL_ThucTap_LTNET
                 DangNhapMenu.Text = "ĐĂNG XUẤT";
                 btnDathang.Enabled = true;
                 btnLichsumuahang.Enabled = true;
+                btnUudai.Enabled = true;
             }
             LoadProducts();
         }
 
         private void DangNhap_Click(object sender, EventArgs e)
         {
-            TempSave.username = null;
-            DangNhapKhach f = new DangNhapKhach();
-            f.ShowDialog();
+            if(DangNhapMenu.Text == "ĐĂNG NHẬP")
+            {
+                DangNhapKhach f = new DangNhapKhach();
+                f.ShowDialog();
+            }
+            if (DangNhapMenu.Text == "ĐĂNG XUẤT")
+            {
+                TempSave.username = null;
+                this.Close();
+            }
         }
 
         private void btnDathang_Click(object sender, EventArgs e)
@@ -188,6 +196,23 @@ namespace BTL_ThucTap_LTNET
         {
             LichSuMuaHang f = new LichSuMuaHang();
             f.ShowDialog();
+        }
+
+        private void HuongDanMenu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng Hướng dẫn sử dụng cho khách hàng đang được phát triển");
+        }
+
+        private void btnUudai_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng Chương trình ưu đãi dành cho khách hàng đang được phát triển");
+
+        }
+
+        private void LienHeMenu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng Liên hệ dành cho khách hàng đang được phát triển");
+
         }
     }
 }

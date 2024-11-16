@@ -108,6 +108,11 @@ namespace BTL_ThucTap_LTNET
             QuenMatKhauKhach f = new QuenMatKhauKhach();
             f.ShowDialog();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }
