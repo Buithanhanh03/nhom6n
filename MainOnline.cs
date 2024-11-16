@@ -31,7 +31,7 @@ namespace BTL_ThucTap_LTNET
         }
         private void VeChungToiMenu_Click(object sender, EventArgs e)
         {
-            ThongTinUngDung f = new ThongTinUngDung();
+            GioiThieuCuaHang f = new GioiThieuCuaHang();
             f.ShowDialog();
         }
 

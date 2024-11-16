@@ -38,6 +38,9 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +50,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 39);
+            this.groupBox1.Size = new System.Drawing.Size(403, 39);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
@@ -75,7 +78,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Location = new System.Drawing.Point(13, 48);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button1.Size = new System.Drawing.Size(194, 38);
             this.guna2Button1.TabIndex = 15;
             this.guna2Button1.Text = "BÁN HÀNG";
             this.guna2Button1.Click += new System.EventHandler(this.btnBanhang_Click);
@@ -93,7 +96,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Location = new System.Drawing.Point(12, 92);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button2.Size = new System.Drawing.Size(195, 38);
             this.guna2Button2.TabIndex = 15;
             this.guna2Button2.Text = "SẢN PHẨM";
             this.guna2Button2.Click += new System.EventHandler(this.btnSanpham_Click);
@@ -109,9 +112,9 @@
             this.guna2Button3.FillColor = System.Drawing.Color.LightGray;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(13, 136);
+            this.guna2Button3.Location = new System.Drawing.Point(14, 136);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button3.Size = new System.Drawing.Size(194, 38);
             this.guna2Button3.TabIndex = 15;
             this.guna2Button3.Text = "KHO HÀNG";
             this.guna2Button3.Click += new System.EventHandler(this.btnKhohang_Click);
@@ -127,9 +130,9 @@
             this.guna2Button4.FillColor = System.Drawing.Color.LightGray;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(12, 180);
+            this.guna2Button4.Location = new System.Drawing.Point(212, 48);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button4.Size = new System.Drawing.Size(195, 38);
             this.guna2Button4.TabIndex = 15;
             this.guna2Button4.Text = "BÁO CÁO";
             this.guna2Button4.Click += new System.EventHandler(this.btnBaocao_Click);
@@ -145,9 +148,9 @@
             this.guna2Button5.FillColor = System.Drawing.Color.LightGray;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(12, 224);
+            this.guna2Button5.Location = new System.Drawing.Point(213, 92);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button5.Size = new System.Drawing.Size(195, 38);
             this.guna2Button5.TabIndex = 15;
             this.guna2Button5.Text = "NHÂN VIÊN";
             this.guna2Button5.Click += new System.EventHandler(this.btnNhanvien_Click);
@@ -163,11 +166,11 @@
             this.guna2Button6.FillColor = System.Drawing.Color.LightGray;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(12, 266);
+            this.guna2Button6.Location = new System.Drawing.Point(212, 136);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(364, 38);
+            this.guna2Button6.Size = new System.Drawing.Size(195, 38);
             this.guna2Button6.TabIndex = 15;
-            this.guna2Button6.Text = "KHÁCH HÀNG, ĐƠN ĐẶT HÀNG";
+            this.guna2Button6.Text = "KHÁCH HÀNG, LỊCH SỬ NHẬP HÀNG";
             this.guna2Button6.Click += new System.EventHandler(this.btnKhac_Click);
             // 
             // btnThoat
@@ -189,18 +192,75 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(13, 310);
+            this.richTextBox1.Location = new System.Drawing.Point(14, 277);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(364, 157);
+            this.richTextBox1.Size = new System.Drawing.Size(385, 203);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BorderRadius = 10;
+            this.guna2Button7.BorderThickness = 1;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Location = new System.Drawing.Point(12, 180);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(194, 38);
+            this.guna2Button7.TabIndex = 17;
+            this.guna2Button7.Text = "XỬ LÝ ĐƠN HÀNG";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.BorderRadius = 10;
+            this.guna2Button8.BorderThickness = 1;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button8.Location = new System.Drawing.Point(214, 180);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(194, 38);
+            this.guna2Button8.TabIndex = 18;
+            this.guna2Button8.Text = "LỊCH LÀM VIỆC";
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.BorderRadius = 10;
+            this.guna2Button9.BorderThickness = 1;
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button9.Location = new System.Drawing.Point(212, 224);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(194, 38);
+            this.guna2Button9.TabIndex = 19;
+            this.guna2Button9.Text = "CHƠI GAME";
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // HuongDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 518);
+            this.ClientSize = new System.Drawing.Size(410, 518);
+            this.Controls.Add(this.guna2Button9);
+            this.Controls.Add(this.guna2Button8);
+            this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.guna2Button6);
             this.Controls.Add(this.guna2Button5);
@@ -232,5 +292,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
     }
 }

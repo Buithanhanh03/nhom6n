@@ -35,22 +35,37 @@ namespace BTL_ThucTap_LTNET
 
         private void btnBaocao_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "BÁO CÁO\r\nBạn có thể xem Báo cáo doanh thu hoặc Báo cáo tồn kho.\r\n- In văn bản: Bạn có thể in ra báo cáo tại đây.\r\n- Thoát: Thoát khỏi trang báo cáo.";
+            richTextBox1.Text = "BÁO CÁO\r\nChỉ admin mới có thể xem Báo cáo doanh thu hoặc Báo cáo tồn kho.\r\nCác chưc năng gồm:\r\n- In văn bản: Bạn có thể in ra báo cáo tại đây.\r\n- Thoát: Thoát khỏi trang báo cáo.";
         }
 
         private void btnNhanvien_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "NHÂN VIÊN:\r\nĐể có thể thao tác, bạn cần chọn 1 dòng trên bảng Nhân viên.\r\n- Thêm: Sau khi đã điền đầy đủ các trường, hãy ấn Thêm để thêm 1 nhân viên mới.\r\n- Cập nhật: Bạn có thể sửa các thuộc tính của sản phẩm bằng cách nhập vào các trường ở dưới. Sau khi đã hoàn tất, hãy ấn Cập nhật.\r\n Nếu muốn xóa nhanh các trường đã nhập, hãy ấn Reset.\r\n- Xóa: Xóa 1 dòng nhân viên đã chọn.\r\n- Thoát: Thoát khỏi trang nhân viên.\r\n- Tìm kiếm theo mã: Hãy nhập mã của nhân viên và bảng sẽ hiển thị ra nhân viên tương ứng.";
+            richTextBox1.Text = "NHÂN VIÊN:\r\nChỉ admin mới có thể chỉnh sửa.\r\nĐể có thể thao tác, bạn cần chọn 1 dòng trên bảng Nhân viên.\r\n- Thêm: Sau khi đã điền đầy đủ các trường, hãy ấn Thêm để thêm 1 nhân viên mới.\r\n- Cập nhật: Bạn có thể sửa các thuộc tính của sản phẩm bằng cách nhập vào các trường ở dưới. Sau khi đã hoàn tất, hãy ấn Cập nhật.\r\n Nếu muốn xóa nhanh các trường đã nhập, hãy ấn Reset.\r\n- Xóa: Xóa 1 dòng nhân viên đã chọn.\r\n- Thoát: Thoát khỏi trang nhân viên.\r\n- Tìm kiếm theo mã: Hãy nhập mã của nhân viên và bảng sẽ hiển thị ra nhân viên tương ứng.";
         }
 
         private void btnKhac_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "KHÁCH HÀNG VÀ ĐƠN ĐẶT HÀNG:\r\nBạn có thể xem danh sách tương ứng ở đây.";
+            richTextBox1.Text = "KHÁCH HÀNG VÀ LỊCH SỬ NHẬP HÀNG:\r\nBạn có thể xem danh sách tương ứng ở đây.";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "XỬ LÝ ĐƠN HÀNG:\r\nNgười dùng có thể xem danh sách các đơn hàng tại đây. Chỉ admin mới có thể chỉnh sửa.\r\nAdmin có thể chỉnh sửa các thuộc tính sau của một đơn hàng khi chọn đối tượng trên bảng:\r\n- Bổ sung nhân viên phụ trách.\r\n- Đặt ngày giao hàng dự kiến.";
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "LỊCH LÀM VIỆC:\r\nNgười dùng có thể xem lịch làm việc tại đây. Chỉ admin mới có thể chỉnh sửa.\r\nAdmin có thể chỉnh sửa thời gian nhân viên làm việc bằng cách ấn vào ô muốn sửa.";
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "CHƠI GAME:\r\nChỉ nhân viên mới có thể chơi game, còn admin hãy đi làm việc đi.\r\nNhân viên có thể chơi game oẳn tù tì (cực khó) với máy. Mỗi khi thắng sẽ được 1 điểm, thua sẽ bị trừ 1 điểm. Nhân viên có\r\nthể ấn nút đổi quà tương ứng khi đã đạt số điểm cần thiết. Phần quà rất hứa hẹn, hãy chơi ngay.";
         }
     }
 }

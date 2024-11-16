@@ -83,6 +83,26 @@ namespace BTL_ThucTap_LTNET.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background1 {
+            get {
+                object obj = ResourceManager.GetObject("background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background2 {
+            get {
+                object obj = ResourceManager.GetObject("background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coffee_I05 {
             get {
                 object obj = ResourceManager.GetObject("Coffee_I05", resourceCulture);
@@ -256,6 +276,16 @@ namespace BTL_ThucTap_LTNET.Properties {
         internal static System.Drawing.Bitmap uniform_shop_01 {
             get {
                 object obj = ResourceManager.GetObject("uniform-shop-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uniform_shop_011 {
+            get {
+                object obj = ResourceManager.GetObject("uniform-shop-011", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

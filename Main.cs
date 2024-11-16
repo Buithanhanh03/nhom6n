@@ -77,7 +77,12 @@ namespace BTL_ThucTap_LTNET
         }
         private void Main_Load(object sender, EventArgs e)
         {
-
+            if(TempSave.TaiKhoan == "admin")
+            {
+                btnBaocaodoanhthu.Enabled = true;
+                btnBaocaotonkho.Enabled = true;
+                btnChuongtrinhgiamgia.Enabled = true;
+            }
         }
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -256,6 +261,12 @@ namespace BTL_ThucTap_LTNET
         private void guna2TileButton3_Click(object sender, EventArgs e)
         {
             XuLyDonHang f = new XuLyDonHang();
+            f.ShowDialog();
+        }
+
+        private void btnChuongtrinhgiamgia_Click(object sender, EventArgs e)
+        {
+            QuanLyGiamGia f = new QuanLyGiamGia();
             f.ShowDialog();
         }
     }
