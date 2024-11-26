@@ -330,6 +330,9 @@
     <EmbeddedResource Include="XemLich.resx">
       <DependentUpon>XemLich.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XemPhanHoi.resx">
+      <DependentUpon>XemPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XuLyDonHang.resx">
       <DependentUpon>XuLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
