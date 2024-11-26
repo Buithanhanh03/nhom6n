@@ -155,6 +155,12 @@
     <Compile Include="KhoHang.Designer.cs">
       <DependentUpon>KhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="LienHe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LienHe.Designer.cs">
+      <DependentUpon>LienHe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhoHang.resx">
       <DependentUpon>KhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LienHe.resx">
+      <DependentUpon>LienHe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

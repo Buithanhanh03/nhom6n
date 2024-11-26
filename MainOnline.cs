@@ -211,8 +211,8 @@ namespace BTL_ThucTap_LTNET
 
         private void LienHeMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Liên hệ dành cho khách hàng đang được phát triển");
-
+            LienHe f = new LienHe();
+            f.ShowDialog();
         }
     }
 }
