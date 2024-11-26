@@ -36,9 +36,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(329, 102);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(86, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(64, 15);
             this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Text = "GITHUB LOI";
             // 
             // XemPhanHoi
             // 
