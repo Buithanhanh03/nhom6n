@@ -224,6 +224,12 @@
     <Compile Include="XemLich.Designer.cs">
       <DependentUpon>XemLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemPhanHoi.Designer.cs">
+      <DependentUpon>XemPhanHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuLyDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
