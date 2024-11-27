@@ -57,6 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnQuangcao = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnXemphanhoi = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -177,6 +178,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnQuangcao);
             this.guna2Panel1.Controls.Add(this.btnXemphanhoi);
             this.guna2Panel1.Controls.Add(this.btnChuongtrinhgiamgia);
             this.guna2Panel1.Controls.Add(this.guna2TileButton3);
@@ -192,7 +194,7 @@
             this.guna2Panel1.Controls.Add(this.btnKhohang);
             this.guna2Panel1.Location = new System.Drawing.Point(4, 113);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(272, 624);
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 634);
             this.guna2Panel1.TabIndex = 13;
             // 
             // btnChuongtrinhgiamgia
@@ -246,7 +248,7 @@
             this.btnChoigame.FillColor = System.Drawing.Color.Indigo;
             this.btnChoigame.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnChoigame.ForeColor = System.Drawing.Color.White;
-            this.btnChoigame.Location = new System.Drawing.Point(11, 578);
+            this.btnChoigame.Location = new System.Drawing.Point(11, 596);
             this.btnChoigame.Name = "btnChoigame";
             this.btnChoigame.Size = new System.Drawing.Size(117, 37);
             this.btnChoigame.TabIndex = 4;
@@ -265,7 +267,7 @@
             this.guna2TileButton2.FillColor = System.Drawing.Color.DarkGreen;
             this.guna2TileButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton2.Location = new System.Drawing.Point(11, 530);
+            this.guna2TileButton2.Location = new System.Drawing.Point(11, 553);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.Size = new System.Drawing.Size(249, 37);
             this.guna2TileButton2.TabIndex = 3;
@@ -325,7 +327,7 @@
             this.btnBaocaotonkho.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaotonkho.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaotonkho.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 476);
+            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 512);
             this.btnBaocaotonkho.Name = "btnBaocaotonkho";
             this.btnBaocaotonkho.Size = new System.Drawing.Size(249, 37);
             this.btnBaocaotonkho.TabIndex = 0;
@@ -345,7 +347,7 @@
             this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 433);
+            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 469);
             this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
             this.btnBaocaodoanhthu.Size = new System.Drawing.Size(249, 37);
             this.btnBaocaodoanhthu.TabIndex = 0;
@@ -467,6 +469,26 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
+            // btnQuangcao
+            // 
+            this.btnQuangcao.Animated = true;
+            this.btnQuangcao.BorderRadius = 10;
+            this.btnQuangcao.BorderThickness = 1;
+            this.btnQuangcao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuangcao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuangcao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuangcao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuangcao.Enabled = false;
+            this.btnQuangcao.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnQuangcao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnQuangcao.ForeColor = System.Drawing.Color.White;
+            this.btnQuangcao.Location = new System.Drawing.Point(11, 418);
+            this.btnQuangcao.Name = "btnQuangcao";
+            this.btnQuangcao.Size = new System.Drawing.Size(249, 37);
+            this.btnQuangcao.TabIndex = 10;
+            this.btnQuangcao.Text = "QUẢN LÝ QUẢNG CÁO";
+            this.btnQuangcao.Click += new System.EventHandler(this.btnQuangcao_Click);
+            // 
             // btnXemphanhoi
             // 
             this.btnXemphanhoi.Animated = true;
@@ -476,14 +498,15 @@
             this.btnXemphanhoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnXemphanhoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnXemphanhoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXemphanhoi.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnXemphanhoi.Enabled = false;
+            this.btnXemphanhoi.FillColor = System.Drawing.Color.BlueViolet;
             this.btnXemphanhoi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXemphanhoi.ForeColor = System.Drawing.Color.White;
             this.btnXemphanhoi.Location = new System.Drawing.Point(11, 375);
             this.btnXemphanhoi.Name = "btnXemphanhoi";
             this.btnXemphanhoi.Size = new System.Drawing.Size(249, 37);
-            this.btnXemphanhoi.TabIndex = 7;
-            this.btnXemphanhoi.Text = "XEM Ý KIẾN PHẢN HỒI";
+            this.btnXemphanhoi.TabIndex = 9;
+            this.btnXemphanhoi.Text = "XEM THÔNG TIN PHẢN HỒI";
             this.btnXemphanhoi.Click += new System.EventHandler(this.btnXemphanhoi_Click);
             // 
             // Main
@@ -547,6 +570,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
         private Guna.UI2.WinForms.Guna2TileButton btnChuongtrinhgiamgia;
+        private Guna.UI2.WinForms.Guna2TileButton btnQuangcao;
         private Guna.UI2.WinForms.Guna2TileButton btnXemphanhoi;
     }
 }

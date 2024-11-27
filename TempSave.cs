@@ -29,5 +29,7 @@ namespace BTL_ThucTap_LTNET
             public int gia;
             public int soluongdaban;
         }
+        public static int maqc { set; get; } // của khách
+
     }
 }

@@ -205,13 +205,20 @@ namespace BTL_ThucTap_LTNET
 
         private void btnUudai_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Chương trình ưu đãi dành cho khách hàng đang được phát triển");
+            ChuongTrinhUuDai f = new ChuongTrinhUuDai();
+            f.ShowDialog();
 
         }
 
         private void LienHeMenu_Click(object sender, EventArgs e)
         {
             LienHe f = new LienHe();
+            f.ShowDialog();
+        }
+
+        private void btnNapvip_Click(object sender, EventArgs e)
+        {
+            NapVip f = new NapVip();
             f.ShowDialog();
         }
     }

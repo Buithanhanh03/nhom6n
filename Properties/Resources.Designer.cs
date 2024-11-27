@@ -173,6 +173,16 @@ namespace BTL_ThucTap_LTNET.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maQR {
+            get {
+                object obj = ResourceManager.GetObject("maQR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MIND_icon {
             get {
                 object obj = ResourceManager.GetObject("MIND_icon", resourceCulture);

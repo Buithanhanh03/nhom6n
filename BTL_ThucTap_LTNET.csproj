@@ -83,6 +83,12 @@
     <Compile Include="ChoiGame.Designer.cs">
       <DependentUpon>ChoiGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChuongTrinhUuDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuongTrinhUuDai.Designer.cs">
+      <DependentUpon>ChuongTrinhUuDai.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKyKhach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     <Compile Include="MainOnline.Designer.cs">
       <DependentUpon>MainOnline.cs</DependentUpon>
     </Compile>
+    <Compile Include="NapVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NapVip.Designer.cs">
+      <DependentUpon>NapVip.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,12 @@
     </Compile>
     <Compile Include="QuanLyGiamGia.Designer.cs">
       <DependentUpon>QuanLyGiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyQuangCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyQuangCao.Designer.cs">
+      <DependentUpon>QuanLyQuangCao.cs</DependentUpon>
     </Compile>
     <Compile Include="QuenMatKhau.cs">
       <SubType>Form</SubType>
@@ -315,6 +333,9 @@
     <EmbeddedResource Include="QuanLyGiamGia.resx">
       <DependentUpon>QuanLyGiamGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyQuangCao.resx">
+      <DependentUpon>QuanLyQuangCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +445,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maQR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

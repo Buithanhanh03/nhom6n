@@ -43,6 +43,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnNapvip = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnUudai = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnLichsumuahang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnDathang = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -93,7 +94,7 @@
             this.ThoatMenu});
             this.menuStrip1.Location = new System.Drawing.Point(193, 18);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(724, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(604, 29);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -206,6 +207,7 @@
             // 
             this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Controls.Add(this.btnNapvip);
             this.guna2GroupBox2.Controls.Add(this.btnUudai);
             this.guna2GroupBox2.Controls.Add(this.btnLichsumuahang);
             this.guna2GroupBox2.Controls.Add(this.btnDathang);
@@ -217,6 +219,29 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(185, 340);
             this.guna2GroupBox2.TabIndex = 13;
             // 
+            // btnNapvip
+            // 
+            this.btnNapvip.BorderColor = System.Drawing.Color.Gray;
+            this.btnNapvip.BorderRadius = 10;
+            this.btnNapvip.BorderThickness = 2;
+            this.btnNapvip.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNapvip.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNapvip.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNapvip.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNapvip.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNapvip.Enabled = false;
+            this.btnNapvip.FillColor = System.Drawing.Color.Black;
+            this.btnNapvip.FillColor2 = System.Drawing.Color.DarkGoldenrod;
+            this.btnNapvip.FocusedColor = System.Drawing.Color.Black;
+            this.btnNapvip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNapvip.ForeColor = System.Drawing.Color.Yellow;
+            this.btnNapvip.Location = new System.Drawing.Point(3, 64);
+            this.btnNapvip.Name = "btnNapvip";
+            this.btnNapvip.Size = new System.Drawing.Size(179, 55);
+            this.btnNapvip.TabIndex = 17;
+            this.btnNapvip.Text = "NẠP VIP";
+            this.btnNapvip.Click += new System.EventHandler(this.btnNapvip_Click);
+            // 
             // btnUudai
             // 
             this.btnUudai.Animated = true;
@@ -226,11 +251,10 @@
             this.btnUudai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUudai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUudai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUudai.Enabled = false;
             this.btnUudai.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnUudai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUudai.ForeColor = System.Drawing.Color.White;
-            this.btnUudai.Location = new System.Drawing.Point(3, 120);
+            this.btnUudai.Location = new System.Drawing.Point(3, 193);
             this.btnUudai.Name = "btnUudai";
             this.btnUudai.Size = new System.Drawing.Size(179, 37);
             this.btnUudai.TabIndex = 15;
@@ -250,7 +274,7 @@
             this.btnLichsumuahang.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnLichsumuahang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLichsumuahang.ForeColor = System.Drawing.Color.White;
-            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 77);
+            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 150);
             this.btnLichsumuahang.Name = "btnLichsumuahang";
             this.btnLichsumuahang.Size = new System.Drawing.Size(179, 37);
             this.btnLichsumuahang.TabIndex = 14;
@@ -328,5 +352,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnDathang;
         private Guna.UI2.WinForms.Guna2TileButton btnLichsumuahang;
         private Guna.UI2.WinForms.Guna2TileButton btnUudai;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnNapvip;
     }
 }
