@@ -57,6 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnXemphanhoi = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -176,6 +177,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btnXemphanhoi);
             this.guna2Panel1.Controls.Add(this.btnChuongtrinhgiamgia);
             this.guna2Panel1.Controls.Add(this.guna2TileButton3);
             this.guna2Panel1.Controls.Add(this.btnChoigame);
@@ -190,7 +192,7 @@
             this.guna2Panel1.Controls.Add(this.btnKhohang);
             this.guna2Panel1.Location = new System.Drawing.Point(4, 113);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(272, 586);
+            this.guna2Panel1.Size = new System.Drawing.Size(272, 624);
             this.guna2Panel1.TabIndex = 13;
             // 
             // btnChuongtrinhgiamgia
@@ -244,7 +246,7 @@
             this.btnChoigame.FillColor = System.Drawing.Color.Indigo;
             this.btnChoigame.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnChoigame.ForeColor = System.Drawing.Color.White;
-            this.btnChoigame.Location = new System.Drawing.Point(11, 543);
+            this.btnChoigame.Location = new System.Drawing.Point(11, 578);
             this.btnChoigame.Name = "btnChoigame";
             this.btnChoigame.Size = new System.Drawing.Size(117, 37);
             this.btnChoigame.TabIndex = 4;
@@ -263,7 +265,7 @@
             this.guna2TileButton2.FillColor = System.Drawing.Color.DarkGreen;
             this.guna2TileButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TileButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton2.Location = new System.Drawing.Point(11, 495);
+            this.guna2TileButton2.Location = new System.Drawing.Point(11, 530);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.Size = new System.Drawing.Size(249, 37);
             this.guna2TileButton2.TabIndex = 3;
@@ -323,7 +325,7 @@
             this.btnBaocaotonkho.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaotonkho.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaotonkho.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 441);
+            this.btnBaocaotonkho.Location = new System.Drawing.Point(11, 476);
             this.btnBaocaotonkho.Name = "btnBaocaotonkho";
             this.btnBaocaotonkho.Size = new System.Drawing.Size(249, 37);
             this.btnBaocaotonkho.TabIndex = 0;
@@ -343,7 +345,7 @@
             this.btnBaocaodoanhthu.FillColor = System.Drawing.Color.Navy;
             this.btnBaocaodoanhthu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBaocaodoanhthu.ForeColor = System.Drawing.Color.White;
-            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 398);
+            this.btnBaocaodoanhthu.Location = new System.Drawing.Point(11, 433);
             this.btnBaocaodoanhthu.Name = "btnBaocaodoanhthu";
             this.btnBaocaodoanhthu.Size = new System.Drawing.Size(249, 37);
             this.btnBaocaodoanhthu.TabIndex = 0;
@@ -465,11 +467,30 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
+            // btnXemphanhoi
+            // 
+            this.btnXemphanhoi.Animated = true;
+            this.btnXemphanhoi.BorderRadius = 10;
+            this.btnXemphanhoi.BorderThickness = 1;
+            this.btnXemphanhoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemphanhoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemphanhoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXemphanhoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXemphanhoi.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnXemphanhoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXemphanhoi.ForeColor = System.Drawing.Color.White;
+            this.btnXemphanhoi.Location = new System.Drawing.Point(11, 375);
+            this.btnXemphanhoi.Name = "btnXemphanhoi";
+            this.btnXemphanhoi.Size = new System.Drawing.Size(249, 37);
+            this.btnXemphanhoi.TabIndex = 7;
+            this.btnXemphanhoi.Text = "XEM Ý KIẾN PHẢN HỒI";
+            this.btnXemphanhoi.Click += new System.EventHandler(this.btnXemphanhoi_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 722);
+            this.ClientSize = new System.Drawing.Size(842, 749);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2Panel1);
@@ -526,5 +547,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
         private Guna.UI2.WinForms.Guna2TileButton btnChuongtrinhgiamgia;
+        private Guna.UI2.WinForms.Guna2TileButton btnXemphanhoi;
     }
 }

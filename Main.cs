@@ -269,5 +269,11 @@ namespace BTL_ThucTap_LTNET
             QuanLyGiamGia f = new QuanLyGiamGia();
             f.ShowDialog();
         }
+
+        private void btnXemphanhoi_Click(object sender, EventArgs e)
+        {
+            XemPhanHoi f = new XemPhanHoi();
+            f.ShowDialog();
+        }
     }
 }
