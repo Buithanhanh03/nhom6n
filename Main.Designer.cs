@@ -42,6 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnQuanlytaikhoankhachhang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnQuangcao = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnXemphanhoi = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnChuongtrinhgiamgia = new Guna.UI2.WinForms.Guna2TileButton();
@@ -59,7 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TileButton4 = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -179,7 +179,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2TileButton4);
+            this.guna2Panel1.Controls.Add(this.btnQuanlytaikhoankhachhang);
             this.guna2Panel1.Controls.Add(this.btnQuangcao);
             this.guna2Panel1.Controls.Add(this.btnXemphanhoi);
             this.guna2Panel1.Controls.Add(this.btnChuongtrinhgiamgia);
@@ -198,6 +198,26 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(272, 634);
             this.guna2Panel1.TabIndex = 13;
+            // 
+            // btnQuanlytaikhoankhachhang
+            // 
+            this.btnQuanlytaikhoankhachhang.Animated = true;
+            this.btnQuanlytaikhoankhachhang.BorderRadius = 10;
+            this.btnQuanlytaikhoankhachhang.BorderThickness = 1;
+            this.btnQuanlytaikhoankhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanlytaikhoankhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanlytaikhoankhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuanlytaikhoankhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuanlytaikhoankhachhang.Enabled = false;
+            this.btnQuanlytaikhoankhachhang.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnQuanlytaikhoankhachhang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnQuanlytaikhoankhachhang.ForeColor = System.Drawing.Color.White;
+            this.btnQuanlytaikhoankhachhang.Location = new System.Drawing.Point(11, 461);
+            this.btnQuanlytaikhoankhachhang.Name = "btnQuanlytaikhoankhachhang";
+            this.btnQuanlytaikhoankhachhang.Size = new System.Drawing.Size(249, 37);
+            this.btnQuanlytaikhoankhachhang.TabIndex = 11;
+            this.btnQuanlytaikhoankhachhang.Text = "QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG";
+            this.btnQuanlytaikhoankhachhang.Click += new System.EventHandler(this.btnQuanlytaikhoankhachhang_Click);
             // 
             // btnQuangcao
             // 
@@ -511,25 +531,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // guna2TileButton4
-            // 
-            this.guna2TileButton4.Animated = true;
-            this.guna2TileButton4.BorderRadius = 10;
-            this.guna2TileButton4.BorderThickness = 1;
-            this.guna2TileButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2TileButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2TileButton4.Enabled = false;
-            this.guna2TileButton4.FillColor = System.Drawing.Color.BlueViolet;
-            this.guna2TileButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TileButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton4.Location = new System.Drawing.Point(11, 461);
-            this.guna2TileButton4.Name = "guna2TileButton4";
-            this.guna2TileButton4.Size = new System.Drawing.Size(249, 37);
-            this.guna2TileButton4.TabIndex = 11;
-            this.guna2TileButton4.Text = "QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,6 +594,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnChuongtrinhgiamgia;
         private Guna.UI2.WinForms.Guna2TileButton btnQuangcao;
         private Guna.UI2.WinForms.Guna2TileButton btnXemphanhoi;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton4;
+        private Guna.UI2.WinForms.Guna2TileButton btnQuanlytaikhoankhachhang;
     }
 }
