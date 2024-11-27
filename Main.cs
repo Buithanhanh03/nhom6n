@@ -291,5 +291,11 @@ namespace BTL_ThucTap_LTNET
             QuanLyTaiKhoanKhachHang f = new QuanLyTaiKhoanKhachHang();
             f.ShowDialog();
         }
+
+        private void btnXulydonhang_Click(object sender, EventArgs e)
+        {
+            XuLyDonHang f = new XuLyDonHang();
+            f.ShowDialog();
+        }
     }
 }

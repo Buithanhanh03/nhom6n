@@ -54,7 +54,7 @@
             this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnBaocaodoanhthu = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2TileButton3 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnXulydonhang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnKhohang = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnSanpham = new Guna.UI2.WinForms.Guna2TileButton();
@@ -295,6 +295,7 @@
             this.btnQuanlytaikhoankhachhang.Size = new System.Drawing.Size(304, 37);
             this.btnQuanlytaikhoankhachhang.TabIndex = 16;
             this.btnQuanlytaikhoankhachhang.Text = "QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG";
+            this.btnQuanlytaikhoankhachhang.Click += new System.EventHandler(this.btnQuanlytaikhoankhachhang_Click);
             // 
             // btnQuangcao
             // 
@@ -315,6 +316,7 @@
             this.btnQuangcao.Size = new System.Drawing.Size(149, 37);
             this.btnQuangcao.TabIndex = 15;
             this.btnQuangcao.Text = "QUẢN LÝ QUẢNG CÁO";
+            this.btnQuangcao.Click += new System.EventHandler(this.btnQuangcao_Click);
             // 
             // btnXemphanhoi
             // 
@@ -335,6 +337,7 @@
             this.btnXemphanhoi.Size = new System.Drawing.Size(149, 37);
             this.btnXemphanhoi.TabIndex = 14;
             this.btnXemphanhoi.Text = "XEM THÔNG TIN PHẢN HỒI";
+            this.btnXemphanhoi.Click += new System.EventHandler(this.btnXemphanhoi_Click);
             // 
             // btnChuongtrinhgiamgia
             // 
@@ -355,6 +358,7 @@
             this.btnChuongtrinhgiamgia.Size = new System.Drawing.Size(149, 37);
             this.btnChuongtrinhgiamgia.TabIndex = 13;
             this.btnChuongtrinhgiamgia.Text = "QUẢN LÝ CHƯƠNG TRÌNH GIẢM GIÁ";
+            this.btnChuongtrinhgiamgia.Click += new System.EventHandler(this.btnChuongtrinhgiamgia_Click);
             // 
             // btnNhanvien
             // 
@@ -375,6 +379,7 @@
             this.btnNhanvien.Size = new System.Drawing.Size(149, 37);
             this.btnNhanvien.TabIndex = 12;
             this.btnNhanvien.Text = "QUẢN LÝ NHÂN VIÊN";
+            this.btnNhanvien.Click += new System.EventHandler(this.btnNhanvien_Click);
             // 
             // btnBaocaotonkho
             // 
@@ -424,7 +429,7 @@
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GroupBox1.BorderThickness = 2;
-            this.guna2GroupBox1.Controls.Add(this.guna2TileButton3);
+            this.guna2GroupBox1.Controls.Add(this.btnXulydonhang);
             this.guna2GroupBox1.Controls.Add(this.btnKhohang);
             this.guna2GroupBox1.Controls.Add(this.guna2TileButton1);
             this.guna2GroupBox1.Controls.Add(this.btnSanpham);
@@ -440,24 +445,25 @@
             this.guna2GroupBox1.Text = "CHỨC NĂNG CHO NHÂN VIÊN";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2TileButton3
+            // btnXulydonhang
             // 
-            this.guna2TileButton3.Animated = true;
-            this.guna2TileButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TileButton3.BorderRadius = 10;
-            this.guna2TileButton3.BorderThickness = 1;
-            this.guna2TileButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2TileButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2TileButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2TileButton3.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.guna2TileButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TileButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton3.Location = new System.Drawing.Point(163, 43);
-            this.guna2TileButton3.Name = "guna2TileButton3";
-            this.guna2TileButton3.Size = new System.Drawing.Size(149, 37);
-            this.guna2TileButton3.TabIndex = 17;
-            this.guna2TileButton3.Text = "XỬ LÝ ĐƠN HÀNG";
+            this.btnXulydonhang.Animated = true;
+            this.btnXulydonhang.BackColor = System.Drawing.Color.Transparent;
+            this.btnXulydonhang.BorderRadius = 10;
+            this.btnXulydonhang.BorderThickness = 1;
+            this.btnXulydonhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXulydonhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXulydonhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXulydonhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXulydonhang.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnXulydonhang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXulydonhang.ForeColor = System.Drawing.Color.White;
+            this.btnXulydonhang.Location = new System.Drawing.Point(163, 43);
+            this.btnXulydonhang.Name = "btnXulydonhang";
+            this.btnXulydonhang.Size = new System.Drawing.Size(149, 37);
+            this.btnXulydonhang.TabIndex = 17;
+            this.btnXulydonhang.Text = "XỬ LÝ ĐƠN HÀNG";
+            this.btnXulydonhang.Click += new System.EventHandler(this.btnXulydonhang_Click);
             // 
             // btnKhohang
             // 
@@ -477,6 +483,7 @@
             this.btnKhohang.Size = new System.Drawing.Size(149, 37);
             this.btnKhohang.TabIndex = 15;
             this.btnKhohang.Text = "KHO HÀNG";
+            this.btnKhohang.Click += new System.EventHandler(this.btnKhohang_Click);
             // 
             // guna2TileButton1
             // 
@@ -496,6 +503,7 @@
             this.guna2TileButton1.Size = new System.Drawing.Size(304, 37);
             this.guna2TileButton1.TabIndex = 16;
             this.guna2TileButton1.Text = "LỊCH SỬ NHẬP HÀNG";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
             // 
             // btnSanpham
             // 
@@ -515,6 +523,7 @@
             this.btnSanpham.Size = new System.Drawing.Size(149, 37);
             this.btnSanpham.TabIndex = 14;
             this.btnSanpham.Text = "SẢN PHẨM";
+            this.btnSanpham.Click += new System.EventHandler(this.btnSanpham_Click);
             // 
             // btnKhachhang
             // 
@@ -534,6 +543,7 @@
             this.btnKhachhang.Size = new System.Drawing.Size(149, 37);
             this.btnKhachhang.TabIndex = 13;
             this.btnKhachhang.Text = "KHÁCH HÀNG";
+            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
             // 
             // btnBanhang
             // 
@@ -660,7 +670,7 @@
         private Guna.UI2.WinForms.Guna2TileButton btnChuongtrinhgiamgia;
         private Guna.UI2.WinForms.Guna2TileButton btnNhanvien;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
+        private Guna.UI2.WinForms.Guna2TileButton btnXulydonhang;
         private Guna.UI2.WinForms.Guna2TileButton btnKhohang;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Guna.UI2.WinForms.Guna2TileButton btnSanpham;

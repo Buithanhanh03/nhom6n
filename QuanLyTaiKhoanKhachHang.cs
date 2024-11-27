@@ -138,5 +138,19 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Vui lòng chọn một tài khoản để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string username = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From nhanvien Where username LIKE @username";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@username", "%" + username + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

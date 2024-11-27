@@ -264,6 +264,7 @@
             this.txtTimkiem.SelectedText = "";
             this.txtTimkiem.Size = new System.Drawing.Size(142, 36);
             this.txtTimkiem.TabIndex = 28;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged);
             // 
             // groupBox3
             // 

@@ -202,5 +202,19 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Vui lòng chọn một quảng cáo để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string tenqc = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From nhanvien Where tenqc LIKE @tenqc";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@tenqc", "%" + tenqc + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

@@ -275,6 +275,9 @@
     <EmbeddedResource Include="ChoiGame.resx">
       <DependentUpon>ChoiGame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChuongTrinhUuDai.resx">
+      <DependentUpon>ChuongTrinhUuDai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKyKhach.resx">
       <DependentUpon>DangKyKhach.cs</DependentUpon>
     </EmbeddedResource>

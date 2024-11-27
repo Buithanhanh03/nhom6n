@@ -166,6 +166,7 @@ namespace BTL_ThucTap_LTNET
             {
                 DangNhapMenu.Text = "ĐĂNG XUẤT";
                 btnDathang.Enabled = true;
+                btnNapvip.Enabled = true;
                 btnLichsumuahang.Enabled = true;
                 btnUudai.Enabled = true;
             }
