@@ -84,6 +84,8 @@ namespace BTL_ThucTap_LTNET
                 btnChuongtrinhgiamgia.Enabled = true;
                 btnQuangcao.Enabled = true;
                 btnQuanlytaikhoankhachhang.Enabled = true;
+                btnXemphanhoi.Enabled = true;
+                btnNhanvien.Enabled = true;
             }
         }
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +122,7 @@ namespace BTL_ThucTap_LTNET
             base.OnPaint(e);
 
             Color color1 = Color.LightPink;
-            Color color2 = Color.IndianRed;
+            Color color2 = Color.BlueViolet;
 
             using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, color1, color2, LinearGradientMode.Vertical))
             {
