@@ -104,5 +104,11 @@ namespace BTL_ThucTap_LTNET
             TempSave.GiamGia = 0;
             TempSave.MaDonHang = 0;
         }
+
+        private void btnGiangvien_Click(object sender, EventArgs e)
+        {
+            MainGiangVien f = new MainGiangVien();
+            f.ShowDialog();
+        }
     }
 }

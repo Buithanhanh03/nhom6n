@@ -129,6 +129,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Location = new System.Drawing.Point(228, 248);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(100, 15);
@@ -139,6 +140,7 @@
             // 
             // txtTK
             // 
+            this.txtTK.BackColor = System.Drawing.Color.Transparent;
             this.txtTK.BorderRadius = 10;
             this.txtTK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTK.DefaultText = "";
@@ -161,6 +163,7 @@
             // linklblQuenMK
             // 
             this.linklblQuenMK.AutoSize = true;
+            this.linklblQuenMK.BackColor = System.Drawing.Color.Transparent;
             this.linklblQuenMK.Location = new System.Drawing.Point(257, 147);
             this.linklblQuenMK.Name = "linklblQuenMK";
             this.linklblQuenMK.Size = new System.Drawing.Size(110, 15);
@@ -171,6 +174,7 @@
             // 
             // txtMK
             // 
+            this.txtMK.BackColor = System.Drawing.Color.Transparent;
             this.txtMK.BorderRadius = 10;
             this.txtMK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMK.DefaultText = "";
@@ -194,6 +198,7 @@
             // 
             this.btnDangNhap.Animated = true;
             this.btnDangNhap.AnimatedGIF = true;
+            this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.btnDangNhap.BorderRadius = 20;
             this.btnDangNhap.BorderThickness = 1;
             this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -215,6 +220,7 @@
             // cbHien
             // 
             this.cbHien.AutoSize = true;
+            this.cbHien.BackColor = System.Drawing.Color.Transparent;
             this.cbHien.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.cbHien.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHien.CheckedState.BorderRadius = 0;
@@ -230,6 +236,7 @@
             this.cbHien.UncheckedState.BorderRadius = 0;
             this.cbHien.UncheckedState.BorderThickness = 0;
             this.cbHien.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbHien.UseVisualStyleBackColor = false;
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // btnThoat

@@ -102,5 +102,10 @@ namespace BTL_ThucTap_LTNET
             richTextBox1.Text = "QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG:\r\nAdmin có thể xem danh sách các thông tin tài khoản khách hàng tại đây.\r\nAdmin có thể chỉnh sửa hoặc xóa các thuộc tính sau của một tài khoản khách hàng khi chọn đối tượng trên bảng:\r\nCác thuộc tính có thể sửa đổi: mật khẩu, vip";
         }
 
+        private void btnXembaotri_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "XEM THÔNG TIN BẢO TRÌ:\r\nAdmin có thể xem danh sách các thông tin bảo trì tại đây.\r\nAdmin có thể xóa các thông tin này";
+
+        }
     }
 }

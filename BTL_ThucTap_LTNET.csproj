@@ -173,6 +173,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGiangVien.Designer.cs">
+      <DependentUpon>MainGiangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainOnline.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGiangVien.resx">
+      <DependentUpon>MainGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainOnline.resx">
       <DependentUpon>MainOnline.cs</DependentUpon>

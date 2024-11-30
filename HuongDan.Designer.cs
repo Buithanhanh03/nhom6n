@@ -50,6 +50,7 @@
             this.btnNhanvien = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnBaocaotonkho = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnBaocaodoanhthu = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnXembaotri = new Guna.UI2.WinForms.Guna2TileButton();
             this.groupBox1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -294,6 +295,7 @@
             this.guna2GroupBox2.BorderRadius = 10;
             this.guna2GroupBox2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2GroupBox2.BorderThickness = 2;
+            this.guna2GroupBox2.Controls.Add(this.btnXembaotri);
             this.guna2GroupBox2.Controls.Add(this.guna2TileButton4);
             this.guna2GroupBox2.Controls.Add(this.btnQuanlytaikhoankhachhang);
             this.guna2GroupBox2.Controls.Add(this.btnQuangcao);
@@ -349,7 +351,7 @@
             this.btnQuanlytaikhoankhachhang.ForeColor = System.Drawing.Color.White;
             this.btnQuanlytaikhoankhachhang.Location = new System.Drawing.Point(8, 172);
             this.btnQuanlytaikhoankhachhang.Name = "btnQuanlytaikhoankhachhang";
-            this.btnQuanlytaikhoankhachhang.Size = new System.Drawing.Size(304, 37);
+            this.btnQuanlytaikhoankhachhang.Size = new System.Drawing.Size(149, 37);
             this.btnQuanlytaikhoankhachhang.TabIndex = 16;
             this.btnQuanlytaikhoankhachhang.Text = "QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG";
             this.btnQuanlytaikhoankhachhang.Click += new System.EventHandler(this.btnQuanlytaikhoankhachhang_Click);
@@ -474,6 +476,26 @@
             this.btnBaocaodoanhthu.Text = "BÁO CÁO DOANH THU";
             this.btnBaocaodoanhthu.Click += new System.EventHandler(this.btnBaocao_Click);
             // 
+            // btnXembaotri
+            // 
+            this.btnXembaotri.Animated = true;
+            this.btnXembaotri.BackColor = System.Drawing.Color.Transparent;
+            this.btnXembaotri.BorderRadius = 10;
+            this.btnXembaotri.BorderThickness = 1;
+            this.btnXembaotri.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXembaotri.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXembaotri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXembaotri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXembaotri.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnXembaotri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXembaotri.ForeColor = System.Drawing.Color.White;
+            this.btnXembaotri.Location = new System.Drawing.Point(163, 172);
+            this.btnXembaotri.Name = "btnXembaotri";
+            this.btnXembaotri.Size = new System.Drawing.Size(149, 37);
+            this.btnXembaotri.TabIndex = 22;
+            this.btnXembaotri.Text = "XEM THÔNG TIN BẢO TRÌ";
+            this.btnXembaotri.Click += new System.EventHandler(this.btnXembaotri_Click);
+            // 
             // HuongDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,5 +543,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnChoigame;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton4;
+        private Guna.UI2.WinForms.Guna2TileButton btnXembaotri;
     }
 }

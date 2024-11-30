@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnGiangvien = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -42,11 +44,10 @@
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnGhetham = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -55,6 +56,7 @@
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.guna2GroupBox1.BorderThickness = 2;
+            this.guna2GroupBox1.Controls.Add(this.btnGiangvien);
             this.guna2GroupBox1.Controls.Add(this.label1);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
@@ -70,6 +72,28 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(458, 437);
             this.guna2GroupBox1.TabIndex = 2;
             // 
+            // btnGiangvien
+            // 
+            this.btnGiangvien.Animated = true;
+            this.btnGiangvien.AnimatedGIF = true;
+            this.btnGiangvien.BorderRadius = 20;
+            this.btnGiangvien.BorderThickness = 1;
+            this.btnGiangvien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiangvien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiangvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiangvien.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiangvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiangvien.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnGiangvien.FillColor2 = System.Drawing.Color.Chocolate;
+            this.btnGiangvien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGiangvien.ForeColor = System.Drawing.Color.White;
+            this.btnGiangvien.Location = new System.Drawing.Point(187, 374);
+            this.btnGiangvien.Name = "btnGiangvien";
+            this.btnGiangvien.Size = new System.Drawing.Size(163, 45);
+            this.btnGiangvien.TabIndex = 25;
+            this.btnGiangvien.Text = "DÀNH CHO GIẢNG VIÊN";
+            this.btnGiangvien.Click += new System.EventHandler(this.btnGiangvien_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -82,11 +106,24 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "UNIWEAR";
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(156, 11);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 23;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(44, 351);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(54, 351);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(353, 15);
             this.guna2HtmlLabel2.TabIndex = 22;
@@ -137,6 +174,7 @@
             // 
             // txtTK
             // 
+            this.txtTK.BackColor = System.Drawing.Color.Transparent;
             this.txtTK.BorderRadius = 10;
             this.txtTK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTK.DefaultText = "";
@@ -159,6 +197,7 @@
             // linklblQuenMK
             // 
             this.linklblQuenMK.AutoSize = true;
+            this.linklblQuenMK.BackColor = System.Drawing.Color.Transparent;
             this.linklblQuenMK.Location = new System.Drawing.Point(257, 147);
             this.linklblQuenMK.Name = "linklblQuenMK";
             this.linklblQuenMK.Size = new System.Drawing.Size(110, 15);
@@ -169,6 +208,7 @@
             // 
             // txtMK
             // 
+            this.txtMK.BackColor = System.Drawing.Color.Transparent;
             this.txtMK.BorderRadius = 10;
             this.txtMK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMK.DefaultText = "";
@@ -192,6 +232,7 @@
             // 
             this.btnDangNhap.Animated = true;
             this.btnDangNhap.AnimatedGIF = true;
+            this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.btnDangNhap.BorderRadius = 20;
             this.btnDangNhap.BorderThickness = 1;
             this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -213,6 +254,7 @@
             // cbHien
             // 
             this.cbHien.AutoSize = true;
+            this.cbHien.BackColor = System.Drawing.Color.Transparent;
             this.cbHien.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.cbHien.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHien.CheckedState.BorderRadius = 0;
@@ -228,6 +270,7 @@
             this.cbHien.UncheckedState.BorderRadius = 0;
             this.cbHien.UncheckedState.BorderThickness = 0;
             this.cbHien.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbHien.UseVisualStyleBackColor = false;
             this.cbHien.CheckedChanged += new System.EventHandler(this.cbHien_CheckedChanged);
             // 
             // btnThoat
@@ -241,9 +284,9 @@
             this.btnThoat.FillColor = System.Drawing.SystemColors.GrayText;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(310, 374);
+            this.btnThoat.Location = new System.Drawing.Point(353, 374);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(124, 45);
+            this.btnThoat.Size = new System.Drawing.Size(89, 45);
             this.btnThoat.TabIndex = 20;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -265,7 +308,7 @@
             this.btnGhetham.ForeColor = System.Drawing.Color.White;
             this.btnGhetham.Location = new System.Drawing.Point(22, 374);
             this.btnGhetham.Name = "btnGhetham";
-            this.btnGhetham.Size = new System.Drawing.Size(282, 45);
+            this.btnGhetham.Size = new System.Drawing.Size(159, 45);
             this.btnGhetham.TabIndex = 19;
             this.btnGhetham.Text = "GHÉ THĂM CỬA HÀNG";
             this.btnGhetham.Click += new System.EventHandler(this.btnGhetham_Click);
@@ -282,19 +325,6 @@
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(156, 11);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 23;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,10 +340,10 @@
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,6 +365,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox cbHien;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnGiangvien;
     }
 }
 
