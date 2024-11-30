@@ -242,6 +242,12 @@
     <Compile Include="ThongTinUngDung.Designer.cs">
       <DependentUpon>ThongTinUngDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemBaoTri.Designer.cs">
+      <DependentUpon>XemBaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemLich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinUngDung.resx">
       <DependentUpon>ThongTinUngDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemBaoTri.resx">
+      <DependentUpon>XemBaoTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XemLich.resx">
       <DependentUpon>XemLich.cs</DependentUpon>

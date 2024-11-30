@@ -86,6 +86,7 @@ namespace BTL_ThucTap_LTNET
                 btnQuanlytaikhoankhachhang.Enabled = true;
                 btnXemphanhoi.Enabled = true;
                 btnNhanvien.Enabled = true;
+                btnXembaotri.Enabled = true;
             }
         }
         private void tHÔNGTINỨNGDỤNGToolStripMenuItem_Click(object sender, EventArgs e)
@@ -295,6 +296,12 @@ namespace BTL_ThucTap_LTNET
         private void btnXulydonhang_Click(object sender, EventArgs e)
         {
             XuLyDonHang f = new XuLyDonHang();
+            f.ShowDialog();
+        }
+
+        private void btnXembaotri_Click(object sender, EventArgs e)
+        {
+            XemBaoTri f = new XemBaoTri();
             f.ShowDialog();
         }
     }
