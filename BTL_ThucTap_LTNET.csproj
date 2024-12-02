@@ -119,6 +119,12 @@
     <Compile Include="GioiThieuCuaHang.Designer.cs">
       <DependentUpon>GioiThieuCuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="HuongDanKhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuongDanKhach.Designer.cs">
+      <DependentUpon>HuongDanKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="LichSuMuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GioiThieuCuaHang.resx">
       <DependentUpon>GioiThieuCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuongDanKhach.resx">
+      <DependentUpon>HuongDanKhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LichSuMuaHang.resx">
       <DependentUpon>LichSuMuaHang.cs</DependentUpon>

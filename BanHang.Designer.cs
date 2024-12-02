@@ -53,15 +53,6 @@
             this.txtThongtin = new System.Windows.Forms.RichTextBox();
             this.txtSoluong = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +62,14 @@
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -296,7 +295,6 @@
             this.gia,
             this.size,
             this.mau,
-            this.madm,
             this.tonkho,
             this.anh,
             this.soluongdaban});
@@ -351,71 +349,6 @@
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // masp
-            // 
-            this.masp.DataPropertyName = "masp";
-            this.masp.HeaderText = "Mã SP";
-            this.masp.Name = "masp";
-            this.masp.ReadOnly = true;
-            // 
-            // tensp
-            // 
-            this.tensp.DataPropertyName = "tensp";
-            this.tensp.HeaderText = "Tên SP";
-            this.tensp.Name = "tensp";
-            this.tensp.ReadOnly = true;
-            // 
-            // gia
-            // 
-            this.gia.DataPropertyName = "gia";
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.DataPropertyName = "size";
-            this.size.HeaderText = "Size";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            // 
-            // mau
-            // 
-            this.mau.DataPropertyName = "mau";
-            this.mau.HeaderText = "Màu";
-            this.mau.Name = "mau";
-            this.mau.ReadOnly = true;
-            // 
-            // madm
-            // 
-            this.madm.DataPropertyName = "madm";
-            this.madm.HeaderText = "Mã DM";
-            this.madm.Name = "madm";
-            this.madm.ReadOnly = true;
-            // 
-            // tonkho
-            // 
-            this.tonkho.DataPropertyName = "tonkho";
-            this.tonkho.HeaderText = "Tồn kho";
-            this.tonkho.Name = "tonkho";
-            this.tonkho.ReadOnly = true;
-            // 
-            // anh
-            // 
-            this.anh.DataPropertyName = "anh";
-            this.anh.HeaderText = "Ảnh";
-            this.anh.Name = "anh";
-            this.anh.ReadOnly = true;
-            this.anh.Visible = false;
-            // 
-            // soluongdaban
-            // 
-            this.soluongdaban.DataPropertyName = "soluongdaban";
-            this.soluongdaban.HeaderText = "SLĐB";
-            this.soluongdaban.Name = "soluongdaban";
-            this.soluongdaban.ReadOnly = true;
-            this.soluongdaban.Visible = false;
             // 
             // dataGridView2
             // 
@@ -553,6 +486,64 @@
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "*Bạn có thể nháy đúp 1 dòng để xem thêm về thông tin sản phẩm";
             // 
+            // masp
+            // 
+            this.masp.DataPropertyName = "masp";
+            this.masp.HeaderText = "Mã SP";
+            this.masp.Name = "masp";
+            this.masp.ReadOnly = true;
+            // 
+            // tensp
+            // 
+            this.tensp.DataPropertyName = "tensp";
+            this.tensp.HeaderText = "Tên SP";
+            this.tensp.Name = "tensp";
+            this.tensp.ReadOnly = true;
+            // 
+            // gia
+            // 
+            this.gia.DataPropertyName = "gia";
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.DataPropertyName = "size";
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            // 
+            // mau
+            // 
+            this.mau.DataPropertyName = "mau";
+            this.mau.HeaderText = "Màu";
+            this.mau.Name = "mau";
+            this.mau.ReadOnly = true;
+            // 
+            // tonkho
+            // 
+            this.tonkho.DataPropertyName = "tonkho";
+            this.tonkho.HeaderText = "Tồn kho";
+            this.tonkho.Name = "tonkho";
+            this.tonkho.ReadOnly = true;
+            // 
+            // anh
+            // 
+            this.anh.DataPropertyName = "anh";
+            this.anh.HeaderText = "Ảnh";
+            this.anh.Name = "anh";
+            this.anh.ReadOnly = true;
+            this.anh.Visible = false;
+            // 
+            // soluongdaban
+            // 
+            this.soluongdaban.DataPropertyName = "soluongdaban";
+            this.soluongdaban.HeaderText = "SLĐB";
+            this.soluongdaban.Name = "soluongdaban";
+            this.soluongdaban.ReadOnly = true;
+            this.soluongdaban.Visible = false;
+            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,16 +600,15 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnThem;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Button btnThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn masp;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensp;
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn mau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madm;
         private System.Windows.Forms.DataGridViewTextBoxColumn tonkho;
         private System.Windows.Forms.DataGridViewTextBoxColumn anh;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluongdaban;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button btnThoat;
     }
 }

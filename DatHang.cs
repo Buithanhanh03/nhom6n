@@ -21,7 +21,7 @@ namespace BTL_ThucTap_LTNET
             conn = new SqlConnection(sqlqr);
             return conn;
         }
-        private List<TempSave.GioHang> gioHangList = new List<TempSave.GioHang>();
+        public List<TempSave.GioHang> danhSachGioHang;
 
         public DatHang()
         {
@@ -150,23 +150,27 @@ namespace BTL_ThucTap_LTNET
                             }
                             else
                             {
-                                var existingItem = gioHangList.FirstOrDefault(g => g.masp == masp);
+                                // Kiểm tra nếu sản phẩm đã tồn tại trong giỏ hàng
+                                var existingItem = TempSave.danhSachGioHang.FirstOrDefault(g => g.masp == masp);
                                 if (existingItem != null)
                                 {
+                                    // Nếu đã tồn tại, tăng số lượng bán
                                     existingItem.soluongdaban += soluongmua;
                                 }
                                 else
                                 {
-                                    gioHangList.Add(new TempSave.GioHang
+                                    // Nếu chưa tồn tại, thêm mới vào danh sách giỏ hàng
+                                    TempSave.danhSachGioHang.Add(new TempSave.GioHang
                                     {
                                         masp = masp,
                                         tensp = tensp,
-                                        soluongdaban = soluongmua,
-                                        gia = gia
+                                        gia = gia,
+                                        soluongdaban = soluongmua
                                     });
                                 }
 
-                                MessageBox.Show($"Đã thêm {soluongmua} sản phẩm vào giỏ hàng!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                // Thông báo thành công
+                                MessageBox.Show($"Đã thêm {soluongmua} sản phẩm \"{tensp}\" vào giỏ hàng!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else
@@ -191,8 +195,15 @@ namespace BTL_ThucTap_LTNET
 
         private void btnGiohang_Click(object sender, EventArgs e)
         {
-            GioHang f = new GioHang(gioHangList);
+            danhSachGioHang = TempSave.danhSachGioHang;
+
+
+            // Mở form GioHang và truyền danh sách giỏ hàng
+            GioHang f = new GioHang(danhSachGioHang);
             f.ShowDialog();
+
+            // Cập nhật lại danh sách giỏ hàng sau khi đóng form
+            TempSave.danhSachGioHang = danhSachGioHang;
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)

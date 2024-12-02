@@ -65,11 +65,12 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Không thể nhập kí tự trong số điện thoại");
                 return;
             }
-            int magiamgia = int.Parse(txtMagiamgia.Text);
             int giamgia = 0;
 
             if (!string.IsNullOrEmpty(txtMagiamgia.Text))
             {
+                int magiamgia = int.Parse(txtMagiamgia.Text);
+
                 using (conn = connectdb())
                 {
                     conn.Open();
@@ -164,7 +165,7 @@ namespace BTL_ThucTap_LTNET
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            foreach (Control control in groupBox1.Controls)
+            foreach (Control control in gbThongtinKH.Controls)
             {
                 if (control is Guna.UI2.WinForms.Guna2TextBox TextBox)
                 {

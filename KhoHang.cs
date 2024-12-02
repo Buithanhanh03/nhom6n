@@ -76,15 +76,6 @@ namespace BTL_ThucTap_LTNET
         }
         private void LoadForm()
         {
-            string query = "SELECT tendm FROM danhmuc";
-
-            using (SqlConnection conn = new SqlConnection(sqlqr))
-            {
-                SqlCommand command = new SqlCommand(query, conn);
-                conn.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-            }
             foreach (Control ctrl in groupBox1.Controls)
             {
                 if (ctrl is Guna.UI2.WinForms.Guna2TextBox TextBox)
@@ -186,11 +177,6 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Hãy nhập số cho size");
                 return;
             }
-            if (IsInteger(txtMadm.Text) == false)
-            {
-                MessageBox.Show("Hãy nhập số cho mã mục");
-                return;
-            }
             if (string.IsNullOrEmpty(relativePath))
             {
                 MessageBox.Show("Bạn chưa chọn ảnh");
@@ -202,7 +188,6 @@ namespace BTL_ThucTap_LTNET
             string anh = relativePath;
             int size = int.Parse(txtSize.Text);
             string mau = txtMau.Text;
-            int madm = int.Parse(txtMadm.Text);
             int tonkho = int.Parse(txtTonkho.Text);
             conn = connectdb();
             conn = new SqlConnection(sqlqr);
@@ -221,15 +206,15 @@ namespace BTL_ThucTap_LTNET
                 else
                 {
                     SqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "INSERT INTO sanpham(masp, tensp, gia, anh, size, mau, madm, tonkho) VALUES(@masp, @tensp, @gia, @anh, @size, @mau, @madm, @tonkho)";
+                    cmd.CommandText = "INSERT INTO sanpham(masp, tensp, gia, anh, size, mau, tonkho, rating) VALUES(@masp, @tensp, @gia, @anh, @size, @mau, @tonkho, @rating)";
                     cmd.Parameters.AddWithValue("@masp", masp);
                     cmd.Parameters.AddWithValue("@tensp", tensp);
                     cmd.Parameters.AddWithValue("@gia", gia);
                     cmd.Parameters.AddWithValue("@anh", anh);
                     cmd.Parameters.AddWithValue("@size", size);
                     cmd.Parameters.AddWithValue("@mau", mau);
-                    cmd.Parameters.AddWithValue("@madm", madm);
                     cmd.Parameters.AddWithValue("@tonkho", tonkho);
+                    cmd.Parameters.AddWithValue("@rating", 5);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã thêm thành công");
                     LoadForm();

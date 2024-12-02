@@ -31,6 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbThongtinKH = new System.Windows.Forms.GroupBox();
+            this.txtMagiamgia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtDiachitruong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSDTKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,8 +44,6 @@
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtMagiamgia = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbThongtinKH.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,35 @@
             this.gbThongtinKH.Size = new System.Drawing.Size(478, 226);
             this.gbThongtinKH.TabIndex = 6;
             this.gbThongtinKH.TabStop = false;
+            // 
+            // txtMagiamgia
+            // 
+            this.txtMagiamgia.BorderRadius = 10;
+            this.txtMagiamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMagiamgia.DefaultText = "";
+            this.txtMagiamgia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMagiamgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMagiamgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMagiamgia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMagiamgia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMagiamgia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMagiamgia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMagiamgia.Location = new System.Drawing.Point(97, 194);
+            this.txtMagiamgia.Name = "txtMagiamgia";
+            this.txtMagiamgia.PasswordChar = '\0';
+            this.txtMagiamgia.PlaceholderText = "";
+            this.txtMagiamgia.SelectedText = "";
+            this.txtMagiamgia.Size = new System.Drawing.Size(353, 26);
+            this.txtMagiamgia.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Mã giảm giá";
             // 
             // txtDiachitruong
             // 
@@ -248,35 +277,6 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(334, 18);
             this.guna2HtmlLabel2.TabIndex = 23;
             this.guna2HtmlLabel2.Text = "*Bạn không thể thoát khi chưa nhập thông tin khách hàng";
-            // 
-            // txtMagiamgia
-            // 
-            this.txtMagiamgia.BorderRadius = 10;
-            this.txtMagiamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMagiamgia.DefaultText = "";
-            this.txtMagiamgia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMagiamgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMagiamgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMagiamgia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMagiamgia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMagiamgia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMagiamgia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMagiamgia.Location = new System.Drawing.Point(97, 194);
-            this.txtMagiamgia.Name = "txtMagiamgia";
-            this.txtMagiamgia.PasswordChar = '\0';
-            this.txtMagiamgia.PlaceholderText = "";
-            this.txtMagiamgia.SelectedText = "";
-            this.txtMagiamgia.Size = new System.Drawing.Size(353, 26);
-            this.txtMagiamgia.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 207);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Mã giảm giá";
             // 
             // NhapKhachHang
             // 

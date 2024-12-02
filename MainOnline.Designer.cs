@@ -31,29 +31,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.HuongDanMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.VeChungToiMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.LienHeMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.DangNhapMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThoatMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnTaikhoan = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnNapvip = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnUudai = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnLichsumuahang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnDathang = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnTaikhoan = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnGiohang = new Guna.UI2.WinForms.Guna2TileButton();
+            this.HuongDanMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.VeChungToiMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.LienHeMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.DangNhapMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThoatMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GroupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,62 +96,9 @@
             this.ThoatMenu});
             this.menuStrip1.Location = new System.Drawing.Point(193, 18);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(604, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(724, 29);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // HuongDanMenu
-            // 
-            this.HuongDanMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.home;
-            this.HuongDanMenu.Name = "HuongDanMenu";
-            this.HuongDanMenu.Size = new System.Drawing.Size(135, 25);
-            this.HuongDanMenu.Text = "HƯỚNG DẪN";
-            this.HuongDanMenu.Click += new System.EventHandler(this.HuongDanMenu_Click);
-            // 
-            // VeChungToiMenu
-            // 
-            this.VeChungToiMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
-            this.VeChungToiMenu.Name = "VeChungToiMenu";
-            this.VeChungToiMenu.Size = new System.Drawing.Size(145, 25);
-            this.VeChungToiMenu.Text = "VỀ CHÚNG TÔI";
-            this.VeChungToiMenu.Click += new System.EventHandler(this.VeChungToiMenu_Click);
-            // 
-            // LienHeMenu
-            // 
-            this.LienHeMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
-            this.LienHeMenu.Name = "LienHeMenu";
-            this.LienHeMenu.Size = new System.Drawing.Size(95, 25);
-            this.LienHeMenu.Text = "LIÊN HỆ";
-            this.LienHeMenu.Click += new System.EventHandler(this.LienHeMenu_Click);
-            // 
-            // DangNhapMenu
-            // 
-            this.DangNhapMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
-            this.DangNhapMenu.Name = "DangNhapMenu";
-            this.DangNhapMenu.Size = new System.Drawing.Size(131, 25);
-            this.DangNhapMenu.Text = "ĐĂNG NHẬP";
-            this.DangNhapMenu.Click += new System.EventHandler(this.DangNhap_Click);
-            // 
-            // ThoatMenu
-            // 
-            this.ThoatMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
-            this.ThoatMenu.Name = "ThoatMenu";
-            this.ThoatMenu.Size = new System.Drawing.Size(90, 25);
-            this.ThoatMenu.Text = "THOÁT";
-            this.ThoatMenu.Click += new System.EventHandler(this.ThoatMenu_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(16, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -158,7 +106,7 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(195, 154);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(603, 343);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(603, 300);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // groupBox1
@@ -208,6 +156,7 @@
             // 
             this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Controls.Add(this.btnGiohang);
             this.guna2GroupBox2.Controls.Add(this.btnTaikhoan);
             this.guna2GroupBox2.Controls.Add(this.btnNapvip);
             this.guna2GroupBox2.Controls.Add(this.btnUudai);
@@ -218,8 +167,28 @@
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox2.Location = new System.Drawing.Point(3, 155);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(185, 340);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(185, 299);
             this.guna2GroupBox2.TabIndex = 13;
+            // 
+            // btnTaikhoan
+            // 
+            this.btnTaikhoan.Animated = true;
+            this.btnTaikhoan.BorderRadius = 10;
+            this.btnTaikhoan.BorderThickness = 1;
+            this.btnTaikhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaikhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaikhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTaikhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTaikhoan.Enabled = false;
+            this.btnTaikhoan.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnTaikhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTaikhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaikhoan.Location = new System.Drawing.Point(3, 254);
+            this.btnTaikhoan.Name = "btnTaikhoan";
+            this.btnTaikhoan.Size = new System.Drawing.Size(179, 37);
+            this.btnTaikhoan.TabIndex = 18;
+            this.btnTaikhoan.Text = "THÔNG TIN TÀI KHOẢN";
+            this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
             // btnNapvip
             // 
@@ -256,7 +225,7 @@
             this.btnUudai.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnUudai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUudai.ForeColor = System.Drawing.Color.White;
-            this.btnUudai.Location = new System.Drawing.Point(3, 168);
+            this.btnUudai.Location = new System.Drawing.Point(3, 211);
             this.btnUudai.Name = "btnUudai";
             this.btnUudai.Size = new System.Drawing.Size(179, 37);
             this.btnUudai.TabIndex = 15;
@@ -276,7 +245,7 @@
             this.btnLichsumuahang.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnLichsumuahang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLichsumuahang.ForeColor = System.Drawing.Color.White;
-            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 125);
+            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 168);
             this.btnLichsumuahang.Name = "btnLichsumuahang";
             this.btnLichsumuahang.Size = new System.Drawing.Size(179, 37);
             this.btnLichsumuahang.TabIndex = 14;
@@ -305,31 +274,86 @@
             this.btnDathang.Text = "ĐẶT HÀNG";
             this.btnDathang.Click += new System.EventHandler(this.btnDathang_Click);
             // 
-            // btnTaikhoan
+            // btnGiohang
             // 
-            this.btnTaikhoan.Animated = true;
-            this.btnTaikhoan.BorderRadius = 10;
-            this.btnTaikhoan.BorderThickness = 1;
-            this.btnTaikhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaikhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTaikhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTaikhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTaikhoan.Enabled = false;
-            this.btnTaikhoan.FillColor = System.Drawing.Color.BlueViolet;
-            this.btnTaikhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTaikhoan.ForeColor = System.Drawing.Color.White;
-            this.btnTaikhoan.Location = new System.Drawing.Point(3, 211);
-            this.btnTaikhoan.Name = "btnTaikhoan";
-            this.btnTaikhoan.Size = new System.Drawing.Size(179, 37);
-            this.btnTaikhoan.TabIndex = 18;
-            this.btnTaikhoan.Text = "THÔNG TIN TÀI KHOẢN";
-            this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
+            this.btnGiohang.Animated = true;
+            this.btnGiohang.BackColor = System.Drawing.Color.Transparent;
+            this.btnGiohang.BorderRadius = 10;
+            this.btnGiohang.BorderThickness = 1;
+            this.btnGiohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiohang.Enabled = false;
+            this.btnGiohang.FillColor = System.Drawing.Color.Indigo;
+            this.btnGiohang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGiohang.ForeColor = System.Drawing.Color.White;
+            this.btnGiohang.Location = new System.Drawing.Point(3, 125);
+            this.btnGiohang.Name = "btnGiohang";
+            this.btnGiohang.Size = new System.Drawing.Size(179, 37);
+            this.btnGiohang.TabIndex = 19;
+            this.btnGiohang.Text = "XEM GIỎ HÀNG";
+            this.btnGiohang.Click += new System.EventHandler(this.btnGiohang_Click);
+            // 
+            // HuongDanMenu
+            // 
+            this.HuongDanMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.home;
+            this.HuongDanMenu.Name = "HuongDanMenu";
+            this.HuongDanMenu.Size = new System.Drawing.Size(135, 25);
+            this.HuongDanMenu.Text = "HƯỚNG DẪN";
+            this.HuongDanMenu.Click += new System.EventHandler(this.HuongDanMenu_Click);
+            // 
+            // VeChungToiMenu
+            // 
+            this.VeChungToiMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.shirt;
+            this.VeChungToiMenu.Name = "VeChungToiMenu";
+            this.VeChungToiMenu.Size = new System.Drawing.Size(145, 25);
+            this.VeChungToiMenu.Text = "VỀ CHÚNG TÔI";
+            this.VeChungToiMenu.Click += new System.EventHandler(this.VeChungToiMenu_Click);
+            // 
+            // LienHeMenu
+            // 
+            this.LienHeMenu.Enabled = false;
+            this.LienHeMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.question_mark;
+            this.LienHeMenu.Name = "LienHeMenu";
+            this.LienHeMenu.Size = new System.Drawing.Size(95, 25);
+            this.LienHeMenu.Text = "LIÊN HỆ";
+            this.LienHeMenu.Click += new System.EventHandler(this.LienHeMenu_Click);
+            // 
+            // DangNhapMenu
+            // 
+            this.DangNhapMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.user;
+            this.DangNhapMenu.Name = "DangNhapMenu";
+            this.DangNhapMenu.Size = new System.Drawing.Size(131, 25);
+            this.DangNhapMenu.Text = "ĐĂNG NHẬP";
+            this.DangNhapMenu.Click += new System.EventHandler(this.DangNhap_Click);
+            // 
+            // ThoatMenu
+            // 
+            this.ThoatMenu.Image = global::BTL_ThucTap_LTNET.Properties.Resources.person;
+            this.ThoatMenu.Name = "ThoatMenu";
+            this.ThoatMenu.Size = new System.Drawing.Size(90, 25);
+            this.ThoatMenu.Text = "THOÁT";
+            this.ThoatMenu.Click += new System.EventHandler(this.ThoatMenu_Click);
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::BTL_ThucTap_LTNET.Properties.Resources.logo;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(16, 12);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(44, 46);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // MainOnline
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 507);
+            this.ClientSize = new System.Drawing.Size(810, 459);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -344,12 +368,12 @@
             this.guna2GroupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +400,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnUudai;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnNapvip;
         private Guna.UI2.WinForms.Guna2TileButton btnTaikhoan;
+        private Guna.UI2.WinForms.Guna2TileButton btnGiohang;
     }
 }

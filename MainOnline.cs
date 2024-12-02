@@ -22,6 +22,8 @@ namespace BTL_ThucTap_LTNET
         {
             InitializeComponent();
         }
+        public List<TempSave.GioHang> danhSachGioHang;
+
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
         private SqlConnection connectdb()
@@ -170,6 +172,8 @@ namespace BTL_ThucTap_LTNET
                 btnLichsumuahang.Enabled = true;
                 btnUudai.Enabled = true;
                 btnTaikhoan.Enabled = true;
+                btnGiohang.Enabled = true;
+                LienHeMenu.Enabled = true;
             }
             LoadProducts();
         }
@@ -202,7 +206,8 @@ namespace BTL_ThucTap_LTNET
 
         private void HuongDanMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng Hướng dẫn sử dụng cho khách hàng đang được phát triển");
+            HuongDanKhach f = new HuongDanKhach();
+            f.ShowDialog();
         }
 
         private void btnUudai_Click(object sender, EventArgs e)
@@ -228,6 +233,19 @@ namespace BTL_ThucTap_LTNET
         {
             ThongTinTaiKhoan f = new ThongTinTaiKhoan();
             f.ShowDialog();
+        }
+
+        private void btnGiohang_Click(object sender, EventArgs e)
+        {
+            danhSachGioHang = TempSave.danhSachGioHang;
+
+
+            // Mở form GioHang và truyền danh sách giỏ hàng
+            GioHang f = new GioHang(danhSachGioHang);
+            f.ShowDialog();
+
+            // Cập nhật lại danh sách giỏ hàng sau khi đóng form
+            TempSave.danhSachGioHang = danhSachGioHang;
         }
     }
 }

@@ -38,7 +38,6 @@
             this.txtSize = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTonkho = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGia = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMadm = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,7 +66,6 @@
             this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.madm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,7 +81,6 @@
             this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.txtTonkho);
             this.groupBox1.Controls.Add(this.txtGia);
-            this.groupBox1.Controls.Add(this.txtMadm);
             this.groupBox1.Controls.Add(this.txtMau);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMa);
@@ -94,7 +90,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(12, 410);
             this.groupBox1.Name = "groupBox1";
@@ -113,7 +108,7 @@
             this.btnAnh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAnh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAnh.ForeColor = System.Drawing.Color.White;
-            this.btnAnh.Location = new System.Drawing.Point(500, 181);
+            this.btnAnh.Location = new System.Drawing.Point(500, 130);
             this.btnAnh.Name = "btnAnh";
             this.btnAnh.Size = new System.Drawing.Size(230, 26);
             this.btnAnh.TabIndex = 9;
@@ -152,7 +147,7 @@
             this.txtTonkho.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTonkho.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTonkho.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTonkho.Location = new System.Drawing.Point(500, 133);
+            this.txtTonkho.Location = new System.Drawing.Point(500, 82);
             this.txtTonkho.Name = "txtTonkho";
             this.txtTonkho.PasswordChar = '\0';
             this.txtTonkho.PlaceholderText = "";
@@ -179,26 +174,6 @@
             this.txtGia.SelectedText = "";
             this.txtGia.Size = new System.Drawing.Size(230, 26);
             this.txtGia.TabIndex = 8;
-            // 
-            // txtMadm
-            // 
-            this.txtMadm.BorderRadius = 10;
-            this.txtMadm.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMadm.DefaultText = "";
-            this.txtMadm.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMadm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMadm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMadm.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMadm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMadm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMadm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMadm.Location = new System.Drawing.Point(500, 82);
-            this.txtMadm.Name = "txtMadm";
-            this.txtMadm.PasswordChar = '\0';
-            this.txtMadm.PlaceholderText = "";
-            this.txtMadm.SelectedText = "";
-            this.txtMadm.Size = new System.Drawing.Size(230, 26);
-            this.txtMadm.TabIndex = 8;
             // 
             // txtMau
             // 
@@ -284,7 +259,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(424, 181);
+            this.label8.Location = new System.Drawing.Point(424, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 16);
             this.label8.TabIndex = 7;
@@ -320,21 +295,11 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Màu";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(421, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 16);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Mã DM";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(421, 133);
+            this.label7.Location = new System.Drawing.Point(421, 82);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 4;
@@ -529,7 +494,6 @@
             this.gia,
             this.size,
             this.mau,
-            this.madm,
             this.tonkho,
             this.anh,
             this.soluongdaban});
@@ -628,13 +592,6 @@
             this.mau.Name = "mau";
             this.mau.ReadOnly = true;
             // 
-            // madm
-            // 
-            this.madm.DataPropertyName = "madm";
-            this.madm.HeaderText = "Mã DM";
-            this.madm.Name = "madm";
-            this.madm.ReadOnly = true;
-            // 
             // tonkho
             // 
             this.tonkho.DataPropertyName = "tonkho";
@@ -697,7 +654,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -712,7 +668,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSize;
         private Guna.UI2.WinForms.Guna2TextBox txtTonkho;
         private Guna.UI2.WinForms.Guna2TextBox txtGia;
-        private Guna.UI2.WinForms.Guna2TextBox txtMadm;
         private Guna.UI2.WinForms.Guna2TextBox txtMau;
         private Guna.UI2.WinForms.Guna2TextBox txtTen;
         private Guna.UI2.WinForms.Guna2TextBox txtMa;
@@ -729,7 +684,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn mau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madm;
         private System.Windows.Forms.DataGridViewTextBoxColumn tonkho;
         private System.Windows.Forms.DataGridViewTextBoxColumn anh;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluongdaban;

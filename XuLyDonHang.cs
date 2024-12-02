@@ -83,7 +83,6 @@ namespace BTL_ThucTap_LTNET
             {
                 int madh = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["madh"].Value);
                 string trangthai = dataGridView1.SelectedRows[0].Cells["trangthai"].Value.ToString();
-                MessageBox.Show(trangthai);
                 // Chưa fix được lỗi này
                 if (trangthai.Equals("Đã giao", StringComparison.OrdinalIgnoreCase))
                 {

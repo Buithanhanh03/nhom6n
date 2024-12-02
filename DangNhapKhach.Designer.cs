@@ -155,7 +155,7 @@
             this.txtTK.Location = new System.Drawing.Point(29, 66);
             this.txtTK.Name = "txtTK";
             this.txtTK.PasswordChar = '\0';
-            this.txtTK.PlaceholderText = "Nhập tài khoản";
+            this.txtTK.PlaceholderText = "Nhập tài khoản. VD: chinh1";
             this.txtTK.SelectedText = "";
             this.txtTK.Size = new System.Drawing.Size(344, 33);
             this.txtTK.TabIndex = 13;
@@ -189,7 +189,7 @@
             this.txtMK.Location = new System.Drawing.Point(29, 108);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
-            this.txtMK.PlaceholderText = "Nhập mật khẩu";
+            this.txtMK.PlaceholderText = "Nhập mật khẩu. VD: 1";
             this.txtMK.SelectedText = "";
             this.txtMK.Size = new System.Drawing.Size(344, 33);
             this.txtMK.TabIndex = 12;

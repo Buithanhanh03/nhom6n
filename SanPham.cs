@@ -98,11 +98,6 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Mã sản phẩm chỉ có thể nhập kiểu số nguyên");
                 return;
             }
-            if (IsInteger(txtMadm.Text) == false)
-            {
-                MessageBox.Show("Mã danh mục chỉ có thể nhập kiểu số nguyên");
-                return;
-            }
             if (IsInteger(txtGia.Text) == false)
             {
                 MessageBox.Show("Giá chỉ có thể nhập kiểu số nguyên");
@@ -172,7 +167,6 @@ namespace BTL_ThucTap_LTNET
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtMa.Enabled = false;
-                txtMadm.Enabled = false;
                 btnCapnhat.Enabled = true;
                 btnXoa.Enabled = false;
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
@@ -180,7 +174,6 @@ namespace BTL_ThucTap_LTNET
                 txtTen.Text = selectedRow.Cells["tensp"].Value.ToString();
                 txtGia.Text = selectedRow.Cells["gia"].Value.ToString();
                 txtMau.Text = selectedRow.Cells["mau"].Value.ToString();
-                txtMadm.Text = selectedRow.Cells["madm"].Value.ToString();
             }
             
             else
@@ -201,11 +194,6 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Hãy nhập số cho Giá");
                 return;
             }
-            if (IsInteger(txtMadm.Text) == false)
-            {
-                MessageBox.Show("Hãy nhập só cho mã danh mục");
-                return;
-            }
             if (string.IsNullOrEmpty(relativePath))
             {
                 MessageBox.Show("Bạn chưa chọn ảnh");
@@ -217,13 +205,12 @@ namespace BTL_ThucTap_LTNET
             int gia = int.Parse(txtGia.Text);
             string anh = relativePath;
             string mau = txtMau.Text;
-            string madm = txtMadm.Text;
             conn = connectdb();
             conn = new SqlConnection(sqlqr);
             using (conn)
             {
                 conn.Open();
-                string sql = "Update sanpham Set tensp = @tensp, gia = @gia, anh = @anh, mau = @mau, madm = @madm Where masp =@masp";
+                string sql = "Update sanpham Set tensp = @tensp, gia = @gia, anh = @anh, mau = @mau Where masp =@masp";
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = sql;
                 cmd.Parameters.AddWithValue("@masp", masp);
@@ -231,7 +218,6 @@ namespace BTL_ThucTap_LTNET
                 cmd.Parameters.AddWithValue("@gia", gia);
                 cmd.Parameters.AddWithValue("@anh", anh);
                 cmd.Parameters.AddWithValue("@mau", mau);
-                cmd.Parameters.AddWithValue("@madm", madm);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Đã sửa thành công");
                 conn.Close();

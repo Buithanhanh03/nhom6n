@@ -22,6 +22,7 @@ namespace BTL_ThucTap_LTNET
             public int tongtienmothang;
         }
         public static string username { set; get; } // của khách
+
         public class GioHang //sau khi khách thêm các sản phẩm và số lượng vào giỏ
         {
             public int masp;
@@ -29,6 +30,7 @@ namespace BTL_ThucTap_LTNET
             public int gia;
             public int soluongdaban;
         }
+        public static List<GioHang> danhSachGioHang = new List<GioHang>();
         public static int maqc { set; get; } // của khách
 
     }

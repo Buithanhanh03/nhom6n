@@ -10,7 +10,7 @@ namespace BTL_ThucTap_LTNET
 {
     public partial class GioHang : Form
     {
-        private List<TempSave.GioHang> danhSachGioHang;
+        public List<TempSave.GioHang> danhSachGioHang;
         public DatHang datHangForm;
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";
@@ -39,7 +39,24 @@ namespace BTL_ThucTap_LTNET
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
             flowLayoutPanel1.Padding = new Padding(10);
+            if (danhSachGioHang == null || danhSachGioHang.Count == 0)
+            {
+                var labelThongBao = new Guna2HtmlLabel
+                {
+                    Text = "Giỏ hàng của bạn không có gì.",
+                    AutoSize = true,
+                    Font = new Font("Segoe UI", 14, FontStyle.Bold),
+                    ForeColor = Color.DarkSlateGray,
+                    Location = new Point(10, 10),
+                    Margin = new Padding(10)
+                };
+                flowLayoutPanel1.Controls.Add(labelThongBao);
 
+                // Vô hiệu hóa nút thanh toán
+                btnThanhtoan.Enabled = false;
+
+                return;
+            }
             foreach (var item in danhSachGioHang.ToList())
             {
                 var panel = new Guna2Panel
