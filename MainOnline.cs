@@ -169,6 +169,7 @@ namespace BTL_ThucTap_LTNET
                 btnNapvip.Enabled = true;
                 btnLichsumuahang.Enabled = true;
                 btnUudai.Enabled = true;
+                btnTaikhoan.Enabled = true;
             }
             LoadProducts();
         }
@@ -220,6 +221,12 @@ namespace BTL_ThucTap_LTNET
         private void btnNapvip_Click(object sender, EventArgs e)
         {
             NapVip f = new NapVip();
+            f.ShowDialog();
+        }
+
+        private void btnTaikhoan_Click(object sender, EventArgs e)
+        {
+            ThongTinTaiKhoan f = new ThongTinTaiKhoan();
             f.ShowDialog();
         }
     }

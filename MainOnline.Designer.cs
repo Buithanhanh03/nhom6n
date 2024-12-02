@@ -47,6 +47,7 @@
             this.btnUudai = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnLichsumuahang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnDathang = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnTaikhoan = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2GroupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -207,6 +208,7 @@
             // 
             this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Controls.Add(this.btnTaikhoan);
             this.guna2GroupBox2.Controls.Add(this.btnNapvip);
             this.guna2GroupBox2.Controls.Add(this.btnUudai);
             this.guna2GroupBox2.Controls.Add(this.btnLichsumuahang);
@@ -254,7 +256,7 @@
             this.btnUudai.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnUudai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUudai.ForeColor = System.Drawing.Color.White;
-            this.btnUudai.Location = new System.Drawing.Point(3, 193);
+            this.btnUudai.Location = new System.Drawing.Point(3, 168);
             this.btnUudai.Name = "btnUudai";
             this.btnUudai.Size = new System.Drawing.Size(179, 37);
             this.btnUudai.TabIndex = 15;
@@ -274,7 +276,7 @@
             this.btnLichsumuahang.FillColor = System.Drawing.Color.MediumAquamarine;
             this.btnLichsumuahang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLichsumuahang.ForeColor = System.Drawing.Color.White;
-            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 150);
+            this.btnLichsumuahang.Location = new System.Drawing.Point(3, 125);
             this.btnLichsumuahang.Name = "btnLichsumuahang";
             this.btnLichsumuahang.Size = new System.Drawing.Size(179, 37);
             this.btnLichsumuahang.TabIndex = 14;
@@ -302,6 +304,26 @@
             this.btnDathang.TabIndex = 2;
             this.btnDathang.Text = "ĐẶT HÀNG";
             this.btnDathang.Click += new System.EventHandler(this.btnDathang_Click);
+            // 
+            // btnTaikhoan
+            // 
+            this.btnTaikhoan.Animated = true;
+            this.btnTaikhoan.BorderRadius = 10;
+            this.btnTaikhoan.BorderThickness = 1;
+            this.btnTaikhoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaikhoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTaikhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTaikhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTaikhoan.Enabled = false;
+            this.btnTaikhoan.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnTaikhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTaikhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaikhoan.Location = new System.Drawing.Point(3, 211);
+            this.btnTaikhoan.Name = "btnTaikhoan";
+            this.btnTaikhoan.Size = new System.Drawing.Size(179, 37);
+            this.btnTaikhoan.TabIndex = 18;
+            this.btnTaikhoan.Text = "THÔNG TIN TÀI KHOẢN";
+            this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
             // MainOnline
             // 
@@ -353,5 +375,6 @@
         private Guna.UI2.WinForms.Guna2TileButton btnLichsumuahang;
         private Guna.UI2.WinForms.Guna2TileButton btnUudai;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnNapvip;
+        private Guna.UI2.WinForms.Guna2TileButton btnTaikhoan;
     }
 }

@@ -39,13 +39,7 @@ namespace BTL_ThucTap_LTNET
         {
             LoadForm();
             LoadNhanVien();
-            if(TempSave.TaiKhoan == "admin")
-            {
-                btnXacnhan.Enabled = true;
-                btnDatngay.Enabled = true;
-                comboBox1.Enabled = true;
-                dateNgaygiao.Enabled = true;
-            }
+            
         }
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
