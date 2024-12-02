@@ -208,7 +208,7 @@ namespace BTL_ThucTap_LTNET
             string tenqc = txtTimkiem.Text;
             conn = connectdb();
             conn = new SqlConnection(sqlqr);
-            string sql = "Select * From nhanvien Where tenqc LIKE @tenqc";
+            string sql = "Select * From quangcao Where tenqc LIKE @tenqc";
             SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
             adapter.SelectCommand.Parameters.AddWithValue("@tenqc", "%" + tenqc + "%");
 

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDanhgia = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnLienhe = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnGiohang = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnTaikhoan = new Guna.UI2.WinForms.Guna2TileButton();
             this.btnNapvip = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnUudai = new Guna.UI2.WinForms.Guna2TileButton();
@@ -38,9 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnThoat = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnGiohang = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnLienhe = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnDanhgia = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2GroupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,64 @@
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(367, 201);
             this.guna2GroupBox2.TabIndex = 14;
+            // 
+            // btnDanhgia
+            // 
+            this.btnDanhgia.Animated = true;
+            this.btnDanhgia.BorderRadius = 10;
+            this.btnDanhgia.BorderThickness = 1;
+            this.btnDanhgia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDanhgia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDanhgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDanhgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDanhgia.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnDanhgia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDanhgia.ForeColor = System.Drawing.Color.White;
+            this.btnDanhgia.Location = new System.Drawing.Point(185, 150);
+            this.btnDanhgia.Name = "btnDanhgia";
+            this.btnDanhgia.Size = new System.Drawing.Size(179, 37);
+            this.btnDanhgia.TabIndex = 22;
+            this.btnDanhgia.Text = "ĐÁNH GIÁ SẢN PHẨM";
+            this.btnDanhgia.Click += new System.EventHandler(this.btnDanhgia_Click);
+            // 
+            // btnLienhe
+            // 
+            this.btnLienhe.Animated = true;
+            this.btnLienhe.BorderRadius = 10;
+            this.btnLienhe.BorderThickness = 1;
+            this.btnLienhe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLienhe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLienhe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLienhe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLienhe.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnLienhe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLienhe.ForeColor = System.Drawing.Color.White;
+            this.btnLienhe.Location = new System.Drawing.Point(3, 150);
+            this.btnLienhe.Name = "btnLienhe";
+            this.btnLienhe.Size = new System.Drawing.Size(179, 37);
+            this.btnLienhe.TabIndex = 21;
+            this.btnLienhe.Text = "LIÊN HỆ";
+            this.btnLienhe.Click += new System.EventHandler(this.btnLienhe_Click);
+            // 
+            // btnGiohang
+            // 
+            this.btnGiohang.Animated = true;
+            this.btnGiohang.BackColor = System.Drawing.Color.Transparent;
+            this.btnGiohang.BorderRadius = 10;
+            this.btnGiohang.BorderThickness = 1;
+            this.btnGiohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiohang.FillColor = System.Drawing.Color.BlueViolet;
+            this.btnGiohang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGiohang.ForeColor = System.Drawing.Color.White;
+            this.btnGiohang.Location = new System.Drawing.Point(3, 64);
+            this.btnGiohang.Name = "btnGiohang";
+            this.btnGiohang.Size = new System.Drawing.Size(179, 37);
+            this.btnGiohang.TabIndex = 20;
+            this.btnGiohang.Text = "XEM GIỎ HÀNG";
+            this.btnGiohang.Click += new System.EventHandler(this.btnGiohang_Click);
             // 
             // btnTaikhoan
             // 
@@ -204,7 +262,6 @@
             this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThoat.Enabled = false;
             this.btnThoat.FillColor = System.Drawing.Color.DimGray;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
@@ -213,64 +270,6 @@
             this.btnThoat.Size = new System.Drawing.Size(179, 37);
             this.btnThoat.TabIndex = 20;
             this.btnThoat.Text = "THOÁT";
-            // 
-            // btnGiohang
-            // 
-            this.btnGiohang.Animated = true;
-            this.btnGiohang.BackColor = System.Drawing.Color.Transparent;
-            this.btnGiohang.BorderRadius = 10;
-            this.btnGiohang.BorderThickness = 1;
-            this.btnGiohang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGiohang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGiohang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGiohang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGiohang.FillColor = System.Drawing.Color.BlueViolet;
-            this.btnGiohang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGiohang.ForeColor = System.Drawing.Color.White;
-            this.btnGiohang.Location = new System.Drawing.Point(3, 64);
-            this.btnGiohang.Name = "btnGiohang";
-            this.btnGiohang.Size = new System.Drawing.Size(179, 37);
-            this.btnGiohang.TabIndex = 20;
-            this.btnGiohang.Text = "XEM GIỎ HÀNG";
-            this.btnGiohang.Click += new System.EventHandler(this.btnGiohang_Click);
-            // 
-            // btnLienhe
-            // 
-            this.btnLienhe.Animated = true;
-            this.btnLienhe.BorderRadius = 10;
-            this.btnLienhe.BorderThickness = 1;
-            this.btnLienhe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLienhe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLienhe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLienhe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLienhe.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLienhe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLienhe.ForeColor = System.Drawing.Color.White;
-            this.btnLienhe.Location = new System.Drawing.Point(3, 150);
-            this.btnLienhe.Name = "btnLienhe";
-            this.btnLienhe.Size = new System.Drawing.Size(179, 37);
-            this.btnLienhe.TabIndex = 21;
-            this.btnLienhe.Text = "LIÊN HỆ";
-            this.btnLienhe.Click += new System.EventHandler(this.btnLienhe_Click);
-            // 
-            // btnDanhgia
-            // 
-            this.btnDanhgia.Animated = true;
-            this.btnDanhgia.BorderRadius = 10;
-            this.btnDanhgia.BorderThickness = 1;
-            this.btnDanhgia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDanhgia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDanhgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDanhgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDanhgia.FillColor = System.Drawing.Color.MediumAquamarine;
-            this.btnDanhgia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDanhgia.ForeColor = System.Drawing.Color.White;
-            this.btnDanhgia.Location = new System.Drawing.Point(185, 150);
-            this.btnDanhgia.Name = "btnDanhgia";
-            this.btnDanhgia.Size = new System.Drawing.Size(179, 37);
-            this.btnDanhgia.TabIndex = 22;
-            this.btnDanhgia.Text = "ĐÁNH GIÁ SẢN PHẨM";
-            this.btnDanhgia.Click += new System.EventHandler(this.btnDanhgia_Click);
             // 
             // HuongDanKhach
             // 
