@@ -74,5 +74,19 @@ namespace BTL_ThucTap_LTNET
                 MessageBox.Show("Vui lòng chọn một ý kiến để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string mabt = txtTimkiem.Text;
+            conn = connectdb();
+            conn = new SqlConnection(sqlqr);
+            string sql = "Select * From lienhe Where malh LIKE @malh";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@malh", "%" + malh + "%");
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

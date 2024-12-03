@@ -20,7 +20,6 @@ namespace BTL_ThucTap_LTNET
         Guna2Panel panelDetail = new Guna2Panel();
         Label lblInfo = new Label();
         PictureBox pictureBox = new PictureBox();
-        private string selectedImagePath;
         private string relativePath;
         private SqlConnection conn = null;
         string sqlqr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}\qlbh_btl.mdf;Integrated Security=True;Connect Timeout=30";

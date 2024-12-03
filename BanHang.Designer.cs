@@ -53,6 +53,14 @@
             this.txtThongtin = new System.Windows.Forms.RichTextBox();
             this.txtSoluong = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,14 +70,6 @@
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluongdaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,7 +152,7 @@
             this.gbChucnang.Controls.Add(this.txtSoluong);
             this.gbChucnang.Location = new System.Drawing.Point(406, 335);
             this.gbChucnang.Name = "gbChucnang";
-            this.gbChucnang.Size = new System.Drawing.Size(382, 215);
+            this.gbChucnang.Size = new System.Drawing.Size(382, 286);
             this.gbChucnang.TabIndex = 5;
             this.gbChucnang.TabStop = false;
             // 
@@ -168,7 +168,7 @@
             this.btnThoat.FillColor = System.Drawing.Color.DimGray;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(294, 168);
+            this.btnThoat.Location = new System.Drawing.Point(294, 239);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(81, 41);
             this.btnThoat.TabIndex = 9;
@@ -187,7 +187,7 @@
             this.btnHuy.FillColor = System.Drawing.Color.DarkGray;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(207, 168);
+            this.btnHuy.Location = new System.Drawing.Point(207, 239);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(81, 41);
             this.btnHuy.TabIndex = 8;
@@ -210,7 +210,7 @@
             this.btnThanhtoan.FillColor2 = System.Drawing.SystemColors.ButtonShadow;
             this.btnThanhtoan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThanhtoan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhtoan.Location = new System.Drawing.Point(23, 168);
+            this.btnThanhtoan.Location = new System.Drawing.Point(23, 239);
             this.btnThanhtoan.Name = "btnThanhtoan";
             this.btnThanhtoan.Size = new System.Drawing.Size(173, 41);
             this.btnThanhtoan.TabIndex = 7;
@@ -254,7 +254,7 @@
             this.txtThongtin.Location = new System.Drawing.Point(23, 95);
             this.txtThongtin.Name = "txtThongtin";
             this.txtThongtin.ReadOnly = true;
-            this.txtThongtin.Size = new System.Drawing.Size(352, 57);
+            this.txtThongtin.Size = new System.Drawing.Size(352, 138);
             this.txtThongtin.TabIndex = 2;
             this.txtThongtin.Text = "";
             this.txtThongtin.TextChanged += new System.EventHandler(this.txtThongtin_TextChanged);
@@ -350,6 +350,64 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // masp
+            // 
+            this.masp.DataPropertyName = "masp";
+            this.masp.HeaderText = "Mã SP";
+            this.masp.Name = "masp";
+            this.masp.ReadOnly = true;
+            // 
+            // tensp
+            // 
+            this.tensp.DataPropertyName = "tensp";
+            this.tensp.HeaderText = "Tên SP";
+            this.tensp.Name = "tensp";
+            this.tensp.ReadOnly = true;
+            // 
+            // gia
+            // 
+            this.gia.DataPropertyName = "gia";
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.DataPropertyName = "size";
+            this.size.HeaderText = "Size";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            // 
+            // mau
+            // 
+            this.mau.DataPropertyName = "mau";
+            this.mau.HeaderText = "Màu";
+            this.mau.Name = "mau";
+            this.mau.ReadOnly = true;
+            // 
+            // tonkho
+            // 
+            this.tonkho.DataPropertyName = "tonkho";
+            this.tonkho.HeaderText = "Tồn kho";
+            this.tonkho.Name = "tonkho";
+            this.tonkho.ReadOnly = true;
+            // 
+            // anh
+            // 
+            this.anh.DataPropertyName = "anh";
+            this.anh.HeaderText = "Ảnh";
+            this.anh.Name = "anh";
+            this.anh.ReadOnly = true;
+            this.anh.Visible = false;
+            // 
+            // soluongdaban
+            // 
+            this.soluongdaban.DataPropertyName = "soluongdaban";
+            this.soluongdaban.HeaderText = "SLĐB";
+            this.soluongdaban.Name = "soluongdaban";
+            this.soluongdaban.ReadOnly = true;
+            this.soluongdaban.Visible = false;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -403,7 +461,7 @@
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView2.Size = new System.Drawing.Size(381, 215);
+            this.dataGridView2.Size = new System.Drawing.Size(381, 286);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -486,69 +544,11 @@
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "*Bạn có thể nháy đúp 1 dòng để xem thêm về thông tin sản phẩm";
             // 
-            // masp
-            // 
-            this.masp.DataPropertyName = "masp";
-            this.masp.HeaderText = "Mã SP";
-            this.masp.Name = "masp";
-            this.masp.ReadOnly = true;
-            // 
-            // tensp
-            // 
-            this.tensp.DataPropertyName = "tensp";
-            this.tensp.HeaderText = "Tên SP";
-            this.tensp.Name = "tensp";
-            this.tensp.ReadOnly = true;
-            // 
-            // gia
-            // 
-            this.gia.DataPropertyName = "gia";
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
-            this.gia.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.DataPropertyName = "size";
-            this.size.HeaderText = "Size";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            // 
-            // mau
-            // 
-            this.mau.DataPropertyName = "mau";
-            this.mau.HeaderText = "Màu";
-            this.mau.Name = "mau";
-            this.mau.ReadOnly = true;
-            // 
-            // tonkho
-            // 
-            this.tonkho.DataPropertyName = "tonkho";
-            this.tonkho.HeaderText = "Tồn kho";
-            this.tonkho.Name = "tonkho";
-            this.tonkho.ReadOnly = true;
-            // 
-            // anh
-            // 
-            this.anh.DataPropertyName = "anh";
-            this.anh.HeaderText = "Ảnh";
-            this.anh.Name = "anh";
-            this.anh.ReadOnly = true;
-            this.anh.Visible = false;
-            // 
-            // soluongdaban
-            // 
-            this.soluongdaban.DataPropertyName = "soluongdaban";
-            this.soluongdaban.HeaderText = "SLĐB";
-            this.soluongdaban.Name = "soluongdaban";
-            this.soluongdaban.ReadOnly = true;
-            this.soluongdaban.Visible = false;
-            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 562);
+            this.ClientSize = new System.Drawing.Size(800, 633);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);

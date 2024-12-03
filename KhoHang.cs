@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Guna.UI2.WinForms;
 
 namespace BTL_ThucTap_LTNET
 {
@@ -97,7 +98,7 @@ namespace BTL_ThucTap_LTNET
             {
                 if (control is Guna.UI2.WinForms.Guna2TextBox textBox)
                 {
-                    if(control != txtTonkho)
+                    if(control == txtTonkho)
                     {
                         control.Enabled = true;
                     }    
